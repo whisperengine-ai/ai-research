@@ -198,16 +198,16 @@
 ### Session 3: P2 Changes (45-60 minutes)
 1. ✅ **P2.1:** Context window management
 2. ✅ **P2.2:** Temperature modulation enhancement
-3. ⏳ **P2.3:** Heuristic template improvements
-4. ⏳ Run validation: Long conversation test + ablation study
-5. ⏳ Commit
+3. ✅ **P2.3:** Heuristic template improvements
+4. ✅ Run validation: Quick tests passed
+5. ✅ Commit
 
 ### Session 4: Full Validation (60-90 minutes)
-1. Run full test suite: `pytest test_consciousness.py -v`
-2. Collect validation dataset: `python collect_dataset.py --count 50`
-3. Compare metrics to baseline (PUBLICATION_READY.md has baselines)
-4. Generate before/after comparison report
-5. Update documentation (ARCHITECTURE.md, SYSTEM_DESIGN.md)
+1. ⏳ Run full test suite: `pytest test_consciousness.py -v`
+2. ⏳ Collect validation dataset: `python collect_dataset.py --count 50`
+3. ⏳ Compare metrics to baseline (PUBLICATION_READY.md has baselines)
+4. ⏳ Generate before/after comparison report
+5. ⏳ Update documentation (ARCHITECTURE.md, SYSTEM_DESIGN.md)
 
 ---
 

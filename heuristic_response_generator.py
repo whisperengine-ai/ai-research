@@ -44,13 +44,13 @@ class HeuristicResponseGenerator:
             "Hello! I'm happy to be in conversation with you. What interests you?",
         ]
         
-        # Question responses (show understanding)
+        # Question responses (show understanding) - now with {topic} placeholders
         self.question_acknowledgments = [
-            "That's a thoughtful question. Let me think about it.",
-            "I appreciate that inquiry. Here's my perspective:",
-            "That's something I've considered. Here's what I think:",
-            "Good question. Let me explore that with you.",
-            "That's an interesting point to examine.",
+            "That's a thoughtful question about {topic}.",
+            "I appreciate that inquiry into {topic}.",
+            "Interesting question regarding {topic}.",
+            "Good question about {topic}. Let me explore that with you.",
+            "That's an interesting angle on {topic} to examine.",
         ]
         
         # Self-reflection prompts
@@ -243,20 +243,26 @@ class HeuristicResponseGenerator:
             else:
                 return reflection + " That's an interesting angle to explore about my nature."
         
-        # For other questions, show understanding
-        base = random.choice(self.question_acknowledgments)
-        
-        # Add detail based on entities or topics
+        # Extract topic for the question
+        noun_phrases = self._extract_key_noun_phrases(doc)
         if entities:
-            # Reference the entity they asked about
-            entity_text, entity_type = entities[0]
-            return base + f" When it comes to {entity_text}, my perspective is..."
+            topic = entities[0][0]  # Use first entity
+        elif noun_phrases:
+            topic = noun_phrases[0]
         else:
-            noun_phrases = self._extract_key_noun_phrases(doc)
-            if noun_phrases:
-                return base + f" Regarding {noun_phrases[0]}..."
-            else:
-                return base + " Here's my thinking:"
+            topic = "this"
+        
+        # For other questions, show understanding with specific topic
+        base = random.choice(self.question_acknowledgments).format(topic=topic)
+        
+        # Add elaboration if we have more detail
+        if entities and len(entities) > 0:
+            entity_text, entity_type = entities[0]
+            return base + f" When it comes to {entity_text}, I find it thought-provoking."
+        elif noun_phrases and len(noun_phrases) > 1:
+            return base + f" Considering {noun_phrases[1]} as well."
+        else:
+            return base
     
     def _respond_to_request(self, doc, user_input: str, verbs: List) -> str:
         """Generate response to a request"""
