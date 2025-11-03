@@ -6,7 +6,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.3
+          "average_resonance": 0.8
         },
         "engagement_trajectory": {
           "status": "success",
@@ -21,7 +21,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.75
+          "average_appropriateness": 0.7999999999999999
         }
       }
     },
@@ -81,7 +81,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.7
+          "average_resonance": 0.5
         },
         "engagement_trajectory": {
           "status": "success",
@@ -106,7 +106,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.7
+          "average_resonance": 0.5
         },
         "engagement_trajectory": {
           "status": "success",
@@ -121,7 +121,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.7999999999999999
+          "average_appropriateness": 0.4
         }
       }
     },
@@ -221,7 +221,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.75
+          "average_appropriateness": 0.6
         }
       }
     },
@@ -331,7 +331,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.5
+          "average_resonance": 0.7
         },
         "engagement_trajectory": {
           "status": "success",
@@ -356,7 +356,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.7
+          "average_resonance": 0.5
         },
         "engagement_trajectory": {
           "status": "success",
@@ -406,7 +406,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.3
+          "average_resonance": 0.8
         },
         "engagement_trajectory": {
           "status": "success",
@@ -421,7 +421,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.75
+          "average_appropriateness": 0.7999999999999999
         }
       }
     },
@@ -621,7 +621,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.95
+          "average_appropriateness": 0.7999999999999999
         }
       }
     },
@@ -656,7 +656,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.5
+          "average_resonance": 0.3
         },
         "engagement_trajectory": {
           "status": "success",
@@ -671,7 +671,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.95
+          "average_appropriateness": 0.75
         }
       }
     },
@@ -681,7 +681,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.7
+          "average_resonance": 0.5
         },
         "engagement_trajectory": {
           "status": "success",
@@ -721,7 +721,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.7999999999999999
+          "average_appropriateness": 0.95
         }
       }
     },
@@ -806,7 +806,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.8
+          "average_resonance": 0.3
         },
         "engagement_trajectory": {
           "status": "success",
@@ -821,7 +821,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.95
+          "average_appropriateness": 0.75
         }
       }
     },
@@ -1021,7 +1021,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.6
+          "average_appropriateness": 0.75
         }
       }
     },
@@ -1056,7 +1056,7 @@
       "analysis": {
         "resonance_analysis": {
           "status": "success",
-          "average_resonance": 0.3
+          "average_resonance": 0.5
         },
         "engagement_trajectory": {
           "status": "success",
@@ -1071,7 +1071,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.75
+          "average_appropriateness": 0.95
         }
       }
     },
@@ -1121,7 +1121,7 @@
         },
         "appropriateness_analysis": {
           "status": "success",
-          "average_appropriateness": 0.95
+          "average_appropriateness": 0.7999999999999999
         }
       }
     },
