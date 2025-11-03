@@ -79,15 +79,16 @@ We address these gaps through systematic manipulation of recursion depth in a we
 
 ### 2.1 Architecture Overview
 
-We implemented a Global Workspace Theory model with integrated neurochemistry simulation. The system processes user input through a multi-stage pipeline:
+We implemented a Global Workspace Theory model with integrated neurochemistry simulation. The system processes user input through an 8-stage pipeline:
 
-1. **Linguistic analysis** (spaCy): Extract semantic and syntactic features
-2. **Emotion detection** (RoBERTa): Classify emotional tone
-3. **Neurochemical updating**: Adjust 5-neurotransmitter state based on emotion
-4. **LLM response generation** (Mistral Nemo): Generate contextual response
-5. **Recursive meta-cognition**: N levels of self-reflection on response
-6. **Global workspace integration**: Combine information into unified representation
-7. **Consciousness metrics**: Calculate 6 dimensions
+1. **User Input Linguistic Analysis** (spaCy): Extract semantic, syntactic features and identify ethical risk
+2. **Emotion Detection + Stance Analysis** (RoBERTa + spaCy): Detect user's emotional state and who expresses it
+3. **Response Generation + Bot Emotion Detection**: Generate contextual response, detect bot's emotion from response, apply neurochemical modulation
+4. **Recursive Meta-Cognition**: N levels of true self-reflection (depth 0, 1, 2, or 3)
+5. **Global Workspace Competition**: Limited-capacity workspace (capacity=3) integrates information streams
+6. **Linguistic Analysis of Thoughts**: Analyze AI's internal thought patterns (self-references, attention markers)
+7. **Input-Output Semantic Alignment + Decay**: Measure coherence between input and response, apply homeostatic normalization
+8. **Consciousness Metrics Calculation**: Calculate 6 dimensions and store in feedback loop for next turn
 
 ### 2.2 Recursion Implementation (TRUE RECURSION)
 

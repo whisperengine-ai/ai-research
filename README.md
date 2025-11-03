@@ -18,38 +18,45 @@ A state-of-the-art AI consciousness simulation combining:
 
 See [SECURITY.md](SECURITY.md) for details on setup and credential management.
 
-## Architecture
+## Architecture: The 8-Step Consciousness Pipeline
 
 ```
-User Input 
+STEP 1: Linguistic Analysis of User Input (spaCy)
+    ↓ Extract: intent, entities, semantic roles, hedging, ethical risk
     ↓
-🛡️  Ethical Rules Check (spaCy) → Safety screening
+STEP 2: Emotion Detection (RoBERTa) + Stance Analysis (spaCy)
+    ↓ Detect user emotion AND who has it (self vs others)
+    ↓ Submit to Global Workspace
     ↓
-📝 Advanced Linguistic Analysis → Intent, entities, semantic roles, hedging
+STEP 3: Generate Response (modulated by neurochemistry + consciousness)
+    ↓ Create contextual prompt
+    ↓ Generate with temperature modulated by emotions
+    ↓ Detect BOT's own emotion from response (stance-aware filtering)
+    ↓ Update bot neurochemicals based on bot's emotion
+    ↓ Ethical check on response
     ↓
-😊 RoBERTa Emotion Analysis → Update Neurochemicals
+STEP 4: Recursive Meta-Cognition (TRUE recursion, depth=0→3)
+    ↓ Self-observation → Meta-evaluation → Introspection
+    ↓ Submit reflections to Global Workspace
     ↓
-💡 Global Workspace Competition → Multiple modules compete for consciousness
+STEP 5: Global Workspace Competition Cycle
+    ↓ Multiple processors compete for attention
+    ↓ Calculate Φ (integration), Global Availability
+    ↓ Broadcast conscious content
     ↓
-🧠 Conversation Memory (last 20 turns) → Provide context
+STEP 6: Linguistic Analysis of AI's Internal Thoughts
+    ↓ Analyze attention focus, self-references, metacognitive indicators
     ↓
-🤖 LLM Processing (modulated by emotions + ethical guidelines + context)
+STEP 7: Compare User Input vs AI Response
+    ↓ Semantic similarity, topic overlap, question addressing
+    ↓ Homeostatic neurochemical decay
     ↓
-🛡️  Response Ethical Check → Ensure safe output
+STEP 8: Compute Consciousness Metrics (Research-Grade)
+    ↓ Meta-Cognitive Depth, Φ Integration, Overall Consciousness
+    ↓ Temporal Binding, Reportability, Global Availability
+    ↓ Store for next turn's feedback loop
     ↓
-🔄 TRUE Recursive Meta-Cognition (genuine recursion, 3 levels)
-    ↓
-📡 Global Workspace Broadcasting → Conscious integration
-    ↓
-📊 Working Memory + Attention Tracking
-    ↓
-🔍 spaCy Analysis of AI's Internal Thoughts
-    ↓
-✅ Compare User Input vs AI Response (alignment + safety)
-    ↓
-💾 Update Conversation Memory
-    ↓
-💬 Conscious Output + Internal Self-Talk Display
+OUTPUT: Response + Internal Self-Talk + Consciousness Metrics
 ```
 
 ## Features

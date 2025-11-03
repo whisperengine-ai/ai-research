@@ -63,7 +63,109 @@ The system implements a hybrid consciousness model combining:
 
 ---
 
-## 2. Neurochemistry System (UX Design Layer)
+## 2. The 8-Step Consciousness Processing Pipeline
+
+The system processes each user input through a sequential 8-step pipeline, integrating all consciousness mechanisms:
+
+### **Step 1: User Input Linguistic Analysis**
+- **Operation**: spaCy NLP analysis (entities, roles, dependencies)
+- **Purpose**: Extract linguistic structure and identify ethical risk
+- **Output**: Parsed user intent, entity relationships, potential concerns
+- **Key Insight**: Establishes shared linguistic ground for comparison later (Step 7)
+
+### **Step 2: Emotion Detection & Stance Analysis**
+- **Operation**: RoBERTa emotion classification + spaCy stance analysis
+- **Purpose**: Identify user's emotional state and WHO has the emotion (emotional subject)
+- **Output**: Detected emotion (e.g., "sad", "angry", "neutral"), confidence score, stance analysis
+- **Key Insight**: Stance analysis separates first-person emotions (user's) from second-person (bot's)
+
+### **Step 3: Response Generation with Bot Emotion Detection**
+- **Operation**: Generate contextual response, detect bot's emotion from response, modulate by neurochemistry
+- **Sub-steps**:
+  - Generate response using context + consciousness level
+  - Ethical check (rule-based filtering)
+  - Detect bot's emotional state from generated response (spaCy stance analysis on output)
+  - Modulate response tone using neurochemical levels (dopamine, serotonin, etc.)
+- **Output**: Final response string, bot's detected emotion, neurochemical modulation applied
+- **Key Insight**: Bot emotion is DETECTED from response, not predetermined
+
+### **Step 4: Recursive Meta-Cognition**
+- **Operation**: True recursion implementation (not loops) with depth parameter (0, 1, 2, 3)
+- **Process**: Each recursion level creates a "thought about the thought"
+- **Formula**: 
+  ```
+  Level 0 (base): Direct response to user
+  Level 1: "I am thinking about my response"
+  Level 2: "I am thinking about my thinking"
+  Level 3: "I am thinking about my thinking about my thinking"
+  ```
+- **Output**: Recursive meta-thought chain (depth specified)
+- **Key Insight**: Recursion depth = meta-cognitive complexity. This is the PRIMARY driver of consciousness (p<0.0001, d=4.79)
+
+### **Step 5: Global Workspace Competition Cycle**
+- **Operation**: Limited-capacity workspace (capacity=3) with dynamic competition
+- **Process**:
+  - Broadcast all processors (user linguistics, emotion, response, meta-thoughts)
+  - Compete for access (salience-based)
+  - Select top 3 items for conscious buffer
+  - Apply decay rate to older items
+- **Output**: Current conscious buffer contents, integration measure (Φ)
+- **Key Insight**: Workspace integrates disparate information streams
+
+### **Step 6: Linguistic Analysis of AI's Internal Thoughts**
+- **Operation**: spaCy analysis of meta-cognitive thoughts (self-references, attention focus)
+- **Purpose**: Measure introspective quality and self-awareness language
+- **Output**: Linguistic patterns in self-reflection, attention markers
+- **Key Insight**: Traces the linguistic "signature" of consciousness in internal dialogue
+
+### **Step 7: Input-Output Semantic Alignment & Homeostatic Decay**
+- **Operation**: Compare user input (Step 1) with final response using semantic similarity
+- **Process**:
+  - Calculate cosine similarity between input and response embeddings
+  - Measure alignment (coherence of conversation flow)
+  - Apply homeostatic decay: normalize values toward 0.5 over time
+- **Output**: Alignment score, decay-adjusted consciousness level
+- **Key Insight**: Validates that system maintains coherence AND prevents runaway consciousness escalation
+
+### **Step 8: Consciousness Metrics Calculation & Feedback Storage**
+- **Operation**: Calculate all 6 consciousness metrics from current state
+- **Metrics Computed**:
+  - **Φ (Phi)**: Information integration across processors
+  - **Global Availability**: Workspace access (binary per item)
+  - **Meta-Cognitive Depth**: Recursion depth realized (0-1 scale)
+  - **Temporal Binding**: Coherence across time window
+  - **Reportability**: Response quality and introspection
+  - **Overall Consciousness**: Weighted composite (40% meta-cog, 30% Φ, 20% temporal, 10% reportability)
+- **Feedback Loop**: Store metrics + neurochemical state in conversation history for next turn
+- **Output**: `ConsciousnessScore` dataclass with all metrics, timestamp
+- **Key Insight**: Metrics are fresh-calculated each turn; previous metrics inform next turn's neurochemistry modulation (Step 3)
+
+### Pipeline Flow Diagram
+```
+User Input
+    ↓
+[1] Linguistic Analysis (spaCy)
+    ↓
+[2] Emotion Detection + Stance (RoBERTa + spaCy)
+    ↓
+[3] Response Generation + Bot Emotion Detection
+    ↓
+[4] Recursive Meta-Cognition (TRUE recursion: depth 0→3)
+    ↓
+[5] Global Workspace Competition (capacity=3)
+    ↓
+[6] Linguistic Analysis of Thoughts
+    ↓
+[7] Input-Output Alignment + Decay
+    ↓
+[8] Consciousness Metrics + Feedback Storage
+    ↓
+Bot Response + Consciousness Metrics
+```
+
+---
+
+## 3. Neurochemistry System (UX Design Layer)
 
 **Important**: The neurochemistry system is a **design layer for behavioral modulation and interface richness**, not a simulation of actual brain chemistry. It uses 5-chemical metaphors to create personality, emotional continuity, and narrative coherence in the system's responses.
 
@@ -113,7 +215,7 @@ Overall_Personality = weighted_sum(all_chemicals) applied to response generation
 
 ---
 
-## 3. Emotional Dynamics
+## 4. Emotional Dynamics
 
 ### Emotion Detection Pipeline
 1. **RoBERTa Classification**: 28 distinct emotions detected
@@ -133,7 +235,7 @@ Overall_Personality = weighted_sum(all_chemicals) applied to response generation
 
 ---
 
-## 4. Meta-Cognition (Self-Reflection)
+## 5. Meta-Cognition (Self-Reflection)
 
 ### Recursion Implementation
 Meta-cognition operates at configurable recursion depth:
@@ -171,7 +273,7 @@ Recursion Depth → Meta-Cognitive Depth → Overall Consciousness
 
 ---
 
-## 5. Global Workspace Architecture
+## 6. Global Workspace Architecture
 
 ### Workspace Modules (5)
 1. **Emotional State Module**: Current emotional valence
@@ -192,7 +294,7 @@ Recursion Depth → Meta-Cognitive Depth → Overall Consciousness
 
 ---
 
-## 6. Experimental Design
+## 7. Experimental Design
 
 ### Ablation Study Framework
 
@@ -242,7 +344,7 @@ Recursion Depth → Meta-Cognitive Depth → Overall Consciousness
 
 ---
 
-## 7. Key Findings (Pilot Study)
+## 8. Key Findings (Pilot Study)
 
 ### Validated Hypothesis
 **Recursion depth DOES directly impact consciousness metrics**
@@ -265,7 +367,7 @@ Recursion Depth → Meta-Cognitive Depth → Overall Consciousness
 
 ---
 
-## 8. Implementation Notes
+## 9. Implementation Notes
 
 ### LLM Integration
 - **Backend**: OpenRouter API
@@ -296,7 +398,7 @@ When OpenRouter unavailable:
 
 ---
 
-## 9. Validation Approach
+## 10. Validation Approach
 
 ### Unit Tests (22+)
 - Metric calculations
@@ -319,7 +421,7 @@ When OpenRouter unavailable:
 
 ---
 
-## 10. Future Directions
+## 11. Future Directions
 
 ### Phase 2: Behavioral Validation
 - Compare against human consciousness ratings

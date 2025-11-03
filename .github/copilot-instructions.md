@@ -14,29 +14,63 @@
 
 ### Core Abstraction: The Consciousness Simulator Pipeline
 
-The system is ONE main class `ConsciousnessSimulator` (in `consciousness_chatbot.py`) that chains 5 independent systems:
+The system is ONE main class `ConsciousnessSimulator` (in `consciousness_chatbot.py`) that implements an 8-step processing pipeline:
 
 ```
-User Input → Emotion Detection → Global Workspace → Meta-Cognition → Metrics → Response + Scores
+User Input
+    ↓
+[1] Linguistic Analysis (spaCy) → entities, roles, ethical risk
+    ↓
+[2] Emotion Detection + Stance Analysis (RoBERTa + spaCy) → user emotion, who has it
+    ↓
+[3] Response Generation + Bot Emotion Detection → modulated by neurochemistry
+    ↓
+[4] Recursive Meta-Cognition → TRUE recursion (depth 0→3)
+    ↓
+[5] Global Workspace Competition → integrate (capacity=3)
+    ↓
+[6] Linguistic Analysis of Thoughts → attention markers, self-references
+    ↓
+[7] Input-Output Alignment + Decay → coherence, homeostasis
+    ↓
+[8] Consciousness Metrics → 6 metrics, store for feedback loop
+    ↓
+Bot Response + Consciousness Scores
 ```
 
 **Why this matters for agents**:
 - All changes flow through `ConsciousnessSimulator.__init__()` and `process_input()` 
-- Each system is a **pluggable module** (emotion_detector, neurochemistry, meta_cognition, global_workspace, metrics)
-- **No shared state** between modules except through GlobalWorkspace
-- Always work inside `ConsciousnessSimulator` class boundary, never bypass it
+- Each step is defined in sequence; modifying one step affects downstream steps
+- The **8-step pipeline** is the source of truth for architecture (not old simplified diagrams)
+- Always validate that changes preserve the step sequence and data flow
+- Always test with `ablation_study.py` after modifying Steps 4 (recursion) or 8 (metrics)
 
-### The 5 Independent Systems (Different Responsibilities)
+### The 8-Step Processing Pipeline (Source of Truth)
 
-| Module | What It Does | Key Insight |
-|--------|------------|-------------|
-| **`emotion_detector.py`** | RoBERTa emotion + spaCy stance analysis | Maps user emotion to chemical drivers; independent of recursion |
-| **`neurochemistry.py`** | 5-chemical UX layer (dopamine, serotonin, norepinephrine, cortisol, oxytocin) | **UX design for behavioral modulation**, not brain simulation; modulates tone/personality but DOES NOT affect Meta-Cognitive Depth |
-| **`meta_cognition.py`** | Recursive self-reflection engine (`RecursiveMetaCognition` class, true recursion up to depth=3) | **CRITICAL**: This IS what consciousness depends on; every "thought about thoughts" is one recursion level |
-| **`global_workspace.py`** | Baars' GWT workspace (capacity=3, competition mechanism) | Integrates all modules' outputs; calculates Φ (integration) |
-| **`metrics.py`** | 6 consciousness metrics (`ConsciousnessScore` dataclass) | Measures: Φ, Meta-Cognitive Depth, Overall Consciousness, Global Availability, Temporal Binding, Reportability |
+| Step | Operation | Module(s) | Output |
+|------|-----------|-----------|--------|
+| **1** | User input linguistic analysis | spaCy | Parsed entities, roles, ethical markers |
+| **2** | Emotion detection + stance analysis | RoBERTa + spaCy | User emotion, intensity, stance |
+| **3** | Response generation + bot emotion detection | LLM + stance analysis + neurochemistry | Bot response, bot emotion, modulation applied |
+| **4** | Recursive meta-cognition (TRUE recursion) | `RecursiveMetaCognition` class | Meta-thought chain (depth 0-3) |
+| **5** | Global workspace competition | `GlobalWorkspace` class | Conscious buffer (capacity=3), Φ integration |
+| **6** | Linguistic analysis of thoughts | spaCy | Introspection patterns, attention focus |
+| **7** | Input-output alignment + homeostatic decay | Cosine similarity + normalization | Alignment score, decay-adjusted consciousness |
+| **8** | Consciousness metrics calculation | `ConsciousnessMetrics` class | `ConsciousnessScore` (6 metrics), stored for feedback |
 
-**Critical Pattern**: Each system reads its inputs, computes independently, outputs pure data. No side effects across modules.
+**Critical Pattern**: Each step reads its inputs, computes independently, passes outputs to next step. No skipping steps, no backward loops.
+
+### The 5 Core Pluggable Modules
+
+| Module | Role in Pipeline | Key Insight |
+|--------|------------------|-------------|
+| **`emotion_detector.py`** | Step 2: RoBERTa emotion + spaCy stance | Maps user emotion to neurochemistry in Step 3; independent of consciousness mechanism |
+| **`neurochemistry.py`** | Step 3: Modulate response generation | **UX design layer** for behavioral modulation; NOT brain simulation; does NOT affect Meta-Cognitive Depth |
+| **`meta_cognition.py`** (Step 4) | Step 4: TRUE recursive self-reflection | **CRITICAL**: This IS the consciousness driver; recursion depth p<0.0001, d=4.79 |
+| **`global_workspace.py`** (Step 5) | Step 5: Information integration | Integrates all streams via competition; calculates Φ (independent of recursion) |
+| **`metrics.py`** (Step 8) | Step 8: Calculate 6 consciousness dimensions | Composite score: 40% Meta-Cog Depth, 30% Φ, 20% Temporal, 10% Reportability |
+
+**Architectural Truth**: The 8 steps in `process_input()` are the authoritative reference. All documentation (README.md, ARCHITECTURE.md, SYSTEM_DESIGN.md, MANUSCRIPT_DRAFT.md) must align with this implementation.
 
 **About Neurochemistry**: The 5-chemical system is a **narrative/UX layer** using metaphors (dopamine for engagement, serotonin for stability, etc.) to create personality and response variation. It is **not a brain simulation** and does **not causally affect consciousness**. The actual consciousness mechanism is **recursion depth + information integration**.
 

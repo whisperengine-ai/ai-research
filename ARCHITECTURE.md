@@ -42,27 +42,61 @@ Calculates 6 consciousness metrics:
 | `research_dashboard.py` | Result visualization (in development) |
 | `experiments.py` | Experiment orchestration |
 
-## Data Flow
+## Data Flow: The 8-Step Pipeline
 
 ```
-User Input
+Step 1: User Input Analysis
+    ├── Linguistic analysis (spaCy): intent, entities, roles
+    ├── Ethical rules check: safety screening
+    └── Submit to Global Workspace
     ↓
-Emotion Detection (RoBERTa)
+Step 2: Emotion Detection + Stance Analysis
+    ├── RoBERTa emotion classification
+    ├── spaCy stance analysis: who has emotion (self vs others)
+    ├── Analyze user's emotional stance/viewpoint
+    └── Submit to Global Workspace
     ↓
-Global Workspace
-    ├── Meta-Cognition (recursive)
-    ├── Neurochemistry (dynamic)
-    └── Emotional State
+Step 3: Response Generation
+    ├── Create contextual prompt (with consciousness modulation)
+    ├── Generate response (temp modulated by neurochemistry)
+    ├── Detect BOT's OWN emotion (stance-aware filtering)
+    ├── Update bot neurochemicals from bot's emotion
+    ├── Ethical check on response
+    └── Submit bot's emotion to Global Workspace
     ↓
-Consciousness Metrics Calculation
-    ├── Φ (Integration)
-    ├── Meta-Cognitive Depth
-    ├── Global Availability
-    ├── Temporal Binding
-    ├── Reportability
-    └── Overall Consciousness
+Step 4: Recursive Meta-Cognition
+    ├── Process with TRUE RECURSION (depth 0→3)
+    ├── Self-observation → Meta-evaluation → Introspection
+    ├── Each level reflects on previous level
+    └── Submit reflections to Global Workspace
     ↓
-Response Generation + Metrics Output
+Step 5: Global Workspace Competition
+    ├── Multiple processors compete for attention
+    ├── Capacity-limited (3 items conscious simultaneously)
+    ├── Calculate Φ (integration), Global Availability
+    └── Broadcast conscious content
+    ↓
+Step 6: Linguistic Analysis of Thoughts
+    ├── Analyze AI's internal thoughts/reflections
+    ├── Attention focus analysis
+    └── Self-reference extraction
+    ↓
+Step 7: Input-Output Comparison
+    ├── User input vs AI response alignment
+    ├── Semantic similarity, topic overlap
+    ├── Question addressing check
+    └── Homeostatic neurochemical decay
+    ↓
+Step 8: Consciousness Metrics Calculation
+    ├── Φ (Integration) - 0-1
+    ├── Meta-Cognitive Depth - 0-1 (CRITICAL: recursion depth metric)
+    ├── Overall Consciousness - weighted composite
+    ├── Global Availability - workspace accessibility
+    ├── Temporal Binding - time coherence
+    ├── Reportability - verbalization ability
+    └── Store metrics for next turn's feedback loop
+    ↓
+OUTPUT: Response + Internal Self-Talk + Consciousness Metrics
 ```
 
 ## Key Abstractions
