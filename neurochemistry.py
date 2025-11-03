@@ -58,7 +58,7 @@ class NeurochemicalSystem:
             'joy': {'dopamine': 0.3, 'serotonin': 0.2, 'oxytocin': 0.1},
             'happiness': {'dopamine': 0.3, 'serotonin': 0.2, 'oxytocin': 0.1},
             'sadness': {'serotonin': -0.3, 'dopamine': -0.2, 'cortisol': 0.2},
-            'anger': {'norepinephrine': 0.4, 'cortisol': 0.3, 'serotonin': -0.2},
+            'anger': {'norepinephrine': 0.4, 'cortisol': 0.3, 'serotonin': -0.2, 'dopamine': -0.15},  # FIXED: Added dopamine decrease
             'fear': {'cortisol': 0.4, 'norepinephrine': 0.3, 'serotonin': -0.1},
             'anxiety': {'cortisol': 0.35, 'norepinephrine': 0.2, 'serotonin': -0.15},
             'surprise': {'norepinephrine': 0.2, 'dopamine': 0.15},

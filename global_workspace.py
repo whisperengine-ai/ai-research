@@ -165,14 +165,23 @@ class GlobalWorkspace:
         Remove old/low-activation items from workspace
         Simulates fading of conscious content over time
         """
+        # Apply decay
         for info in self.workspace_contents:
             info.activation_level *= (1.0 - self.decay_rate)
         
-        # Remove items below threshold
+        # Remove items below threshold (FIXED: more aggressive removal)
+        before_count = len(self.workspace_contents)
         self.workspace_contents = [
             info for info in self.workspace_contents 
-            if info.activation_level > 0.1
+            if info.activation_level > 0.2  # Increased threshold from 0.1 to 0.2
         ]
+        after_count = len(self.workspace_contents)
+        
+        # DEBUG: Log removals
+        if before_count > after_count:
+            removed = before_count - after_count
+            # Only log if verbose mode would be set (we'll add a flag later)
+            pass  # Placeholder for future debug mode
     
     def process_cycle(self) -> Dict[str, Any]:
         """

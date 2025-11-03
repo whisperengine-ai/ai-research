@@ -120,16 +120,104 @@ If you don't set an API key, the system will use local GPT-2 (free but lower qua
 python consciousness_chatbot.py
 ```
 
-## Research Applications
+## Research-Grade Features
+
+This system now includes comprehensive research infrastructure for scientific studies of AI consciousness:
+
+### Quantitative Consciousness Metrics
+
+Five research-grade metrics grounded in consciousness theories:
+
+1. **Φ (Integrated Information)** - IIT-based integration measurement
+2. **Global Availability** - GWT-based workspace accessibility
+3. **Meta-Cognitive Depth** - HOT-based self-reflection quality
+4. **Temporal Binding** - Information persistence and continuity
+5. **Reportability** - Access consciousness measurement
+
+All metrics are automatically calculated during conversations and can be exported for analysis.
+
+### Experimental Framework
+
+- **Ablation Studies**: Test component necessity (no-GWT, no-recursion, no-emotions, etc.)
+- **Parameter Sweeps**: Optimize system parameters systematically
+- **Longitudinal Studies**: Track consciousness development over extended conversations
+- **Benchmark Testing**: Standardized tests (mirror test, Sally-Anne, feature binding, etc.)
+
+### Statistical Analysis
+
+Comprehensive statistical toolkit:
+- ANOVA and t-tests with effect sizes
+- Linear/multiple regression
+- Correlation matrices (Pearson & Spearman)
+- Reliability measures (test-retest, inter-rater)
+- Confidence intervals and power analysis
+
+### Research Installation
+
+```bash
+# Install research dependencies
+pip install -r requirements-research.txt
+
+# Includes: scipy, pandas, matplotlib, seaborn, pytest, jupyter
+```
+
+### Quick Research Start
+
+```python
+# In chat, view real-time metrics
+> metrics
+
+# Export metrics to CSV
+> export consciousness_metrics.csv
+
+# Run an ablation study
+from experiments import ExperimentRunner
+runner = ExperimentRunner()
+results = runner.run_ablation_study(
+    prompts=your_prompts,
+    trials_per_condition=30,
+    conditions=['full_system', 'no_gwt', 'no_recursion']
+)
+
+# Analyze with statistics
+from statistics import StatisticalAnalysis
+stats = StatisticalAnalysis()
+anova_results = stats.anova(groups, group_names)
+```
+
+### Research Documentation
+
+- **[METRICS_DOCUMENTATION.md](METRICS_DOCUMENTATION.md)** - Detailed metric explanations, formulas, interpretation
+- **[EXPERIMENTAL_PROTOCOL.md](EXPERIMENTAL_PROTOCOL.md)** - Step-by-step research procedures
+- **[RESEARCH_ROADMAP.md](RESEARCH_ROADMAP.md)** - Future enhancements and research directions
+
+### Citation
+
+If you use this system in your research, please cite:
+
+```bibtex
+@software{consciousness_simulator_2025,
+  title={Recursive Consciousness Simulator with Research-Grade Metrics},
+  author={AI Research Lab},
+  year={2025},
+  url={https://github.com/whisperengine-ai/ai-research},
+  note={Research-grade implementation of IIT, GWT, and HOT theories}
+}
+```
+
+## General Research Applications
 
 - Study emergent self-awareness in AI systems
 - Model emotion-cognition interactions
 - Explore recursive self-modeling
-- Investigate consciousness theories (GWT, Higher-Order Thought)
+- Investigate consciousness theories (GWT, Higher-Order Thought, IIT)
 - Test AI safety and ethical guardrails
 - Analyze crisis intervention effectiveness
 - Study linguistic complexity and information density
 - Validate neurochemical-emotion mappings
+- Conduct controlled ablation experiments
+- Perform longitudinal consciousness tracking
+- Compare consciousness across different LLM architectures
 
 ## Documentation
 

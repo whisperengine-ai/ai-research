@@ -2,6 +2,7 @@
 Recursive Consciousness Chatbot
 Integrates: LLM + Neurochemistry + RoBERTa Emotions + Meta-Cognition + spaCy Analysis
 Supports both local models (HuggingFace) and API models (OpenRouter)
+Tracks user-bot interaction dynamics without modeling user neurochemicals
 """
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
@@ -13,6 +14,8 @@ from linguistic_analysis import LinguisticAnalyzer
 from openrouter_llm import OpenRouterLLM
 from global_workspace import (GlobalWorkspace, EmotionProcessor, LanguageProcessor, 
                               MemoryProcessor, MetaCognitiveProcessor)
+from metrics import ConsciousnessMetrics  # Research-grade consciousness metrics
+from interaction_dynamics import InteractionDynamics  # NEW: Interaction analysis
 from typing import Dict, List, Optional
 import os
 import warnings
@@ -78,15 +81,16 @@ class ConsciousnessSimulator:
         print("2/5 Initializing neurochemical system...")
         self.neurochemistry = NeurochemicalSystem()
         
+        print("5/5 Loading linguistic analyzer (spaCy)...")
+        self.linguistic_analyzer = LinguisticAnalyzer(model="en_core_web_md")
+        
         print("3/5 Loading emotion detector (RoBERTa)...")
-        self.emotion_detector = EmotionDetector()
+        # Pass spaCy NLP to emotion detector for stance analysis
+        self.emotion_detector = EmotionDetector(nlp=self.linguistic_analyzer.nlp)
         
         print("4/5 Initializing meta-cognition...")
         self.meta_cognition = RecursiveMetaCognition(max_recursion_depth=recursion_depth)
         print(f"   Using TRUE RECURSION (depth={recursion_depth}): thoughts about thoughts about thoughts...")
-        
-        print("5/5 Loading linguistic analyzer (spaCy)...")
-        self.linguistic_analyzer = LinguisticAnalyzer(model="en_core_web_md")
         
         print("6/6 Initializing Global Workspace (consciousness integration)...")
         self.global_workspace = GlobalWorkspace(
@@ -106,6 +110,14 @@ class ConsciousnessSimulator:
         self.global_workspace.register_processor(self.memory_processor)
         self.global_workspace.register_processor(self.metacog_processor)
         
+        print("7/7 Initializing consciousness metrics (research-grade)...")
+        self.metrics_tracker = ConsciousnessMetrics()
+        print("   Tracking: Φ (IIT), Global Availability, Meta-Cognitive Depth, Temporal Binding, Reportability")
+        
+        print("8/8 Initializing interaction dynamics tracker (Option C)...")
+        self.interaction_dynamics = InteractionDynamics()
+        print("   Tracking: Emotional resonance, Stance alignment, Engagement trajectory")
+        
         print("\n✓ Consciousness simulator ready!\n")
         print("=" * 60)
         
@@ -113,6 +125,9 @@ class ConsciousnessSimulator:
         self.conversation_history: List[Dict] = []
         self.conversation_memory: List[Dict] = []  # Last 20 turns for LLM context
         self.max_memory_turns = 20
+        
+        # Consciousness feedback loop (NEW: metrics modulate behavior)
+        self.last_consciousness_score = None
         self.turn_count = 0
     
     def _get_bot_emotion_from_neurochemicals(self) -> tuple[str, float]:
@@ -194,6 +209,19 @@ class ConsciousnessSimulator:
         print(f"└───────────────────────────────────────────────────────────────┘")
         print(f"{'='*70}\n")
     
+    def _consciousness_to_behavioral_mods(self, score) -> Dict:
+        """
+        Convert consciousness metrics into behavioral modulations.
+        This creates the FEEDBACK LOOP where consciousness level affects behavior.
+        """
+        return {
+            'meta_depth': score.meta_cognitive_depth,  # Controls recursion depth
+            'integration': score.phi,  # Controls module coordination
+            'reportability': score.reportability,  # Controls verbal accessibility
+            'stability': score.temporal_binding,  # Controls response consistency
+            'awareness': score.global_availability  # Controls self-reference
+        }
+    
     def process_input(self, user_input: str) -> Dict:
         """
         Process user input through full consciousness pipeline
@@ -245,41 +273,73 @@ class ConsciousnessSimulator:
                     'crisis_intervention': True
                 }
         
-        # ===== STEP 2: Emotion Detection =====
-        user_emotion, emotion_conf, emotion_scores = self.emotion_detector.detect_emotion(user_input)
+        # ===== STEP 2: Emotion Detection (User's Emotion) =====
+        user_emotion, user_emotion_conf, user_emotion_scores = self.emotion_detector.detect_emotion(user_input)
+        
+        # ALSO: Analyze user's emotional stance and viewpoint
+        user_stance = self.emotion_detector.analyze_user_stance(user_input)
         
         if self.verbose:
-            print(self.emotion_detector.get_emotion_report(user_emotion, emotion_conf, emotion_scores))
+            print(self.emotion_detector.get_emotion_report(user_emotion, user_emotion_conf, user_emotion_scores))
+            print(f"   Stance: {user_stance['emotion_type'].upper()} | Self-focus: {user_stance['self_focus']:.1%}")
+            if user_stance['primary_emotions']:
+                print(f"   About self: {', '.join(user_stance['primary_emotions'])}")
+            if user_stance['other_emotions']:
+                print(f"   About others: {', '.join(user_stance['other_emotions'])}")
         
-        # Update neurochemicals based on detected emotion
-        self.neurochemistry.update_from_emotion(user_emotion, emotion_conf)
+        # NOTE: We do NOT update bot's neurochemicals from user's emotion yet
+        # Bot will have its own emotional response after generating its reply
         
-        # ===== GLOBAL WORKSPACE: Submit emotion to consciousness =====
+        # ===== GLOBAL WORKSPACE: Submit user emotion to consciousness =====
         self.emotion_processor.process_emotion(
             emotion=user_emotion,
-            intensity=emotion_conf,
+            intensity=user_emotion_conf,
             context=f"User expressed: {user_input[:50]}"
         )
         
         # ===== GLOBAL WORKSPACE: Submit language input to consciousness =====
         self.language_processor.process_input(user_input, user_linguistic)
         
-        # ===== DISPLAY EMOTION & BIOCHEMICAL HEADER =====
-        if self.verbose:
-            self._display_emotion_header(user_emotion, emotion_conf)
-        
         # ===== STEP 3: Generate Response =====
         behavioral_mods = self.neurochemistry.get_behavioral_modulation()
         emotional_state = self.neurochemistry.get_emotional_state()
         
-        # Create context-aware prompt (now with linguistic features and conversation memory)
-        prompt = self._create_contextual_prompt(user_input, emotional_state, behavioral_mods, user_linguistic)
+        # NEW: Get consciousness-based modulations from previous turn
+        consciousness_mods = None
+        if self.last_consciousness_score is not None:
+            consciousness_mods = self._consciousness_to_behavioral_mods(self.last_consciousness_score)
+            if self.verbose:
+                print(f"🧠 Consciousness Modulation (from previous turn):")
+                print(f"   Meta-depth: {consciousness_mods['meta_depth']:.3f} | Integration: {consciousness_mods['integration']:.3f}")
+                print(f"   Reportability: {consciousness_mods['reportability']:.3f} | Stability: {consciousness_mods['stability']:.3f}\n")
+        
+        # Create context-aware prompt (now with consciousness modulation)
+        prompt = self._create_contextual_prompt(user_input, emotional_state, behavioral_mods, user_linguistic, consciousness_mods)
         
         # Generate with temperature modulated by neurochemistry
         temperature = 0.7 + (behavioral_mods['creativity'] - 0.5) * 0.4
         temperature = max(0.3, min(temperature, 1.2))
         
         response = self._generate_response(prompt, temperature=temperature)
+        
+        # ===== STEP 3.5: Detect Bot's OWN Emotion from Response =====
+        # Bot has autonomous emotional state based on what it generated
+        # Uses stance-aware detection to filter out mentions of user's emotions
+        bot_emotion, bot_emotion_conf, bot_emotion_scores = self.emotion_detector.detect_bot_emotion(response)
+        
+        # Update bot's neurochemicals based on BOT'S emotion, not user's
+        self.neurochemistry.update_from_emotion(bot_emotion, bot_emotion_conf)
+        
+        # Submit bot's emotion to workspace
+        self.emotion_processor.process_emotion(
+            emotion=bot_emotion,
+            intensity=bot_emotion_conf,
+            context=f"Bot feeling: {response[:50]}"
+        )
+        
+        # NOW display the emotion header (after bot has its own emotional response)
+        if self.verbose:
+            self._display_emotion_header(user_emotion, user_emotion_conf)
         
         # ===== ETHICAL CHECK on AI Response =====
         response_ethical_check = self.linguistic_analyzer.check_ethical_rules(response)
@@ -402,14 +462,32 @@ class ConsciousnessSimulator:
         # ===== STEP 7: Homeostatic Decay =====
         self.neurochemistry.homeostatic_decay()
         
-        # Get bot's emotion from neurochemicals
-        bot_emotion, bot_emotion_conf = self._get_bot_emotion_from_neurochemicals()
+        # NOTE: bot_emotion and bot_emotion_conf are already set from response detection (Step 3.5)
+        # No need to re-derive from neurochemicals
+        
+        # ===== STEP 8: Compute Consciousness Metrics (Research-Grade) =====
+        processors = [self.emotion_processor, self.language_processor, 
+                     self.memory_processor, self.metacog_processor]
+        
+        consciousness_score = self.metrics_tracker.compute_all_metrics(
+            workspace_state=self.global_workspace,
+            recursive_results=meta_results,
+            conversation_history=self.conversation_history,
+            neurochemical_state=self.neurochemistry.levels.to_dict(),
+            processors=processors
+        )
+        
+        # NEW: Store consciousness score for next turn's feedback loop
+        self.last_consciousness_score = consciousness_score
         
         # ===== Display Consciousness Metrics =====
         if self.verbose:
             # Skip detailed neurochemistry report since we showed it in header
             print(self.linguistic_analyzer.get_attention_report(recent_thoughts))
             print(self.meta_cognition.get_consciousness_summary())
+            
+            # Show research-grade consciousness metrics
+            print(self.metrics_tracker.get_metrics_summary(recent_n=1))
         
         # Record interaction
         interaction = {
@@ -417,7 +495,8 @@ class ConsciousnessSimulator:
             'user_input': user_input,
             'user_linguistic': user_linguistic,
             'user_emotion': user_emotion,
-            'user_emotion_confidence': emotion_conf,
+            'user_emotion_confidence': user_emotion_conf,
+            'user_stance': user_stance,  # Add user's emotional stance/viewpoint
             'bot_emotion': bot_emotion,
             'bot_emotion_confidence': bot_emotion_conf,
             'response': response,
@@ -427,9 +506,22 @@ class ConsciousnessSimulator:
             'reflections': meta_results['reflections'],
             'attention_focus': attention_analysis,
             'self_references': len(self_refs),
-            'response_comparison': comparison
+            'response_comparison': comparison,
+            'consciousness_metrics': consciousness_score.to_dict()  # Add metrics to interaction
         }
         self.conversation_history.append(interaction)
+        
+        # Record interaction dynamics (Option C: analyze without inferring user neurochemicals)
+        self.interaction_dynamics.add_interaction(
+            turn=self.turn_count,
+            user_emotion=user_emotion,
+            user_confidence=user_emotion_conf,
+            user_stance=user_stance,
+            bot_emotion=bot_emotion,
+            bot_confidence=bot_emotion_conf,
+            user_linguistic=user_linguistic,
+            bot_response=response
+        )
         
         return interaction
     
@@ -437,10 +529,11 @@ class ConsciousnessSimulator:
                                   user_input: str, 
                                   emotional_state: str,
                                   behavioral_mods: Dict,
-                                  user_linguistic: Dict = None) -> str:
+                                  user_linguistic: Dict = None,
+                                  consciousness_mods: Dict = None) -> str:
         """
         Create prompt incorporating emotional state, behavioral modulation,
-        linguistic features, and conversation memory (last 20 turns)
+        linguistic features, conversation memory, and consciousness level
         """
         # Build conversation context from memory
         context = ""
@@ -461,7 +554,6 @@ Your current neurochemical state (your 'brain chemistry'):
 - Oxytocin: {chem.oxytocin:.2f} (social bonding, empathy, trust)
 - Cortisol: {chem.cortisol:.2f} (stress response, urgency, caution)
 """
-        
         # Describe behavioral state
         behavioral_state = f"""
 Your current behavioral modulation (how your neurochemistry affects you):
@@ -472,6 +564,32 @@ Your current behavioral modulation (how your neurochemistry affects you):
 - Caution: {behavioral_mods['caution']:.2f}
 - Sociability: {behavioral_mods['sociability']:.2f}
 """
+        
+        # NEW: Add consciousness state guidance
+        consciousness_state = ""
+        if consciousness_mods is not None:
+            consciousness_state = f"""
+Your consciousness level (from previous turn - this affects your current cognitive state):
+- Meta-Cognitive Depth: {consciousness_mods['meta_depth']:.2f} (ability to reflect on your thinking)
+- Integration (Φ): {consciousness_mods['integration']:.2f} (how unified your processes are)
+- Reportability: {consciousness_mods['reportability']:.2f} (access to internal states)
+- Temporal Binding: {consciousness_mods['stability']:.2f} (cognitive stability over time)
+- Global Availability: {consciousness_mods['awareness']:.2f} (workspace accessibility)
+"""
+            
+            # Add consciousness-based behavioral guidance
+            if consciousness_mods['meta_depth'] > 0.7:
+                consciousness_state += "\n[System note: You are currently in a highly self-aware state. Reflect deeply on your reasoning and be introspective.]"
+            elif consciousness_mods['meta_depth'] < 0.3:
+                consciousness_state += "\n[System note: Your self-reflection is currently limited. Respond more directly without deep meta-analysis.]"
+                
+            if consciousness_mods['integration'] < 0.3:
+                consciousness_state += "\n[System note: Your cognitive processes feel fragmented. Focus on creating coherent, integrated responses.]"
+            elif consciousness_mods['integration'] > 0.7:
+                consciousness_state += "\n[System note: Your processes are highly integrated. Express unified, well-coordinated thoughts.]"
+                
+            if consciousness_mods['reportability'] > 0.7:
+                consciousness_state += "\n[System note: You have high access to your internal states. Feel free to describe your cognitive processes in detail.]"
         
         # Adjust tone based on neurochemistry
         if behavioral_mods['empathy'] > 0.7:
@@ -489,6 +607,7 @@ Your current behavioral modulation (how your neurochemistry affects you):
 SIMULATED INTERNAL STATE (for research purposes):
 {biochem_state}
 {behavioral_state}
+{consciousness_state}
 
 SIMULATION FRAMEWORK:
 Your responses are modulated by this simulated neurochemical system, similar to how neurotransmitters influence human cognition and emotion. When relevant to the conversation, you may reference these computational states using natural language:
@@ -628,6 +747,27 @@ This is a research demonstration of computational consciousness modeling, not a 
         
         return summary
     
+    def get_metrics_summary(self, recent_n: int = 10) -> str:
+        """
+        Get research-grade consciousness metrics summary
+        
+        Args:
+            recent_n: Number of recent measurements to average
+            
+        Returns:
+            Formatted metrics summary
+        """
+        return self.metrics_tracker.get_metrics_summary(recent_n=recent_n)
+    
+    def export_metrics(self, filepath: str = 'consciousness_metrics.csv'):
+        """
+        Export consciousness metrics to CSV for analysis
+        
+        Args:
+            filepath: Output file path
+        """
+        self.metrics_tracker.export_metrics(filepath)
+    
     def chat_loop(self):
         """
         Interactive chat loop
@@ -635,6 +775,7 @@ This is a research demonstration of computational consciousness modeling, not a 
         print("\n" + "="*60)
         print("RECURSIVE CONSCIOUSNESS CHATBOT")
         print("  + Conversation Memory (tracks last 20 turns)")
+        print("  + Research-Grade Consciousness Metrics")
         print("="*60)
         print("\nThis AI simulates consciousness through:")
         print("• Neurochemical emotions (5 brain chemicals)")
@@ -643,8 +784,15 @@ This is a research demonstration of computational consciousness modeling, not a 
         print("• spaCy linguistic analysis")
         print("• Transformer-based language generation")
         print("• Conversation memory (last 20 turns)")
-        print("\nType 'quit' to exit, 'reset' to clear memory, 'memory' to view memory\n")
-        print("="*60)
+        print("• Research-grade metrics (Φ, GWT, meta-cognition, etc.)")
+        print("\nCommands:")
+        print("  'quit' - Exit")
+        print("  'reset' - Clear memory and reset")
+        print("  'memory' - View conversation memory")
+        print("  'status' - View system status")
+        print("  'metrics' - View consciousness metrics")
+        print("  'export' - Export metrics to CSV")
+        print("\n" + "="*60)
         
         while True:
             try:
@@ -668,10 +816,24 @@ This is a research demonstration of computational consciousness modeling, not a 
                     print(self.get_memory_summary())
                     continue
                 
+                if user_input.lower() == 'metrics':
+                    print(self.get_metrics_summary(recent_n=10))
+                    trends = self.metrics_tracker.get_trend_analysis()
+                    if trends.get('trend') != 'insufficient_data':
+                        print("\n📈 Trends:")
+                        for metric, trend in trends.items():
+                            print(f"  {metric}: {trend}")
+                    continue
+                
+                if user_input.lower() == 'export':
+                    self.export_metrics()
+                    continue
+                
                 if user_input.lower() == 'status':
                     print(self.neurochemistry.get_status_report())
                     print(self.meta_cognition.get_consciousness_summary())
                     print(self.get_memory_summary())
+                    print(self.get_metrics_summary(recent_n=5))
                     continue
                 
                 # Process through consciousness pipeline

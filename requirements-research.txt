@@ -1,0 +1,31 @@
+# Research-Grade Dependencies for Consciousness Simulator
+# Install with: pip install -r requirements-research.txt
+
+# Core dependencies (already installed)
+transformers>=4.30.0
+torch>=2.0.0
+spacy>=3.5.0
+python-dotenv>=1.0.0
+
+# Statistical Analysis
+scipy>=1.10.0          # Statistical tests (ANOVA, t-tests, correlations)
+numpy>=1.24.0          # Numerical computations (already installed with torch)
+pandas>=2.0.0          # Data manipulation and analysis
+
+# Visualization & Dashboard
+matplotlib>=3.7.0      # Basic plotting
+seaborn>=0.12.0        # Statistical visualizations
+plotly>=5.14.0         # Interactive plots
+
+# Testing
+pytest>=7.3.0          # Unit testing framework
+pytest-cov>=4.1.0      # Code coverage
+
+# Jupyter Notebooks (for analysis)
+jupyter>=1.0.0
+ipykernel>=6.23.0
+nbformat>=5.9.0
+
+# Optional: Advanced statistical modeling
+# statsmodels>=0.14.0  # Advanced regression, time series
+# scikit-learn>=1.3.0  # Machine learning metrics, preprocessing
