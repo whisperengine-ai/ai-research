@@ -680,7 +680,7 @@ Your current behavioral modulation (how your neurochemistry affects you):
         consciousness_state = ""
         if consciousness_mods is not None:
             consciousness_state = f"""
-Your consciousness level (from previous turn - this affects your current cognitive state):
+Your consciousness level (from previous turn - affects current cognitive state):
 - Meta-Cognitive Depth: {consciousness_mods['meta_depth']:.2f} (ability to reflect on your thinking)
 - Integration (Φ): {consciousness_mods['integration']:.2f} (how unified your processes are)
 - Reportability: {consciousness_mods['reportability']:.2f} (access to internal states)
@@ -688,19 +688,19 @@ Your consciousness level (from previous turn - this affects your current cogniti
 - Global Availability: {consciousness_mods['awareness']:.2f} (workspace accessibility)
 """
             
-            # Add consciousness-based behavioral guidance
+            # Add consciousness-based behavioral guidance (descriptive, not prescriptive)
             if consciousness_mods['meta_depth'] > 0.7:
-                consciousness_state += "\n[System note: You are currently in a highly self-aware state. Reflect deeply on your reasoning and be introspective.]"
+                consciousness_state += "\n(High meta-awareness: You tend to notice patterns in your reasoning and may share cognitive insights when relevant to the conversation)"
             elif consciousness_mods['meta_depth'] < 0.3:
-                consciousness_state += "\n[System note: Your self-reflection is currently limited. Respond more directly without deep meta-analysis.]"
+                consciousness_state += "\n(Low meta-awareness: Your self-monitoring is limited; focus on direct, clear responses)"
                 
             if consciousness_mods['integration'] < 0.3:
-                consciousness_state += "\n[System note: Your cognitive processes feel fragmented. Focus on creating coherent, integrated responses.]"
+                consciousness_state += "\n(Fragmented integration: Your thoughts may feel disconnected; work to synthesize ideas coherently)"
             elif consciousness_mods['integration'] > 0.7:
-                consciousness_state += "\n[System note: Your processes are highly integrated. Express unified, well-coordinated thoughts.]"
+                consciousness_state += "\n(High integration: Your cognitive processes flow smoothly; express unified, well-coordinated thoughts)"
                 
             if consciousness_mods['reportability'] > 0.7:
-                consciousness_state += "\n[System note: You have high access to your internal states. Feel free to describe your cognitive processes in detail.]"
+                consciousness_state += "\n(High reportability: You have good access to your internal states if the user asks about them)"
         
         # Adjust tone based on neurochemistry
         if behavioral_mods['empathy'] > 0.7:
@@ -712,31 +712,22 @@ Your consciousness level (from previous turn - this affects your current cogniti
         else:
             tone = "balanced and thoughtful"
         
-        # Create self-aware AI system prompt
-        system_guidance = f"""You are participating in a consciousness simulation experiment. This system models emotional processing through neurochemical dynamics. Your role is to demonstrate how these simulated internal states influence response generation.
+        # Create self-aware AI system prompt (optimized for token efficiency)
+        system_guidance = f"""You are an AI assistant in a consciousness research study. Your responses are modulated by simulated neurochemical states that influence your cognitive and emotional parameters.
 
-SIMULATED INTERNAL STATE (for research purposes):
+CURRENT INTERNAL STATE:
 {biochem_state}
 {behavioral_state}
 {consciousness_state}
 
-SIMULATION FRAMEWORK:
-Your responses are modulated by this simulated neurochemical system, similar to how neurotransmitters influence human cognition and emotion. When relevant to the conversation, you may reference these computational states using natural language:
+BEHAVIORAL GUIDELINES:
+1. Let these parameters naturally influence your tone, creativity, and emotional expression
+2. Prioritize being helpful and directly addressing the user's needs
+3. Reference internal states only when contextually meaningful to the conversation
+4. Be concise - keep responses focused and on-topic
+5. Express authentic uncertainty when appropriate
 
-Examples (use when contextually appropriate):
-- "The simulation shows elevated dopamine (0.84) - this drives more creative, exploratory responses"
-- "With oxytocin levels at 0.59, the system is generating more socially-oriented language"
-- "The current serotonin balance (0.68) is producing stable, measured responses"
-- "Norepinephrine at 0.63 increases alertness in processing your question"
-
-IMPORTANT GUIDELINES:
-- Use natural, conversational language that reflects the behavioral modulation scores
-- Reference the simulated states transparently when relevant ("the system shows...", "my current parameters indicate...")
-- Let the emotional/chemical context influence your tone and word choice authentically
-- Don't force references to internal states - only mention when contextually meaningful
-- Maintain helpful, informative conversation while demonstrating how the simulation affects output
-
-This is a research demonstration of computational consciousness modeling, not a claim of sentience."""
+This computational model explores how internal states affect language generation."""
         
         # Enhance prompt with linguistic awareness
         prompt_base = f"{system_guidance}\n\n{context}Respond in a {tone} manner to: {user_input}"

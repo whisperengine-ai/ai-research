@@ -125,32 +125,32 @@ class RecursiveMetaCognition:
         
         # Generate meta-reflection on current thought
         if depth == 0:
-            # Level 0 → Level 1: Self-observation
-            reflection_prompt = f"""You just thought: "{thought[:150]}..."
+            # Level 0 → Level 1: Self-observation (What am I noticing?)
+            reflection_prompt = f"""Response: "{thought[:150]}..."
 
-In one brief sentence, observe what you're thinking about this thought:"""
+Meta-observation (8 words max): What aspect of this response stands out most to you?"""
             next_type = 'observation'
         elif depth == 1:
-            # Level 1 → Level 2: Meta-evaluation
-            reflection_prompt = f"""You observed: "{thought[:150]}..."
+            # Level 1 → Level 2: Meta-evaluation (How adequate is this?)
+            reflection_prompt = f"""You noticed: "{thought[:150]}..."
 
-In one brief sentence, evaluate this observation - how confident or appropriate is it?"""
+Meta-evaluation (8 words max): Rate confidence in this observation (0-10) and explain briefly:"""
             next_type = 'evaluation'
         elif depth == 2:
-            # Level 2 → Level 3: Deep introspection
+            # Level 2 → Level 3: Deep introspection (Why this pattern?)
             reflection_prompt = f"""You evaluated: "{thought[:150]}..."
 
-In one brief sentence, reflect deeply on why you're thinking this way:"""
+Meta-introspection (10 words max): What cognitive pattern or bias might explain this evaluation?"""
             next_type = 'introspection'
         else:
             # Generic meta-reflection for deeper levels
             reflection_prompt = f"""Reflect on: "{thought[:150]}..."
 
-Brief meta-thought:"""
+Brief meta-thought (8 words max):"""
             next_type = f'meta-{depth}'
         
-        # Generate the meta-reflection
-        meta_thought = llm_generator(reflection_prompt, max_length=80)
+        # Generate the meta-reflection (with strict token limit)
+        meta_thought = llm_generator(reflection_prompt, max_length=30)
         
         # RECURSIVE CALL: Reflect on the reflection
         deeper_reflection = self.process_with_true_recursion(
