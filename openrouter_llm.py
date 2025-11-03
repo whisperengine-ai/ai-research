@@ -53,7 +53,7 @@ class OpenRouterLLM:
                 temperature: float = 0.7,
                 conversation_history: Optional[List[Dict]] = None) -> str:
         """
-        Generate text using OpenRouter API
+        Generate text using OpenRouter API with context window management
         
         Args:
             prompt: The prompt to generate from
@@ -67,9 +67,29 @@ class OpenRouterLLM:
         # Build messages array
         messages = []
         
-        # Add conversation history if provided
+        # Add conversation history with token budget management
         if conversation_history:
-            for turn in conversation_history:
+            # Approximate token budget (most models support 8k+ context)
+            # Reserve: ~500 for system prompt, max_tokens for response, 200 buffer
+            max_history_tokens = 8000 - 500 - max_tokens - 200  # ~7000 tokens for history
+            estimated_tokens = 0
+            
+            # Start from most recent and work backward (reverse iteration)
+            history_to_add = []
+            for turn in reversed(conversation_history[-20:]):  # Consider last 20 turns max
+                # Rough token estimation: ~4 chars per token
+                turn_tokens = (len(turn['user']) + len(turn['ai'])) // 4
+                
+                # Check if adding this turn would exceed budget
+                if estimated_tokens + turn_tokens > max_history_tokens:
+                    break  # Stop adding older turns
+                
+                # Add to front of list (since we're iterating backward)
+                history_to_add.insert(0, turn)
+                estimated_tokens += turn_tokens
+            
+            # Add the selected history to messages
+            for turn in history_to_add:
                 messages.append({"role": "user", "content": turn['user']})
                 messages.append({"role": "assistant", "content": turn['ai']})
         

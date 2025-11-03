@@ -398,8 +398,23 @@ class ConsciousnessSimulator:
         # Create context-aware prompt (now with consciousness modulation)
         prompt = self._create_contextual_prompt(user_input, emotional_state, behavioral_mods, user_linguistic, consciousness_mods)
         
-        # Generate with temperature modulated by neurochemistry
+        # Generate with temperature modulated by neurochemistry AND consciousness
         temperature = self.llm_temperature + (behavioral_mods['creativity'] - 0.5) * 0.4
+        
+        # NEW: Adjust temperature based on consciousness state
+        if consciousness_mods is not None:
+            # High integration → more stable responses (lower temp)
+            if consciousness_mods['integration'] > 0.7:
+                temperature *= 0.9
+            # Low integration → more variable responses (higher temp)
+            elif consciousness_mods['integration'] < 0.3:
+                temperature *= 1.1
+            
+            # High reportability → more precise (lower temp)
+            if consciousness_mods['reportability'] > 0.7:
+                temperature *= 0.95
+        
+        # Ensure temperature stays in valid range
         temperature = max(0.3, min(temperature, 1.2))
         
         response = self._generate_response(prompt, 
