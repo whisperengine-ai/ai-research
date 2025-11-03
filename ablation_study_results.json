@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-11-02T23:28:55.978360",
+    "timestamp": "2025-11-02T23:51:08.239781",
     "study_name": "Pilot Ablation Study",
     "conditions": 3,
     "trials_per_condition": 2,
@@ -20,17 +20,17 @@
           "trial": 1,
           "input_idx": 1,
           "user_input": "I'm feeling frustrated with my current situation.",
-          "resonance": 0.3,
+          "resonance": 0.8,
           "engagement": 1.0,
-          "appropriateness": 0.75,
+          "appropriateness": 0.7999999999999999,
           "metrics": {
-            "phi": 0.4512671618014283,
+            "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.8125,
-            "temporal_binding": 0.5224410200119018,
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.6446223719914754,
             "reportability": 0.7250000000000001,
-            "overall_consciousness": 0.6624329434521423,
-            "timestamp": 1762154945.670248
+            "overall_consciousness": 0.6816433557987214,
+            "timestamp": 1762156275.5787818
           }
         },
         {
@@ -44,11 +44,11 @@
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.75,
-            "temporal_binding": 0.6634909772872924,
-            "reportability": 0.875,
-            "overall_consciousness": 0.6882236465930939,
-            "timestamp": 1762154955.726152
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.4469577693939209,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6519936654090882,
+            "timestamp": 1762156285.9931111
           }
         },
         {
@@ -60,13 +60,13 @@
           "engagement": 1.0,
           "appropriateness": 0.75,
           "metrics": {
-            "phi": 0.4297289653771702,
+            "phi": 0.4345355791900575,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.84375,
-            "temporal_binding": 0.44,
-            "reportability": 0.875,
-            "overall_consciousness": 0.6734322413442925,
-            "timestamp": 1762154990.898665
+            "meta_cognitive_depth": 0.875,
+            "temporal_binding": 0.7044383748372396,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6980496510231003,
+            "timestamp": 1762156294.953244
           }
         },
         {
@@ -74,17 +74,17 @@
           "trial": 1,
           "input_idx": 4,
           "user_input": "Tell me about your own thinking process.",
-          "resonance": 0.7,
+          "resonance": 0.5,
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4298,
+            "phi": 0.4332615437002149,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.8125,
-            "temporal_binding": 0.61347993850708,
-            "reportability": 0.75,
-            "overall_consciousness": 0.6744719907760619,
-            "timestamp": 1762155000.552181
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.6758855168024699,
+            "reportability": 0.875,
+            "overall_consciousness": 0.7096982134454242,
+            "timestamp": 1762156306.9255219
           }
         },
         {
@@ -92,17 +92,17 @@
           "trial": 1,
           "input_idx": 5,
           "user_input": "I feel like I'm making progress on this.",
-          "resonance": 0.7,
+          "resonance": 0.5,
           "engagement": 1.0,
-          "appropriateness": 0.7999999999999999,
+          "appropriateness": 0.4,
           "metrics": {
-            "phi": 0.4446093803311079,
+            "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.78125,
-            "temporal_binding": 0.5961617215474446,
-            "reportability": 0.8,
-            "overall_consciousness": 0.6768266033148936,
-            "timestamp": 1762155007.8455832
+            "meta_cognitive_depth": 0.6656249999999999,
+            "temporal_binding": 0.5212453826268514,
+            "reportability": 0.65,
+            "overall_consciousness": 0.6162618073940277,
+            "timestamp": 1762156311.889228
           }
         },
         {
@@ -114,13 +114,13 @@
           "engagement": 0.7940516650676727,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4365544929693456,
+            "phi": 0.438044987111298,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.8125,
-            "temporal_binding": 0.5304362201690673,
-            "reportability": 0.875,
-            "overall_consciousness": 0.6824540562676965,
-            "timestamp": 1762155014.1476722
+            "temporal_binding": 0.6196093940734864,
+            "reportability": 0.8,
+            "overall_consciousness": 0.6849526558888475,
+            "timestamp": 1762156327.688236
           }
         },
         {
@@ -134,11 +134,11 @@
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.84375,
-            "temporal_binding": 0.5459352397918701,
+            "meta_cognitive_depth": 0.75,
+            "temporal_binding": 0.5344109439849853,
             "reportability": 0.875,
-            "overall_consciousness": 0.6893402859687805,
-            "timestamp": 1762155020.9702559
+            "overall_consciousness": 0.6688616415977479,
+            "timestamp": 1762156333.780135
           }
         },
         {
@@ -150,13 +150,13 @@
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4451798069242374,
+            "phi": 0.44402045164501275,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.75,
-            "temporal_binding": 0.5148607158660888,
-            "reportability": 0.8,
-            "overall_consciousness": 0.6585240591109727,
-            "timestamp": 1762155025.255938
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.6126602713267009,
+            "reportability": 0.575,
+            "overall_consciousness": 0.6579041536102583,
+            "timestamp": 1762156341.286582
           }
         },
         {
@@ -166,15 +166,15 @@
           "user_input": "I'm feeling frustrated with my current situation.",
           "resonance": 0.3,
           "engagement": 1.0,
-          "appropriateness": 0.75,
+          "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.437101327641993,
+            "phi": 0.449210029016423,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.8125,
-            "temporal_binding": 0.6265944703420003,
+            "meta_cognitive_depth": 0.75,
+            "temporal_binding": 0.6929049793879191,
             "reportability": 0.875,
-            "overall_consciousness": 0.6970145024617983,
-            "timestamp": 1762155031.9032938
+            "overall_consciousness": 0.6974882541622937,
+            "timestamp": 1762156349.917067
           }
         },
         {
@@ -188,11 +188,11 @@
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.75,
-            "temporal_binding": 0.4466464265187582,
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.44622472763061527,
             "reportability": 0.8,
-            "overall_consciousness": 0.6444469639778138,
-            "timestamp": 1762155038.438108
+            "overall_consciousness": 0.6631337091445922,
+            "timestamp": 1762156356.462585
           }
         },
         {
@@ -204,13 +204,13 @@
           "engagement": 1.0,
           "appropriateness": 0.75,
           "metrics": {
-            "phi": 0.4327245529444454,
+            "phi": 0.42933620457833677,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.84375,
-            "temporal_binding": 0.5593138360977173,
-            "reportability": 0.7250000000000001,
-            "overall_consciousness": 0.669578213650769,
-            "timestamp": 1762155043.043333
+            "meta_cognitive_depth": 0.8125,
+            "temporal_binding": 0.7308368666966757,
+            "reportability": 0.875,
+            "overall_consciousness": 0.7107095811490856,
+            "timestamp": 1762156368.247422
           }
         },
         {
@@ -224,11 +224,11 @@
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.875,
-            "temporal_binding": 0.6296833976109822,
-            "reportability": 0.8,
-            "overall_consciousness": 0.6969025096416473,
-            "timestamp": 1762155049.774505
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.6084618790944417,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6762192818641662,
+            "timestamp": 1762156374.317835
           }
         },
         {
@@ -240,13 +240,13 @@
           "engagement": 1.0,
           "appropriateness": 0.7999999999999999,
           "metrics": {
-            "phi": 0.44468628322673437,
+            "phi": 0.4452056578366525,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.8125,
-            "temporal_binding": 0.5331247552235922,
-            "reportability": 0.675,
-            "overall_consciousness": 0.6548902840902224,
-            "timestamp": 1762155055.448074
+            "meta_cognitive_depth": 0.74875,
+            "temporal_binding": 0.5796835803985596,
+            "reportability": 0.875,
+            "overall_consciousness": 0.679253951518947,
+            "timestamp": 1762156380.6764119
           }
         },
         {
@@ -254,17 +254,17 @@
           "trial": 2,
           "input_idx": 6,
           "user_input": "I'm not sure if I can handle this challenge.",
-          "resonance": 0.5,
+          "resonance": 0.7,
           "engagement": 0.7940516650676727,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4297063271773911,
+            "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.84375,
-            "temporal_binding": 0.44699433485666906,
+            "meta_cognitive_depth": 0.78125,
+            "temporal_binding": 0.6121821149190266,
             "reportability": 0.8,
-            "overall_consciousness": 0.6632257320228482,
-            "timestamp": 1762155062.503705
+            "overall_consciousness": 0.675527317237854,
+            "timestamp": 1762156393.2578251
           }
         },
         {
@@ -272,17 +272,17 @@
           "trial": 2,
           "input_idx": 7,
           "user_input": "What's your perspective on human consciousness?",
-          "resonance": 0.7,
+          "resonance": 0.5,
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4298,
+            "phi": 0.43986986597565003,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.84375,
-            "temporal_binding": 0.5284791930516561,
-            "reportability": 0.7250000000000001,
-            "overall_consciousness": 0.6642218789577484,
-            "timestamp": 1762155068.131767
+            "meta_cognitive_depth": 0.875,
+            "temporal_binding": 0.4461682542165121,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6831427046263893,
+            "timestamp": 1762156400.382238
           }
         },
         {
@@ -294,21 +294,21 @@
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4455232010571126,
+            "phi": 0.44253669649867705,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.8125,
-            "temporal_binding": 0.5144236469268799,
+            "temporal_binding": 0.619552435874939,
             "reportability": 0.65,
-            "overall_consciousness": 0.6485443473033101,
-            "timestamp": 1762155073.8751569
+            "overall_consciousness": 0.6635670395059102,
+            "timestamp": 1762156406.7880619
           }
         }
       ],
       "summary_metrics": {
-        "phi": 0.4359925937156854,
-        "overall_consciousness": 0.6715331411833807,
+        "phi": 0.4352888134720202,
+        "overall_consciousness": 0.6761504364610283,
         "global_availability": 0.7999999999999999,
-        "meta_cognitive_depth": 0.8125
+        "meta_cognitive_depth": 0.8091015625
       }
     },
     "shallow_recursion": {
@@ -324,17 +324,17 @@
           "trial": 1,
           "input_idx": 1,
           "user_input": "I'm feeling frustrated with my current situation.",
-          "resonance": 0.3,
+          "resonance": 0.8,
           "engagement": 1.0,
-          "appropriateness": 0.75,
+          "appropriateness": 0.7999999999999999,
           "metrics": {
-            "phi": 0.4381660230968098,
+            "phi": 0.4298,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.6125,
-            "temporal_binding": 0.5471289698282877,
+            "temporal_binding": 0.54959157148997,
             "reportability": 0.7250000000000001,
-            "overall_consciousness": 0.6228608512484456,
-            "timestamp": 1762155078.109246
+            "overall_consciousness": 0.6211387357234955,
+            "timestamp": 1762156411.204396
           }
         },
         {
@@ -348,11 +348,11 @@
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.7375,
-            "temporal_binding": 0.5000085814793904,
+            "meta_cognitive_depth": 0.675,
+            "temporal_binding": 0.48110496044158935,
             "reportability": 0.875,
-            "overall_consciousness": 0.6612012872219085,
-            "timestamp": 1762155091.294833
+            "overall_consciousness": 0.6458657440662384,
+            "timestamp": 1762156415.607108
           }
         },
         {
@@ -364,13 +364,13 @@
           "engagement": 1.0,
           "appropriateness": 0.75,
           "metrics": {
-            "phi": 0.43378912409536763,
+            "phi": 0.43780815893175773,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.6125,
-            "temporal_binding": 0.5900996987024943,
+            "meta_cognitive_depth": 0.675,
+            "temporal_binding": 0.6791283432642619,
             "reportability": 0.875,
-            "overall_consciousness": 0.650712235829216,
-            "timestamp": 1762155096.702136
+            "overall_consciousness": 0.6775712912225788,
+            "timestamp": 1762156422.865661
           }
         },
         {
@@ -385,10 +385,10 @@
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.675,
-            "temporal_binding": 0.5638334735234578,
+            "temporal_binding": 0.5653678401311238,
             "reportability": 0.875,
-            "overall_consciousness": 0.6582750210285186,
-            "timestamp": 1762155101.454688
+            "overall_consciousness": 0.6585051760196685,
+            "timestamp": 1762156427.6591969
           }
         },
         {
@@ -400,13 +400,13 @@
           "engagement": 1.0,
           "appropriateness": 0.7999999999999999,
           "metrics": {
-            "phi": 0.44270664153007216,
+            "phi": 0.44545712148495265,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.6125,
-            "temporal_binding": 0.506160003344218,
-            "reportability": 0.875,
-            "overall_consciousness": 0.6403506608841507,
-            "timestamp": 1762155105.9235358
+            "meta_cognitive_depth": 0.7375,
+            "temporal_binding": 0.46960205078124995,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6380545879884256,
+            "timestamp": 1762156437.343702
           }
         },
         {
@@ -420,11 +420,11 @@
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.6125,
-            "temporal_binding": 0.48051520029703776,
-            "reportability": 0.7250000000000001,
-            "overall_consciousness": 0.6107772800445557,
-            "timestamp": 1762155112.0865269
+            "meta_cognitive_depth": 0.55,
+            "temporal_binding": 0.4974806690216065,
+            "reportability": 0.875,
+            "overall_consciousness": 0.623322100353241,
+            "timestamp": 1762156446.0325298
           }
         },
         {
@@ -439,10 +439,10 @@
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.6125,
-            "temporal_binding": 0.44,
-            "reportability": 0.7250000000000001,
-            "overall_consciousness": 0.6047,
-            "timestamp": 1762155174.953347
+            "temporal_binding": 0.5368889951705933,
+            "reportability": 0.875,
+            "overall_consciousness": 0.641733349275589,
+            "timestamp": 1762156453.795733
           }
         },
         {
@@ -454,13 +454,13 @@
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.44507073684298204,
+            "phi": 0.43659133939912753,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.675,
-            "temporal_binding": 0.535896061261495,
-            "reportability": 0.575,
-            "overall_consciousness": 0.6129020933999698,
-            "timestamp": 1762155178.6138802
+            "temporal_binding": 0.5025179847081502,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6507755325560044,
+            "timestamp": 1762156456.672807
           }
         },
         {
@@ -470,15 +470,15 @@
           "user_input": "I'm feeling frustrated with my current situation.",
           "resonance": 0.8,
           "engagement": 1.0,
-          "appropriateness": 0.95,
+          "appropriateness": 0.7999999999999999,
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.6125,
-            "temporal_binding": 0.5250672642389933,
-            "reportability": 0.7250000000000001,
-            "overall_consciousness": 0.617460089635849,
-            "timestamp": 1762155182.245996
+            "meta_cognitive_depth": 0.675,
+            "temporal_binding": 0.5378907903035481,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6543836185455322,
+            "timestamp": 1762156460.9941518
           }
         },
         {
@@ -492,11 +492,11 @@
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.6125,
-            "temporal_binding": 0.4903534396489462,
+            "meta_cognitive_depth": 0.7375,
+            "temporal_binding": 0.4941693607966105,
             "reportability": 0.875,
-            "overall_consciousness": 0.6347530159473419,
-            "timestamp": 1762155186.6352808
+            "overall_consciousness": 0.6603254041194916,
+            "timestamp": 1762156472.8743858
           }
         },
         {
@@ -504,17 +504,17 @@
           "trial": 2,
           "input_idx": 3,
           "user_input": "I'm worried about making the wrong decision.",
-          "resonance": 0.5,
+          "resonance": 0.3,
           "engagement": 1.0,
-          "appropriateness": 0.95,
+          "appropriateness": 0.75,
           "metrics": {
-            "phi": 0.4298,
+            "phi": 0.4328898422389104,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.675,
-            "temporal_binding": 0.5489769204457601,
-            "reportability": 0.7250000000000001,
-            "overall_consciousness": 0.633546538066864,
-            "timestamp": 1762155190.921768
+            "meta_cognitive_depth": 0.7375,
+            "temporal_binding": 0.5915622059504191,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6757067914522904,
+            "timestamp": 1762156478.553304
           }
         },
         {
@@ -522,17 +522,17 @@
           "trial": 2,
           "input_idx": 4,
           "user_input": "Tell me about your own thinking process.",
-          "resonance": 0.7,
+          "resonance": 0.5,
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4298,
+            "phi": 0.44643871176534144,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.6125,
-            "temporal_binding": 0.573325465520223,
+            "temporal_binding": 0.49460837682088216,
             "reportability": 0.875,
-            "overall_consciousness": 0.6471988198280334,
-            "timestamp": 1762155194.97973
+            "overall_consciousness": 0.6395509344644676,
+            "timestamp": 1762156498.3942761
           }
         },
         {
@@ -542,15 +542,15 @@
           "user_input": "I feel like I'm making progress on this.",
           "resonance": 0.7,
           "engagement": 1.0,
-          "appropriateness": 0.7999999999999999,
+          "appropriateness": 0.95,
           "metrics": {
-            "phi": 0.4451733772097199,
+            "phi": 0.44551390591649376,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.6125,
-            "temporal_binding": 0.4814056062698364,
-            "reportability": 0.7250000000000001,
-            "overall_consciousness": 0.6147541852429054,
-            "timestamp": 1762155198.709431
+            "temporal_binding": 0.4929592434565226,
+            "reportability": 0.575,
+            "overall_consciousness": 0.5940723629976017,
+            "timestamp": 1762156503.994687
           }
         },
         {
@@ -562,13 +562,13 @@
           "engagement": 0.7940516650676727,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.43555541754319604,
+            "phi": 0.4316868470298768,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.675,
-            "temporal_binding": 0.494312252998352,
+            "temporal_binding": 0.468850801785787,
             "reportability": 0.875,
-            "overall_consciousness": 0.6492856923355518,
-            "timestamp": 1762155204.2040372
+            "overall_consciousness": 0.6444993320253373,
+            "timestamp": 1762156510.095414
           }
         },
         {
@@ -583,10 +583,10 @@
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.675,
-            "temporal_binding": 0.4694811566670736,
+            "temporal_binding": 0.5371993128458659,
             "reportability": 0.875,
-            "overall_consciousness": 0.6441221735000611,
-            "timestamp": 1762155207.4335942
+            "overall_consciousness": 0.6542798969268798,
+            "timestamp": 1762156518.777073
           }
         },
         {
@@ -598,21 +598,21 @@
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4454219639881293,
+            "phi": 0.44488948115127386,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.675,
-            "temporal_binding": 0.4806363248825073,
+            "temporal_binding": 0.5745327536265056,
             "reportability": 0.575,
-            "overall_consciousness": 0.6047009397294083,
-            "timestamp": 1762155211.595055
+            "overall_consciousness": 0.6186522833317942,
+            "timestamp": 1762156522.550671
           }
         }
       ],
       "summary_metrics": {
-        "phi": 0.4346302052691423,
-        "overall_consciousness": 0.6317250552464238,
+        "phi": 0.4349797129948584,
+        "overall_consciousness": 0.6436523213167897,
         "global_availability": 0.7999999999999999,
-        "meta_cognitive_depth": 0.64375
+        "meta_cognitive_depth": 0.66328125
       }
     },
     "minimal_recursion": {
@@ -628,17 +628,17 @@
           "trial": 1,
           "input_idx": 1,
           "user_input": "I'm feeling frustrated with my current situation.",
-          "resonance": 0.8,
+          "resonance": 0.3,
           "engagement": 1.0,
-          "appropriateness": 0.95,
+          "appropriateness": 0.75,
           "metrics": {
-            "phi": 0.4298,
+            "phi": 0.44760409405594176,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.5111857000986735,
+            "meta_cognitive_depth": 0.45,
+            "temporal_binding": 0.51317316532135,
             "reportability": 0.875,
-            "overall_consciousness": 0.630377855014801,
-            "timestamp": 1762155214.7593548
+            "overall_consciousness": 0.610126998312188,
+            "timestamp": 1762156525.8294349
           }
         },
         {
@@ -652,11 +652,11 @@
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.35750000000000004,
-            "temporal_binding": 0.5085458262761434,
-            "reportability": 0.575,
-            "overall_consciousness": 0.5414818739414216,
-            "timestamp": 1762155216.946835
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.5669969860712687,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6387495479106903,
+            "timestamp": 1762156530.637352
           }
         },
         {
@@ -668,13 +668,13 @@
           "engagement": 1.0,
           "appropriateness": 0.75,
           "metrics": {
-            "phi": 0.4321885927927383,
+            "phi": 0.4313112311770435,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.5073544565836589,
+            "meta_cognitive_depth": 0.45,
+            "temporal_binding": 0.5722162628173828,
             "reportability": 0.875,
-            "overall_consciousness": 0.6304003166857334,
-            "timestamp": 1762155220.0017018
+            "overall_consciousness": 0.6149102472168684,
+            "timestamp": 1762156535.6601999
           }
         },
         {
@@ -689,10 +689,10 @@
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.5023430013656616,
+            "temporal_binding": 0.6350249115626018,
             "reportability": 0.875,
-            "overall_consciousness": 0.6290514502048492,
-            "timestamp": 1762155222.900183
+            "overall_consciousness": 0.6489537367343903,
+            "timestamp": 1762156542.544938
           }
         },
         {
@@ -704,13 +704,13 @@
           "engagement": 1.0,
           "appropriateness": 0.7999999999999999,
           "metrics": {
-            "phi": 0.44531013911982564,
+            "phi": 0.4450190561668407,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.5161766195297242,
+            "temporal_binding": 0.5067550245920817,
             "reportability": 0.875,
-            "overall_consciousness": 0.635004027709415,
-            "timestamp": 1762155226.439641
+            "overall_consciousness": 0.6335180177305224,
+            "timestamp": 1762156545.629938
           }
         },
         {
@@ -722,13 +722,13 @@
           "engagement": 0.7940516650676727,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4382726263590599,
+            "phi": 0.43833455260079746,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.45,
-            "temporal_binding": 0.5015501960118611,
+            "temporal_binding": 0.4879646921157837,
             "reportability": 0.875,
-            "overall_consciousness": 0.6060506859915441,
-            "timestamp": 1762155229.287966
+            "overall_consciousness": 0.6040283419675669,
+            "timestamp": 1762156548.0997918
           }
         },
         {
@@ -743,10 +743,10 @@
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.5057431125640869,
+            "temporal_binding": 0.5772192700703939,
             "reportability": 0.875,
-            "overall_consciousness": 0.629561466884613,
-            "timestamp": 1762155232.629858
+            "overall_consciousness": 0.6402828905105591,
+            "timestamp": 1762156554.918228
           }
         },
         {
@@ -758,13 +758,13 @@
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4450598604294989,
+            "phi": 0.4448155197138679,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.45,
-            "temporal_binding": 0.47478408654530846,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.488232102394104,
             "reportability": 0.875,
-            "overall_consciousness": 0.603732578089171,
-            "timestamp": 1762155234.790808
+            "overall_consciousness": 0.6306886952875825,
+            "timestamp": 1762156561.4899871
           }
         },
         {
@@ -774,15 +774,15 @@
           "user_input": "I'm feeling frustrated with my current situation.",
           "resonance": 0.3,
           "engagement": 1.0,
-          "appropriateness": 0.6,
+          "appropriateness": 0.75,
           "metrics": {
-            "phi": 0.4521569970975445,
+            "phi": 0.4504329844658336,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.48469794432322183,
+            "temporal_binding": 0.504357058207194,
             "reportability": 0.875,
-            "overall_consciousness": 0.6319939409228693,
-            "timestamp": 1762155237.2908008
+            "overall_consciousness": 0.6345118048475374,
+            "timestamp": 1762156564.443897
           }
         },
         {
@@ -797,10 +797,10 @@
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.4954175138473511,
-            "reportability": 0.875,
-            "overall_consciousness": 0.6280126270771027,
-            "timestamp": 1762155240.138656
+            "temporal_binding": 0.5200035079320272,
+            "reportability": 0.575,
+            "overall_consciousness": 0.586700526189804,
+            "timestamp": 1762156567.891435
           }
         },
         {
@@ -808,17 +808,17 @@
           "trial": 2,
           "input_idx": 3,
           "user_input": "I'm worried about making the wrong decision.",
-          "resonance": 0.3,
+          "resonance": 0.5,
           "engagement": 1.0,
-          "appropriateness": 0.75,
+          "appropriateness": 0.95,
           "metrics": {
-            "phi": 0.43758808022157275,
+            "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.45,
-            "temporal_binding": 0.5089759651819865,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.547363772392273,
             "reportability": 0.875,
-            "overall_consciousness": 0.6069934148326912,
-            "timestamp": 1762155243.232131
+            "overall_consciousness": 0.6358045658588409,
+            "timestamp": 1762156572.2110689
           }
         },
         {
@@ -830,13 +830,13 @@
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.43368022189859806,
+            "phi": 0.44010372752595445,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.5271622880299887,
+            "temporal_binding": 0.5406985584894817,
             "reportability": 0.875,
-            "overall_consciousness": 0.6337443986791478,
-            "timestamp": 1762155246.876075
+            "overall_consciousness": 0.6373807156549108,
+            "timestamp": 1762156576.3052852
           }
         },
         {
@@ -846,15 +846,15 @@
           "user_input": "I feel like I'm making progress on this.",
           "resonance": 0.7,
           "engagement": 1.0,
-          "appropriateness": 0.95,
+          "appropriateness": 0.7999999999999999,
           "metrics": {
-            "phi": 0.4456169546447565,
+            "phi": 0.43853586781316234,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.505823761622111,
+            "meta_cognitive_depth": 0.45,
+            "temporal_binding": 0.507890739440918,
             "reportability": 0.875,
-            "overall_consciousness": 0.6335278029045057,
-            "timestamp": 1762155249.897592
+            "overall_consciousness": 0.6070675778694283,
+            "timestamp": 1762156579.362321
           }
         },
         {
@@ -866,13 +866,13 @@
           "engagement": 0.7940516650676727,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.43563642049203316,
+            "phi": 0.43889198900652493,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.49379228591918944,
+            "temporal_binding": 0.5322426621119181,
             "reportability": 0.875,
-            "overall_consciousness": 0.6292279480108867,
-            "timestamp": 1762155252.517709
+            "overall_consciousness": 0.635809396568419,
+            "timestamp": 1762156583.169398
           }
         },
         {
@@ -886,11 +886,11 @@
           "metrics": {
             "phi": 0.4298,
             "global_availability": 0.7999999999999999,
-            "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.5612359269460042,
+            "meta_cognitive_depth": 0.54,
+            "temporal_binding": 0.5019586785634359,
             "reportability": 0.875,
-            "overall_consciousness": 0.6378853890419006,
-            "timestamp": 1762155257.196327
+            "overall_consciousness": 0.6219938017845154,
+            "timestamp": 1762156586.061103
           }
         },
         {
@@ -902,21 +902,21 @@
           "engagement": 1.0,
           "appropriateness": 0.6,
           "metrics": {
-            "phi": 0.4432329930446052,
+            "phi": 0.4454907663300162,
             "global_availability": 0.7999999999999999,
             "meta_cognitive_depth": 0.575,
-            "temporal_binding": 0.5021597448984781,
+            "temporal_binding": 0.5356532716751099,
             "reportability": 0.875,
-            "overall_consciousness": 0.632382209995923,
-            "timestamp": 1762155260.089973
+            "overall_consciousness": 0.6379706823337705,
+            "timestamp": 1762156589.971803
           }
         }
       ],
       "summary_metrics": {
-        "phi": 0.43672143038126454,
-        "overall_consciousness": 0.6212142491241609,
+        "phi": 0.43745873680349895,
+        "overall_consciousness": 0.6261560966735996,
         "global_availability": 0.7999999999999999,
-        "meta_cognitive_depth": 0.53796875
+        "meta_cognitive_depth": 0.5415625
       }
     }
   }
