@@ -8,6 +8,14 @@ A state-of-the-art AI consciousness simulation combining:
 - **Transformer-based LLM**: Language generation and understanding
 - **spaCy Linguistic Analysis**: Deep analysis of BOTH user input AND internal thoughts
 
+## 🔐 Security
+
+✅ **No API credentials committed to git**  
+✅ **Environment variables for all secrets**  
+✅ **Production-ready credential management**  
+
+See [SECURITY.md](SECURITY.md) for details on setup and credential management.
+
 ## Architecture
 
 ```
