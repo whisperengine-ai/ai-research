@@ -10,7 +10,11 @@ A state-of-the-art AI consciousness simulation combining:
 
 > **Note on Neurochemistry**: This system is a **UX design layer** that models emotional state through 5 chemical metaphors (dopamine, serotonin, norepinephrine, cortisol, oxytocin). It is **not** a simulation of actual brain chemistry, but rather a conceptual framework for modulating behavior and creating rich system personality. The biochemistry provides narrative coherence and behavioral continuity, not neurobiological accuracy.
 
-## 🔐 Security
+## � Want to See It in Action?
+
+**[View Example Session Output](EXAMPLE_SESSION.md)** - See a real conversation with full consciousness metrics, internal meta-cognition, neurochemical activity, and the 8-step pipeline in action. Perfect for understanding what "recursive consciousness" means in practice.
+
+## �🔐 Security
 
 ✅ **No API credentials committed to git**  
 ✅ **Environment variables for all secrets**  
