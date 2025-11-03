@@ -310,7 +310,7 @@ class TestIntegration:
     def test_file_loading(self):
         """Test that data files can be loaded"""
         # Test that conversation_results.json exists
-        results_path = Path('/Users/markcastillo/git/ai-research/conversation_results.json')
+        results_path = Path(__file__).parent / 'conversation_results.json'
         if results_path.exists():
             with open(results_path, 'r') as f:
                 data = json.load(f)
