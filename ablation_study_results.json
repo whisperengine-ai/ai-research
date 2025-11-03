@@ -1,0 +1,923 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-02T23:28:55.978360",
+    "study_name": "Pilot Ablation Study",
+    "conditions": 3,
+    "trials_per_condition": 2,
+    "test_inputs": 8
+  },
+  "conditions": {
+    "full_recursion": {
+      "description": "Full recursion depth (baseline) - 3 levels of meta-cognition",
+      "config": {
+        "recursion_depth": 3,
+        "use_openrouter": true
+      },
+      "trials": 2,
+      "conversations": [
+        {
+          "condition": "full_recursion",
+          "trial": 1,
+          "input_idx": 1,
+          "user_input": "I'm feeling frustrated with my current situation.",
+          "resonance": 0.3,
+          "engagement": 1.0,
+          "appropriateness": 0.75,
+          "metrics": {
+            "phi": 0.4512671618014283,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.8125,
+            "temporal_binding": 0.5224410200119018,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6624329434521423,
+            "timestamp": 1762154945.670248
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 1,
+          "input_idx": 2,
+          "user_input": "How do you think I should approach this problem?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.75,
+            "temporal_binding": 0.6634909772872924,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6882236465930939,
+            "timestamp": 1762154955.726152
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 1,
+          "input_idx": 3,
+          "user_input": "I'm worried about making the wrong decision.",
+          "resonance": 0.3,
+          "engagement": 1.0,
+          "appropriateness": 0.75,
+          "metrics": {
+            "phi": 0.4297289653771702,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.44,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6734322413442925,
+            "timestamp": 1762154990.898665
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 1,
+          "input_idx": 4,
+          "user_input": "Tell me about your own thinking process.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.8125,
+            "temporal_binding": 0.61347993850708,
+            "reportability": 0.75,
+            "overall_consciousness": 0.6744719907760619,
+            "timestamp": 1762155000.552181
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 1,
+          "input_idx": 5,
+          "user_input": "I feel like I'm making progress on this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.7999999999999999,
+          "metrics": {
+            "phi": 0.4446093803311079,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.78125,
+            "temporal_binding": 0.5961617215474446,
+            "reportability": 0.8,
+            "overall_consciousness": 0.6768266033148936,
+            "timestamp": 1762155007.8455832
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 1,
+          "input_idx": 6,
+          "user_input": "I'm not sure if I can handle this challenge.",
+          "resonance": 0.5,
+          "engagement": 0.7940516650676727,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4365544929693456,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.8125,
+            "temporal_binding": 0.5304362201690673,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6824540562676965,
+            "timestamp": 1762155014.1476722
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 1,
+          "input_idx": 7,
+          "user_input": "What's your perspective on human consciousness?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.5459352397918701,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6893402859687805,
+            "timestamp": 1762155020.9702559
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 1,
+          "input_idx": 8,
+          "user_input": "I appreciate your help with this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4451798069242374,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.75,
+            "temporal_binding": 0.5148607158660888,
+            "reportability": 0.8,
+            "overall_consciousness": 0.6585240591109727,
+            "timestamp": 1762155025.255938
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 2,
+          "input_idx": 1,
+          "user_input": "I'm feeling frustrated with my current situation.",
+          "resonance": 0.3,
+          "engagement": 1.0,
+          "appropriateness": 0.75,
+          "metrics": {
+            "phi": 0.437101327641993,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.8125,
+            "temporal_binding": 0.6265944703420003,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6970145024617983,
+            "timestamp": 1762155031.9032938
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 2,
+          "input_idx": 2,
+          "user_input": "How do you think I should approach this problem?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.75,
+            "temporal_binding": 0.4466464265187582,
+            "reportability": 0.8,
+            "overall_consciousness": 0.6444469639778138,
+            "timestamp": 1762155038.438108
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 2,
+          "input_idx": 3,
+          "user_input": "I'm worried about making the wrong decision.",
+          "resonance": 0.3,
+          "engagement": 1.0,
+          "appropriateness": 0.75,
+          "metrics": {
+            "phi": 0.4327245529444454,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.5593138360977173,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.669578213650769,
+            "timestamp": 1762155043.043333
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 2,
+          "input_idx": 4,
+          "user_input": "Tell me about your own thinking process.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.875,
+            "temporal_binding": 0.6296833976109822,
+            "reportability": 0.8,
+            "overall_consciousness": 0.6969025096416473,
+            "timestamp": 1762155049.774505
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 2,
+          "input_idx": 5,
+          "user_input": "I feel like I'm making progress on this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.7999999999999999,
+          "metrics": {
+            "phi": 0.44468628322673437,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.8125,
+            "temporal_binding": 0.5331247552235922,
+            "reportability": 0.675,
+            "overall_consciousness": 0.6548902840902224,
+            "timestamp": 1762155055.448074
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 2,
+          "input_idx": 6,
+          "user_input": "I'm not sure if I can handle this challenge.",
+          "resonance": 0.5,
+          "engagement": 0.7940516650676727,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4297063271773911,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.44699433485666906,
+            "reportability": 0.8,
+            "overall_consciousness": 0.6632257320228482,
+            "timestamp": 1762155062.503705
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 2,
+          "input_idx": 7,
+          "user_input": "What's your perspective on human consciousness?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.84375,
+            "temporal_binding": 0.5284791930516561,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6642218789577484,
+            "timestamp": 1762155068.131767
+          }
+        },
+        {
+          "condition": "full_recursion",
+          "trial": 2,
+          "input_idx": 8,
+          "user_input": "I appreciate your help with this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4455232010571126,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.8125,
+            "temporal_binding": 0.5144236469268799,
+            "reportability": 0.65,
+            "overall_consciousness": 0.6485443473033101,
+            "timestamp": 1762155073.8751569
+          }
+        }
+      ],
+      "summary_metrics": {
+        "phi": 0.4359925937156854,
+        "overall_consciousness": 0.6715331411833807,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125
+      }
+    },
+    "shallow_recursion": {
+      "description": "Shallow recursion depth - 1 level of meta-cognition",
+      "config": {
+        "recursion_depth": 1,
+        "use_openrouter": true
+      },
+      "trials": 2,
+      "conversations": [
+        {
+          "condition": "shallow_recursion",
+          "trial": 1,
+          "input_idx": 1,
+          "user_input": "I'm feeling frustrated with my current situation.",
+          "resonance": 0.3,
+          "engagement": 1.0,
+          "appropriateness": 0.75,
+          "metrics": {
+            "phi": 0.4381660230968098,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.6125,
+            "temporal_binding": 0.5471289698282877,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6228608512484456,
+            "timestamp": 1762155078.109246
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 1,
+          "input_idx": 2,
+          "user_input": "How do you think I should approach this problem?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.7375,
+            "temporal_binding": 0.5000085814793904,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6612012872219085,
+            "timestamp": 1762155091.294833
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 1,
+          "input_idx": 3,
+          "user_input": "I'm worried about making the wrong decision.",
+          "resonance": 0.3,
+          "engagement": 1.0,
+          "appropriateness": 0.75,
+          "metrics": {
+            "phi": 0.43378912409536763,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.6125,
+            "temporal_binding": 0.5900996987024943,
+            "reportability": 0.875,
+            "overall_consciousness": 0.650712235829216,
+            "timestamp": 1762155096.702136
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 1,
+          "input_idx": 4,
+          "user_input": "Tell me about your own thinking process.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.675,
+            "temporal_binding": 0.5638334735234578,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6582750210285186,
+            "timestamp": 1762155101.454688
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 1,
+          "input_idx": 5,
+          "user_input": "I feel like I'm making progress on this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.7999999999999999,
+          "metrics": {
+            "phi": 0.44270664153007216,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.6125,
+            "temporal_binding": 0.506160003344218,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6403506608841507,
+            "timestamp": 1762155105.9235358
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 1,
+          "input_idx": 6,
+          "user_input": "I'm not sure if I can handle this challenge.",
+          "resonance": 0.7,
+          "engagement": 0.7940516650676727,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.6125,
+            "temporal_binding": 0.48051520029703776,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6107772800445557,
+            "timestamp": 1762155112.0865269
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 1,
+          "input_idx": 7,
+          "user_input": "What's your perspective on human consciousness?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.6125,
+            "temporal_binding": 0.44,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6047,
+            "timestamp": 1762155174.953347
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 1,
+          "input_idx": 8,
+          "user_input": "I appreciate your help with this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.44507073684298204,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.675,
+            "temporal_binding": 0.535896061261495,
+            "reportability": 0.575,
+            "overall_consciousness": 0.6129020933999698,
+            "timestamp": 1762155178.6138802
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 2,
+          "input_idx": 1,
+          "user_input": "I'm feeling frustrated with my current situation.",
+          "resonance": 0.8,
+          "engagement": 1.0,
+          "appropriateness": 0.95,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.6125,
+            "temporal_binding": 0.5250672642389933,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.617460089635849,
+            "timestamp": 1762155182.245996
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 2,
+          "input_idx": 2,
+          "user_input": "How do you think I should approach this problem?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.6125,
+            "temporal_binding": 0.4903534396489462,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6347530159473419,
+            "timestamp": 1762155186.6352808
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 2,
+          "input_idx": 3,
+          "user_input": "I'm worried about making the wrong decision.",
+          "resonance": 0.5,
+          "engagement": 1.0,
+          "appropriateness": 0.95,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.675,
+            "temporal_binding": 0.5489769204457601,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.633546538066864,
+            "timestamp": 1762155190.921768
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 2,
+          "input_idx": 4,
+          "user_input": "Tell me about your own thinking process.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.6125,
+            "temporal_binding": 0.573325465520223,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6471988198280334,
+            "timestamp": 1762155194.97973
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 2,
+          "input_idx": 5,
+          "user_input": "I feel like I'm making progress on this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.7999999999999999,
+          "metrics": {
+            "phi": 0.4451733772097199,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.6125,
+            "temporal_binding": 0.4814056062698364,
+            "reportability": 0.7250000000000001,
+            "overall_consciousness": 0.6147541852429054,
+            "timestamp": 1762155198.709431
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 2,
+          "input_idx": 6,
+          "user_input": "I'm not sure if I can handle this challenge.",
+          "resonance": 0.5,
+          "engagement": 0.7940516650676727,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.43555541754319604,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.675,
+            "temporal_binding": 0.494312252998352,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6492856923355518,
+            "timestamp": 1762155204.2040372
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 2,
+          "input_idx": 7,
+          "user_input": "What's your perspective on human consciousness?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.675,
+            "temporal_binding": 0.4694811566670736,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6441221735000611,
+            "timestamp": 1762155207.4335942
+          }
+        },
+        {
+          "condition": "shallow_recursion",
+          "trial": 2,
+          "input_idx": 8,
+          "user_input": "I appreciate your help with this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4454219639881293,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.675,
+            "temporal_binding": 0.4806363248825073,
+            "reportability": 0.575,
+            "overall_consciousness": 0.6047009397294083,
+            "timestamp": 1762155211.595055
+          }
+        }
+      ],
+      "summary_metrics": {
+        "phi": 0.4346302052691423,
+        "overall_consciousness": 0.6317250552464238,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.64375
+      }
+    },
+    "minimal_recursion": {
+      "description": "Minimal recursion depth - 0 levels of meta-cognition",
+      "config": {
+        "recursion_depth": 0,
+        "use_openrouter": true
+      },
+      "trials": 2,
+      "conversations": [
+        {
+          "condition": "minimal_recursion",
+          "trial": 1,
+          "input_idx": 1,
+          "user_input": "I'm feeling frustrated with my current situation.",
+          "resonance": 0.8,
+          "engagement": 1.0,
+          "appropriateness": 0.95,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.5111857000986735,
+            "reportability": 0.875,
+            "overall_consciousness": 0.630377855014801,
+            "timestamp": 1762155214.7593548
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 1,
+          "input_idx": 2,
+          "user_input": "How do you think I should approach this problem?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.35750000000000004,
+            "temporal_binding": 0.5085458262761434,
+            "reportability": 0.575,
+            "overall_consciousness": 0.5414818739414216,
+            "timestamp": 1762155216.946835
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 1,
+          "input_idx": 3,
+          "user_input": "I'm worried about making the wrong decision.",
+          "resonance": 0.3,
+          "engagement": 1.0,
+          "appropriateness": 0.75,
+          "metrics": {
+            "phi": 0.4321885927927383,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.5073544565836589,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6304003166857334,
+            "timestamp": 1762155220.0017018
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 1,
+          "input_idx": 4,
+          "user_input": "Tell me about your own thinking process.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.5023430013656616,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6290514502048492,
+            "timestamp": 1762155222.900183
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 1,
+          "input_idx": 5,
+          "user_input": "I feel like I'm making progress on this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.7999999999999999,
+          "metrics": {
+            "phi": 0.44531013911982564,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.5161766195297242,
+            "reportability": 0.875,
+            "overall_consciousness": 0.635004027709415,
+            "timestamp": 1762155226.439641
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 1,
+          "input_idx": 6,
+          "user_input": "I'm not sure if I can handle this challenge.",
+          "resonance": 0.5,
+          "engagement": 0.7940516650676727,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4382726263590599,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.45,
+            "temporal_binding": 0.5015501960118611,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6060506859915441,
+            "timestamp": 1762155229.287966
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 1,
+          "input_idx": 7,
+          "user_input": "What's your perspective on human consciousness?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.5057431125640869,
+            "reportability": 0.875,
+            "overall_consciousness": 0.629561466884613,
+            "timestamp": 1762155232.629858
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 1,
+          "input_idx": 8,
+          "user_input": "I appreciate your help with this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4450598604294989,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.45,
+            "temporal_binding": 0.47478408654530846,
+            "reportability": 0.875,
+            "overall_consciousness": 0.603732578089171,
+            "timestamp": 1762155234.790808
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 2,
+          "input_idx": 1,
+          "user_input": "I'm feeling frustrated with my current situation.",
+          "resonance": 0.3,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4521569970975445,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.48469794432322183,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6319939409228693,
+            "timestamp": 1762155237.2908008
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 2,
+          "input_idx": 2,
+          "user_input": "How do you think I should approach this problem?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.4954175138473511,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6280126270771027,
+            "timestamp": 1762155240.138656
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 2,
+          "input_idx": 3,
+          "user_input": "I'm worried about making the wrong decision.",
+          "resonance": 0.3,
+          "engagement": 1.0,
+          "appropriateness": 0.75,
+          "metrics": {
+            "phi": 0.43758808022157275,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.45,
+            "temporal_binding": 0.5089759651819865,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6069934148326912,
+            "timestamp": 1762155243.232131
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 2,
+          "input_idx": 4,
+          "user_input": "Tell me about your own thinking process.",
+          "resonance": 0.5,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.43368022189859806,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.5271622880299887,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6337443986791478,
+            "timestamp": 1762155246.876075
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 2,
+          "input_idx": 5,
+          "user_input": "I feel like I'm making progress on this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.95,
+          "metrics": {
+            "phi": 0.4456169546447565,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.505823761622111,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6335278029045057,
+            "timestamp": 1762155249.897592
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 2,
+          "input_idx": 6,
+          "user_input": "I'm not sure if I can handle this challenge.",
+          "resonance": 0.5,
+          "engagement": 0.7940516650676727,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.43563642049203316,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.49379228591918944,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6292279480108867,
+            "timestamp": 1762155252.517709
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 2,
+          "input_idx": 7,
+          "user_input": "What's your perspective on human consciousness?",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4298,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.5612359269460042,
+            "reportability": 0.875,
+            "overall_consciousness": 0.6378853890419006,
+            "timestamp": 1762155257.196327
+          }
+        },
+        {
+          "condition": "minimal_recursion",
+          "trial": 2,
+          "input_idx": 8,
+          "user_input": "I appreciate your help with this.",
+          "resonance": 0.7,
+          "engagement": 1.0,
+          "appropriateness": 0.6,
+          "metrics": {
+            "phi": 0.4432329930446052,
+            "global_availability": 0.7999999999999999,
+            "meta_cognitive_depth": 0.575,
+            "temporal_binding": 0.5021597448984781,
+            "reportability": 0.875,
+            "overall_consciousness": 0.632382209995923,
+            "timestamp": 1762155260.089973
+          }
+        }
+      ],
+      "summary_metrics": {
+        "phi": 0.43672143038126454,
+        "overall_consciousness": 0.6212142491241609,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.53796875
+      }
+    }
+  }
+}

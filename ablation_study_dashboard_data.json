@@ -1,0 +1,1204 @@
+{
+  "conversations": [
+    {
+      "name": "full_recursion (trial 1)",
+      "turns": 1,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.3
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.75
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 1)",
+      "turns": 2,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 1)",
+      "turns": 3,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.3
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.75
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 1)",
+      "turns": 4,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 1)",
+      "turns": 5,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.7999999999999999
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 1)",
+      "turns": 6,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.5
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 0.7940516650676727
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 1)",
+      "turns": 7,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 1)",
+      "turns": 8,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 2)",
+      "turns": 1,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.3
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.75
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 2)",
+      "turns": 2,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 2)",
+      "turns": 3,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.3
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.75
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 2)",
+      "turns": 4,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 2)",
+      "turns": 5,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.7999999999999999
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 2)",
+      "turns": 6,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.5
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 0.7940516650676727
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 2)",
+      "turns": 7,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "full_recursion (trial 2)",
+      "turns": 8,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 1)",
+      "turns": 1,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.3
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.75
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 1)",
+      "turns": 2,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 1)",
+      "turns": 3,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.3
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.75
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 1)",
+      "turns": 4,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 1)",
+      "turns": 5,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.7999999999999999
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 1)",
+      "turns": 6,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 0.7940516650676727
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 1)",
+      "turns": 7,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 1)",
+      "turns": 8,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 2)",
+      "turns": 1,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.8
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.95
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 2)",
+      "turns": 2,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 2)",
+      "turns": 3,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.5
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.95
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 2)",
+      "turns": 4,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 2)",
+      "turns": 5,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.7999999999999999
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 2)",
+      "turns": 6,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.5
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 0.7940516650676727
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 2)",
+      "turns": 7,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "shallow_recursion (trial 2)",
+      "turns": 8,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 1)",
+      "turns": 1,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.8
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.95
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 1)",
+      "turns": 2,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 1)",
+      "turns": 3,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.3
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.75
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 1)",
+      "turns": 4,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 1)",
+      "turns": 5,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.7999999999999999
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 1)",
+      "turns": 6,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.5
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 0.7940516650676727
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 1)",
+      "turns": 7,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 1)",
+      "turns": 8,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 2)",
+      "turns": 1,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.3
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 2)",
+      "turns": 2,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 2)",
+      "turns": 3,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.3
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.75
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 2)",
+      "turns": 4,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.5
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 2)",
+      "turns": 5,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.95
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 2)",
+      "turns": 6,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.5
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 0.7940516650676727
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 2)",
+      "turns": 7,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    },
+    {
+      "name": "minimal_recursion (trial 2)",
+      "turns": 8,
+      "analysis": {
+        "resonance_analysis": {
+          "status": "success",
+          "average_resonance": 0.7
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "average_engagement": 1.0
+        },
+        "emotional_trajectory": {
+          "status": "success",
+          "trajectory": 0.0,
+          "direction": "stable",
+          "start_emotion": "neutral",
+          "end_emotion": "neutral"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "average_appropriateness": 0.6
+        }
+      }
+    }
+  ]
+}

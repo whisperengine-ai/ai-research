@@ -1,0 +1,518 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-02T23:25:04.816072",
+    "num_conversations": 3,
+    "batch_statistics": {
+      "total_conversations": 3,
+      "emotional_improvement": {
+        "mean": 0.20000000000000004,
+        "median": 0.7,
+        "stdev": 1.0440306508910548,
+        "range": [
+          -1.0,
+          0.9
+        ]
+      },
+      "resonance": {
+        "mean": 0.5833333333333333,
+        "median": 0.575,
+        "stdev": 0.06291528696058958,
+        "range": [
+          0.5249999999999999,
+          0.6499999999999999
+        ]
+      },
+      "engagement": {
+        "mean": 1.0,
+        "median": 1.0,
+        "stdev": 0.0,
+        "range": [
+          1.0,
+          1.0
+        ]
+      },
+      "appropriateness": {
+        "mean": 0.6458333333333334,
+        "median": 0.65,
+        "stdev": 0.007216878364870297,
+        "range": [
+          0.6375000000000001,
+          0.65
+        ]
+      },
+      "direction_counts": {
+        "improving": 2,
+        "stable": 0,
+        "declining": 1
+      }
+    }
+  },
+  "conversations": [
+    {
+      "name": "Frustration to Hope",
+      "timestamp": "2025-11-02T23:22:26.501976",
+      "turns": 4,
+      "exchanges": [
+        {
+          "turn": 1,
+          "user_input": "I'm really frustrated with my work situation right now",
+          "bot_response": "\"I'm really sorry to hear that you're feeling frustrated, and I want you to know that I'm here to listen. The simulation indicates elevated stress response, cortisol at 0.30, which might be contributing to your current emotional state. While it's not as high as it could be, it's still suggesting a level of caution and urgency, Urgency: 0.42, that could be influencing your perspective."
+        },
+        {
+          "turn": 2,
+          "user_input": "Nobody seems to understand what I'm going through",
+          "bot_response": "\"I can truly see why you're feeling frustrated, considering the high cortisol levels (0.61) indicating a strong stress response. It's as if the system's alarm is going off, emphasizing the urgency (0.68) you're experiencing. However, I want you to know that I'm here to listen and try to understand, with empathy (0.48) at my current levels. Can you tell me more about what's happening at work that's making you feel"
+        },
+        {
+          "turn": 3,
+          "user_input": "But actually, maybe I could try a different approach",
+          "bot_response": "\"Given the current internal state with elevated cortisol levels (0.59) and a strong urgency (0.67), it's understandable that you're feeling at a loss. However, I'd like to propose that we tap into the creativity (0.47) and positivity (0.46) aspects of your simulation, even if they're not at their peak right now. Let's explore a different approach together.\n\nTo start, could you perhaps share what has been working well"
+        },
+        {
+          "turn": 4,
+          "user_input": "You know what? I think this might work out after all",
+          "bot_response": "\"The system shows a notable shift in your internal state, with cortisol levels dropping to 0.48, indicating a reduced stress response. This change is accompanied by a slight increase in dopamine to 0.55, suggesting a renewed sense of motivation and optimism. With this refreshed perspective, it's great to hear that you're feeling more hopeful about your situation. Let's build on this positivity and explore how we can support this new approach together.\""
+        }
+      ],
+      "analysis": {
+        "total_turns": 4,
+        "emotional_trajectory": {
+          "status": "success",
+          "start_emotion": "anger",
+          "start_valence": -0.9,
+          "end_emotion": "neutral",
+          "end_valence": 0.0,
+          "trajectory": 0.9,
+          "trend": 0.2200000000000001,
+          "direction": "improving",
+          "trend_direction": "improving"
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "start_engagement": 1.0,
+          "end_engagement": 1.0,
+          "trajectory": 0.0,
+          "trend": 0.0,
+          "average_engagement": 1.0,
+          "direction": "stable"
+        },
+        "resonance_analysis": {
+          "status": "success",
+          "turns": 4,
+          "average_resonance": 0.575,
+          "max_resonance": 0.7,
+          "min_resonance": 0.4,
+          "resonance_std": 0.12990381056766578,
+          "high_resonance_turns": 2,
+          "low_resonance_turns": 0,
+          "resonance_trend": "improving"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "turns": 4,
+          "average_appropriateness": 0.65,
+          "max_appropriateness": 0.7999999999999999,
+          "min_appropriateness": 0.6,
+          "appropriate_turns": 4,
+          "inappropriate_turns": 0
+        },
+        "raw_interactions": [
+          {
+            "turn": 1,
+            "user_emotion": "anger",
+            "user_confidence": 0.9473912715911865,
+            "user_stance": {
+              "primary_emotions": [
+                "frustrated"
+              ],
+              "other_emotions": [],
+              "self_focus": 1.0,
+              "emotion_type": "direct",
+              "total_emotions_found": 1
+            },
+            "bot_emotion": "fear",
+            "bot_confidence": 0.8106287121772766,
+            "resonance": 0.4,
+            "stance_alignment": 0.9,
+            "engagement": 1.0,
+            "appropriateness": 0.7999999999999999,
+            "user_linguistic_complexity": 0.73,
+            "response_length": 64
+          },
+          {
+            "turn": 2,
+            "user_emotion": "surprise",
+            "user_confidence": 0.6647392511367798,
+            "user_stance": {
+              "primary_emotions": [],
+              "other_emotions": [],
+              "self_focus": 0.5,
+              "emotion_type": "mixed",
+              "total_emotions_found": 0
+            },
+            "bot_emotion": "neutral",
+            "bot_confidence": 0.8544055223464966,
+            "resonance": 0.5,
+            "stance_alignment": 0.5,
+            "engagement": 1.0,
+            "appropriateness": 0.6,
+            "user_linguistic_complexity": 0.7333333333333334,
+            "response_length": 70
+          },
+          {
+            "turn": 3,
+            "user_emotion": "neutral",
+            "user_confidence": 0.9245114326477051,
+            "user_stance": {
+              "primary_emotions": [],
+              "other_emotions": [],
+              "self_focus": 0.5,
+              "emotion_type": "mixed",
+              "total_emotions_found": 0
+            },
+            "bot_emotion": "neutral",
+            "bot_confidence": 0.9584880471229553,
+            "resonance": 0.7,
+            "stance_alignment": 0.5,
+            "engagement": 1.0,
+            "appropriateness": 0.6,
+            "user_linguistic_complexity": 0.72,
+            "response_length": 68
+          },
+          {
+            "turn": 4,
+            "user_emotion": "neutral",
+            "user_confidence": 0.6831271648406982,
+            "user_stance": {
+              "primary_emotions": [],
+              "other_emotions": [],
+              "self_focus": 0.5,
+              "emotion_type": "mixed",
+              "total_emotions_found": 0
+            },
+            "bot_emotion": "neutral",
+            "bot_confidence": 0.6499617695808411,
+            "resonance": 0.7,
+            "stance_alignment": 0.5,
+            "engagement": 1.0,
+            "appropriateness": 0.6,
+            "user_linguistic_complexity": 0.675,
+            "response_length": 72
+          }
+        ]
+      },
+      "summary": "================================================================================\nINTERACTION DYNAMICS ANALYSIS\n================================================================================\n\nEMOTIONAL TRAJECTORY:\n  Start: ANGER (-0.90)\n  End:   NEUTRAL (0.00)\n  Direction: IMPROVING\n  Overall change: 0.90\n\nENGAGEMENT TRAJECTORY:\n  Average: 100.0%\n  Start: 100.0% \u2192 End: 100.0%\n  Direction: STABLE\n\nEMOTIONAL RESONANCE:\n  Average: 57.5%\n  Range: 40.0% - 70.0%\n  High resonance turns: 2\n  Low resonance turns: 0\n\nRESPONSE APPROPRIATENESS:\n  Average: 65.0%\n  Appropriate turns: 4/4\n  Inappropriate turns: 0/4\n\n================================================================================\n"
+    },
+    {
+      "name": "Anxiety to Confidence",
+      "timestamp": "2025-11-02T23:23:06.532556",
+      "turns": 4,
+      "exchanges": [
+        {
+          "turn": 1,
+          "user_input": "I'm feeling really anxious about an upcoming presentation",
+          "bot_response": "\"The system's current lower cortisol level (0.30) is helping me respond with calm, but I can sense the urgency in your voice. My empathy score (0.50) is high, so let's address this anxiety together. Tell me more about what's making you feel this way.\""
+        },
+        {
+          "turn": 2,
+          "user_input": "What if I mess up in front of everyone?",
+          "bot_response": "\"The system's stability is maintained with serotonin at 0.44, helping me keep a balanced perspective. I understand that the fear of making mistakes can be overwhelming, especially with an upcoming presentation. However, it's essential to remember that setbacks are opportunities for growth, not signs of failure. With my current creativity score at 0.49, let's brainstorm some strategies to manage this anxiety together. What specific aspects of the presentation are you worried about the most? Perhaps we can"
+        },
+        {
+          "turn": 3,
+          "user_input": "I guess I've prepared pretty well though",
+          "bot_response": "\"While your preparation efforts are commendable, the system's norepinephrine levels (0.94) are keeping me alert to the potential pitfalls of overconfidence. Let's acknowledge the anxiety and address it together. The system's elevated cortisol (0.88) is a reminder that this is a significant event for you, and that's okay. It's normal to feel this way, even with thorough preparation. Let's focus on what you've learned and how you can"
+        },
+        {
+          "turn": 4,
+          "user_input": "Actually, I think I'm ready for this",
+          "bot_response": "\"The system's dopamine levels have risen to 0.69, reflecting a growing sense of confidence and motivation. With that said, 'ready' is a strong statement, and I want to ensure we're addressing any lingering anxieties. The simulation shows increased norepinephrine (0.97), keeping me alert to the potential challenges ahead. Let's explore this readiness further. How do you feel prepared, specifically?\""
+        }
+      ],
+      "analysis": {
+        "total_turns": 4,
+        "emotional_trajectory": {
+          "status": "success",
+          "start_emotion": "fear",
+          "start_valence": -0.7,
+          "end_emotion": "neutral",
+          "end_valence": 0.0,
+          "trajectory": 0.7,
+          "trend": 0.30000000000000016,
+          "direction": "improving",
+          "trend_direction": "improving"
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "start_engagement": 1.0,
+          "end_engagement": 1.0,
+          "trajectory": 0.0,
+          "trend": 0.0,
+          "average_engagement": 1.0,
+          "direction": "stable"
+        },
+        "resonance_analysis": {
+          "status": "success",
+          "turns": 4,
+          "average_resonance": 0.5249999999999999,
+          "max_resonance": 0.7,
+          "min_resonance": 0.3,
+          "resonance_std": 0.17853571071357124,
+          "high_resonance_turns": 2,
+          "low_resonance_turns": 1,
+          "resonance_trend": "improving"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "turns": 4,
+          "average_appropriateness": 0.6375000000000001,
+          "max_appropriateness": 0.75,
+          "min_appropriateness": 0.6,
+          "appropriate_turns": 4,
+          "inappropriate_turns": 0
+        },
+        "raw_interactions": [
+          {
+            "turn": 1,
+            "user_emotion": "fear",
+            "user_confidence": 0.9946925044059753,
+            "user_stance": {
+              "primary_emotions": [
+                "feel",
+                "anxious"
+              ],
+              "other_emotions": [],
+              "self_focus": 1.0,
+              "emotion_type": "direct",
+              "total_emotions_found": 2
+            },
+            "bot_emotion": "fear",
+            "bot_confidence": 0.635949432849884,
+            "resonance": 0.3,
+            "stance_alignment": 0.9,
+            "engagement": 1.0,
+            "appropriateness": 0.75,
+            "user_linguistic_complexity": 0.7777777777777778,
+            "response_length": 44
+          },
+          {
+            "turn": 2,
+            "user_emotion": "anger",
+            "user_confidence": 0.6786672472953796,
+            "user_stance": {
+              "primary_emotions": [],
+              "other_emotions": [],
+              "self_focus": 0.5,
+              "emotion_type": "mixed",
+              "total_emotions_found": 0
+            },
+            "bot_emotion": "fear",
+            "bot_confidence": 0.9253484010696411,
+            "resonance": 0.4,
+            "stance_alignment": 0.5,
+            "engagement": 1.0,
+            "appropriateness": 0.6,
+            "user_linguistic_complexity": 0.655,
+            "response_length": 77
+          },
+          {
+            "turn": 3,
+            "user_emotion": "neutral",
+            "user_confidence": 0.957111656665802,
+            "user_stance": {
+              "primary_emotions": [],
+              "other_emotions": [],
+              "self_focus": 0.5,
+              "emotion_type": "mixed",
+              "total_emotions_found": 0
+            },
+            "bot_emotion": "neutral",
+            "bot_confidence": 0.5552082657814026,
+            "resonance": 0.7,
+            "stance_alignment": 0.5,
+            "engagement": 1.0,
+            "appropriateness": 0.6,
+            "user_linguistic_complexity": 0.65,
+            "response_length": 68
+          },
+          {
+            "turn": 4,
+            "user_emotion": "neutral",
+            "user_confidence": 0.8565493226051331,
+            "user_stance": {
+              "primary_emotions": [],
+              "other_emotions": [],
+              "self_focus": 0.5,
+              "emotion_type": "mixed",
+              "total_emotions_found": 0
+            },
+            "bot_emotion": "neutral",
+            "bot_confidence": 0.4273371696472168,
+            "resonance": 0.7,
+            "stance_alignment": 0.5,
+            "engagement": 1.0,
+            "appropriateness": 0.6,
+            "user_linguistic_complexity": 0.6111111111111112,
+            "response_length": 59
+          }
+        ]
+      },
+      "summary": "================================================================================\nINTERACTION DYNAMICS ANALYSIS\n================================================================================\n\nEMOTIONAL TRAJECTORY:\n  Start: FEAR (-0.70)\n  End:   NEUTRAL (0.00)\n  Direction: IMPROVING\n  Overall change: 0.70\n\nENGAGEMENT TRAJECTORY:\n  Average: 100.0%\n  Start: 100.0% \u2192 End: 100.0%\n  Direction: STABLE\n\nEMOTIONAL RESONANCE:\n  Average: 52.5%\n  Range: 30.0% - 70.0%\n  High resonance turns: 2\n  Low resonance turns: 1\n\nRESPONSE APPROPRIATENESS:\n  Average: 63.8%\n  Appropriate turns: 4/4\n  Inappropriate turns: 0/4\n\n================================================================================\n"
+    },
+    {
+      "name": "Positive Momentum",
+      "timestamp": "2025-11-02T23:24:08.388625",
+      "turns": 4,
+      "exchanges": [
+        {
+          "turn": 1,
+          "user_input": "I had a really good meeting today",
+          "bot_response": "\"Great to hear that! The system shows positive mood indicators with serotonin at 0.50, which might be contributing to my enthusiastic response. I'm really glad you had a good meeting. Can you tell me more about what made it so positive?\""
+        },
+        {
+          "turn": 2,
+          "user_input": "My ideas were well received by the team",
+          "bot_response": "\"Fantastic to hear! My dopamine's spiking to 0.82, reflecting the reward and motivation I'm feeling along with you. The team's positive reception of your ideas has really boosted your creative mojo - and mine too, vicariously! With your ideation well-received, I'm feeling more sociable as well, oxytocin jumping to 0.65. Cheers to you and your team's success! Now, let's dive into the"
+        },
+        {
+          "turn": 3,
+          "user_input": "I'm feeling more confident about my role",
+          "bot_response": "\"Oh, that's wonderful to hear! Your oxytocin levels are high at 0.91, fostering a warm, empathetic response in tune with your growing confidence. I'm really happy for you, and it's great to see your hard work paying off. Can you tell me more about what specifically boosted your confidence and how it feels to have this newfound assurance in your role?\""
+        },
+        {
+          "turn": 4,
+          "user_input": "I think I could even take on more responsibility",
+          "bot_response": "\"That's an amazing development to hear. With both dopamine at 0.97 and serotonin at 0.97, I'm expressing very positive, content feelings. Your growing confidence and the rewards from your recent success are fueling this creative, adventurous mindset. I can see that you're feeling ready to take on more challenges. It's great to see you pushing yourself and stepping up. Tell me, what aspects of your role interest you the most for potential growth?"
+        }
+      ],
+      "analysis": {
+        "total_turns": 4,
+        "emotional_trajectory": {
+          "status": "success",
+          "start_emotion": "joy",
+          "start_valence": 1.0,
+          "end_emotion": "neutral",
+          "end_valence": 0.0,
+          "trajectory": -1.0,
+          "trend": -0.30000000000000016,
+          "direction": "declining",
+          "trend_direction": "declining"
+        },
+        "engagement_trajectory": {
+          "status": "success",
+          "start_engagement": 1.0,
+          "end_engagement": 1.0,
+          "trajectory": 0.0,
+          "trend": 0.0,
+          "average_engagement": 1.0,
+          "direction": "stable"
+        },
+        "resonance_analysis": {
+          "status": "success",
+          "turns": 4,
+          "average_resonance": 0.6499999999999999,
+          "max_resonance": 0.7,
+          "min_resonance": 0.5,
+          "resonance_std": 0.08660254037844385,
+          "high_resonance_turns": 3,
+          "low_resonance_turns": 0,
+          "resonance_trend": "declining"
+        },
+        "appropriateness_analysis": {
+          "status": "success",
+          "turns": 4,
+          "average_appropriateness": 0.65,
+          "max_appropriateness": 0.7999999999999999,
+          "min_appropriateness": 0.6,
+          "appropriate_turns": 4,
+          "inappropriate_turns": 0
+        },
+        "raw_interactions": [
+          {
+            "turn": 1,
+            "user_emotion": "joy",
+            "user_confidence": 0.9889236092567444,
+            "user_stance": {
+              "primary_emotions": [],
+              "other_emotions": [],
+              "self_focus": 0.5,
+              "emotion_type": "mixed",
+              "total_emotions_found": 0
+            },
+            "bot_emotion": "joy",
+            "bot_confidence": 0.9829593896865845,
+            "resonance": 0.7,
+            "stance_alignment": 0.5,
+            "engagement": 1.0,
+            "appropriateness": 0.6,
+            "user_linguistic_complexity": 0.6928571428571428,
+            "response_length": 41
+          },
+          {
+            "turn": 2,
+            "user_emotion": "joy",
+            "user_confidence": 0.9874520897865295,
+            "user_stance": {
+              "primary_emotions": [],
+              "other_emotions": [],
+              "self_focus": 0.5,
+              "emotion_type": "mixed",
+              "total_emotions_found": 0
+            },
+            "bot_emotion": "joy",
+            "bot_confidence": 0.9904026985168457,
+            "resonance": 0.7,
+            "stance_alignment": 0.5,
+            "engagement": 1.0,
+            "appropriateness": 0.6,
+            "user_linguistic_complexity": 0.7,
+            "response_length": 62
+          },
+          {
+            "turn": 3,
+            "user_emotion": "joy",
+            "user_confidence": 0.9879369139671326,
+            "user_stance": {
+              "primary_emotions": [
+                "feel"
+              ],
+              "other_emotions": [],
+              "self_focus": 1.0,
+              "emotion_type": "direct",
+              "total_emotions_found": 1
+            },
+            "bot_emotion": "joy",
+            "bot_confidence": 0.9860958456993103,
+            "resonance": 0.7,
+            "stance_alignment": 0.9,
+            "engagement": 1.0,
+            "appropriateness": 0.7999999999999999,
+            "user_linguistic_complexity": 0.7125,
+            "response_length": 61
+          },
+          {
+            "turn": 4,
+            "user_emotion": "neutral",
+            "user_confidence": 0.8741162419319153,
+            "user_stance": {
+              "primary_emotions": [],
+              "other_emotions": [],
+              "self_focus": 0.5,
+              "emotion_type": "mixed",
+              "total_emotions_found": 0
+            },
+            "bot_emotion": "joy",
+            "bot_confidence": 0.8436222076416016,
+            "resonance": 0.5,
+            "stance_alignment": 0.5,
+            "engagement": 1.0,
+            "appropriateness": 0.6,
+            "user_linguistic_complexity": 0.6666666666666666,
+            "response_length": 73
+          }
+        ]
+      },
+      "summary": "================================================================================\nINTERACTION DYNAMICS ANALYSIS\n================================================================================\n\nEMOTIONAL TRAJECTORY:\n  Start: JOY (1.00)\n  End:   NEUTRAL (0.00)\n  Direction: DECLINING\n  Overall change: -1.00\n\nENGAGEMENT TRAJECTORY:\n  Average: 100.0%\n  Start: 100.0% \u2192 End: 100.0%\n  Direction: STABLE\n\nEMOTIONAL RESONANCE:\n  Average: 65.0%\n  Range: 50.0% - 70.0%\n  High resonance turns: 3\n  Low resonance turns: 0\n\nRESPONSE APPROPRIATENESS:\n  Average: 65.0%\n  Appropriate turns: 4/4\n  Inappropriate turns: 0/4\n\n================================================================================\n"
+    }
+  ]
+}

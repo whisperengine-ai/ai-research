@@ -38,45 +38,28 @@ ABLATION_TEST_INPUTS = [
 ]
 
 # Experiment conditions
+# NOTE: ConsciousnessSimulator supports recursion_depth control
+# We test varying recursion depth as a proxy for component impact
 ABLATION_CONDITIONS = {
-    'full_system': {
-        'description': 'All components enabled (baseline)',
+    'full_recursion': {
+        'description': 'Full recursion depth (baseline) - 3 levels of meta-cognition',
         'config': {
-            'use_gwt': True,
-            'use_recursion': True,
-            'use_emotions': True,
-            'use_memory': True,
-            'recursion_depth': 3
+            'recursion_depth': 3,
+            'use_openrouter': True
         }
     },
-    'no_emotions': {
-        'description': 'Neurochemical emotion system disabled',
+    'shallow_recursion': {
+        'description': 'Shallow recursion depth - 1 level of meta-cognition',
         'config': {
-            'use_gwt': True,
-            'use_recursion': True,
-            'use_emotions': False,
-            'use_memory': True,
-            'recursion_depth': 3
+            'recursion_depth': 1,
+            'use_openrouter': True
         }
     },
-    'no_recursion': {
-        'description': 'Recursive meta-cognition disabled',
+    'minimal_recursion': {
+        'description': 'Minimal recursion depth - 0 levels of meta-cognition',
         'config': {
-            'use_gwt': True,
-            'use_recursion': False,
-            'use_emotions': True,
-            'use_memory': True,
-            'recursion_depth': 0
-        }
-    },
-    'no_gwt': {
-        'description': 'Global workspace theory disabled',
-        'config': {
-            'use_gwt': False,
-            'use_recursion': True,
-            'use_emotions': True,
-            'use_memory': True,
-            'recursion_depth': 3
+            'recursion_depth': 0,
+            'use_openrouter': True
         }
     }
 }
@@ -119,9 +102,11 @@ class AblationStudy:
             for input_idx, test_input in enumerate(ABLATION_TEST_INPUTS):
                 try:
                     # Create simulator with condition config
+                    # Only use supported parameters: recursion_depth, use_openrouter, llm_model
                     bot = ConsciousnessSimulator(
                         verbose=False,
-                        **config
+                        recursion_depth=config.get('recursion_depth', 3),
+                        use_openrouter=config.get('use_openrouter', True)
                     )
                     
                     # Run interaction

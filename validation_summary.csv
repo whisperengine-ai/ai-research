@@ -1,0 +1,4 @@
+Scenario,Turns,Emotional_Start,Emotional_End,Improvement,Direction,Avg_Resonance,Avg_Engagement,Avg_Quality,Appropriate_Turns
+Frustration to Hope,4,anger,neutral,0.90,IMPROVING,57.5%,100.0%,65.0%,4/4
+Anxiety to Confidence,4,fear,neutral,0.70,IMPROVING,52.5%,100.0%,63.8%,4/4
+Positive Momentum,4,joy,neutral,-1.00,DECLINING,65.0%,100.0%,65.0%,4/4
