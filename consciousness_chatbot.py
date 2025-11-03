@@ -39,7 +39,9 @@ class ConsciousnessSimulator:
                  use_openrouter: bool = True,
                  use_heuristic: bool = False,
                  recursion_depth: int = 3,
-                 verbose: bool = True):
+                 verbose: bool = True,
+                 enable_ml_logging: bool = False,
+                 ml_log_dir: str = 'ml_logs'):
         """
         Initialize the consciousness simulator
         
@@ -49,10 +51,13 @@ class ConsciousnessSimulator:
             use_heuristic: If True, use heuristic response generation (no LLM). Fastest for testing
             recursion_depth: How many levels of self-reflection (1-3)
             verbose: Show detailed internal states
+            enable_ml_logging: If True, log conversation data for ML training
+            ml_log_dir: Directory to save ML training logs
         """
         self.verbose = verbose
         self.use_openrouter = use_openrouter
         self.use_heuristic = use_heuristic
+        self.enable_ml_logging = enable_ml_logging
         
         print("🧠 Initializing Consciousness Simulator...\n")
         
@@ -151,6 +156,14 @@ class ConsciousnessSimulator:
         self.conversation_history: List[Dict] = []
         self.conversation_memory: List[Dict] = []  # Last 20 turns for LLM context
         self.max_memory_turns = 20
+        
+        # ML Logging (NEW: for training quality prediction models)
+        if enable_ml_logging:
+            from ml_logger import MLLogger
+            self.ml_logger = MLLogger(log_dir=ml_log_dir)
+            print(f"📊 ML logging enabled → {ml_log_dir}/")
+        else:
+            self.ml_logger = None
         
         # Consciousness feedback loop (NEW: metrics modulate behavior)
         self.last_consciousness_score = None
@@ -553,6 +566,19 @@ class ConsciousnessSimulator:
             bot_response=response
         )
         
+        # ===== ML LOGGING: Log turn data for training =====
+        if self.ml_logger:
+            self.ml_logger.log_turn(
+                user_input=user_input,
+                response=response,
+                meta_cognition=meta_results,
+                metrics=consciousness_score,
+                dynamics=self.interaction_dynamics,
+                neurochemistry=self.neurochemistry.levels.to_dict(),
+                user_emotion=user_emotion,
+                user_emotion_confidence=user_emotion_conf
+            )
+        
         # ===== FINAL: Display AI Response at Bottom =====
         # This is displayed AFTER all consciousness metrics and internal processing
         # so the user sees the response at the bottom of the screen, ready for next input
@@ -860,6 +886,15 @@ This is a research demonstration of computational consciousness modeling, not a 
                 
                 if user_input.lower() in ['quit', 'exit', 'q']:
                     print("\n👋 Ending consciousness simulation...")
+                    
+                    # Save ML logs if enabled
+                    if self.ml_logger:
+                        filepath = self.ml_logger.save_session()
+                        stats = self.ml_logger.get_summary_stats()
+                        print(f"\n📊 ML Training Data Summary:")
+                        print(f"   Turns logged: {stats['num_turns']}")
+                        print(f"   Saved to: {filepath}")
+                    
                     break
                 
                 if user_input.lower() == 'reset':
@@ -926,6 +961,10 @@ def main():
                        help='Meta-cognitive recursion depth (0-3, default: 3)')
     parser.add_argument('--quiet', '-q', action='store_true',
                        help='Reduce verbose output')
+    parser.add_argument('--log-ml', action='store_true',
+                       help='Enable ML training data logging (saves to ml_logs/)')
+    parser.add_argument('--ml-log-dir', type=str, default='ml_logs',
+                       help='Directory for ML training logs (default: ml_logs)')
     
     args = parser.parse_args()
     
@@ -939,7 +978,9 @@ def main():
         simulator = ConsciousnessSimulator(
             use_heuristic=True,
             recursion_depth=args.depth,
-            verbose=not args.quiet
+            verbose=not args.quiet,
+            enable_ml_logging=args.log_ml,
+            ml_log_dir=args.ml_log_dir
         )
     
     elif args.local:
@@ -951,7 +992,9 @@ def main():
             llm_model=args.model,
             use_openrouter=False,
             recursion_depth=args.depth,
-            verbose=not args.quiet
+            verbose=not args.quiet,
+            enable_ml_logging=args.log_ml,
+            ml_log_dir=args.ml_log_dir
         )
     
     else:
@@ -965,7 +1008,9 @@ def main():
             simulator = ConsciousnessSimulator(
                 use_openrouter=True,
                 recursion_depth=args.depth,
-                verbose=not args.quiet
+                verbose=not args.quiet,
+                enable_ml_logging=args.log_ml,
+                ml_log_dir=args.ml_log_dir
             )
         else:
             print("💻 LOCAL MODE - No API key found, using local model")
@@ -975,7 +1020,9 @@ def main():
                 llm_model=args.model,
                 use_openrouter=False,
                 recursion_depth=args.depth,
-                verbose=not args.quiet
+                verbose=not args.quiet,
+                enable_ml_logging=args.log_ml,
+                ml_log_dir=args.ml_log_dir
             )
     
     simulator.chat_loop()

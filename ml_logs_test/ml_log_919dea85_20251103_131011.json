@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "session_id": "919dea85",
+    "timestamp": "2025-11-03T13:10:11.517471",
+    "num_turns": 3,
+    "format_version": "1.0"
+  },
+  "turns": [
+    {
+      "turn_id": "718f33bd-80da-4b32-99c2-8059c240c673",
+      "timestamp": "2025-11-03T13:09:54.697998",
+      "session_id": "919dea85",
+      "user_input": "I'm feeling worried about this project.",
+      "user_input_length": 39,
+      "response": "\"Thank you! I'm feeling better now!\"",
+      "response_length": 36,
+      "user_emotion": "fear",
+      "user_emotion_confidence": 0.991696834564209,
+      "meta_cognition_raw": {
+        "reflections": [
+          {
+            "level": 0,
+            "type": "response",
+            "content": "\"Thank you! I'm feeling better now!\""
+          },
+          {
+            "level": 1,
+            "type": "observation",
+            "content": "\"I can't believe you're so generous. I mean, I can't believe that you've made so much money. I mean, but I don't think it's really fair for you to pay me for this. And I'm really sorry that I can't take care of you, but I can't take care of you when I'm with you. I can't take care"
+          },
+          {
+            "level": 2,
+            "type": "evaluation",
+            "content": "In a few paragraphs, you'll see that you can really make a difference."
+          },
+          {
+            "level": 3,
+            "type": "introspection",
+            "content": "\"I have to be so smart, so smart, so smart.\""
+          }
+        ],
+        "num_reflections": 4
+      },
+      "meta_cognition_features": {
+        "num_reflections": 4,
+        "max_depth": 3,
+        "avg_reflection_length": 107.75,
+        "self_ref_count": 13,
+        "self_ref_density": 0.029953917050691243,
+        "confidence_markers": 0,
+        "uncertainty_markers": 0,
+        "confidence_ratio": 0.0,
+        "emotion_words": 2,
+        "emotional_awareness_density": 0.004608294930875576,
+        "positive_eval": 0,
+        "negative_eval": 0,
+        "eval_polarity": 0.0,
+        "user_mentions": 3,
+        "perspective_taking_score": 0.0069124423963133645
+      },
+      "neurochemistry": {
+        "dopamine": 0.7538408994674682,
+        "serotonin": 0.6692272663116455,
+        "norepinephrine": 0.5,
+        "oxytocin": 0.5846136331558227,
+        "cortisol": 0.3
+      },
+      "outcomes": {
+        "consciousness_metrics": {
+          "phi": 0.44319483784136393,
+          "global_availability": 0.7999999999999999,
+          "meta_cognitive_depth": 0.75,
+          "temporal_binding": 0.6860839986801147,
+          "reportability": 0.7250000000000001,
+          "overall_consciousness": 0.6724613092623581,
+          "timestamp": 1762204194.697938
+        },
+        "engagement_score": null,
+        "resonance_score": null,
+        "appropriateness_score": null,
+        "human_quality_rating": null,
+        "user_satisfaction": null,
+        "conversation_continued": null
+      }
+    },
+    {
+      "turn_id": "5dd48172-b67b-4024-a5c6-e31694663946",
+      "timestamp": "2025-11-03T13:10:03.446910",
+      "session_id": "919dea85",
+      "user_input": "Can you help me understand consciousness?",
+      "user_input_length": 41,
+      "response": "\"What you said... I know it's not true. It's only possible to be thinking of my own mind, not the self of others.\"",
+      "response_length": 114,
+      "user_emotion": "neutral",
+      "user_emotion_confidence": 0.626937747001648,
+      "meta_cognition_raw": {
+        "reflections": [
+          {
+            "level": 0,
+            "type": "response",
+            "content": "\"What you said... I know it's not true. It's only possible to be thinking of my own mind, not the self of others.\""
+          },
+          {
+            "level": 1,
+            "type": "observation",
+            "content": "\"What I do is believe that there is no other way.\""
+          },
+          {
+            "level": 2,
+            "type": "evaluation",
+            "content": "What is a \"reasonable\" person to believe?"
+          },
+          {
+            "level": 3,
+            "type": "introspection",
+            "content": "\"I think I have a reasonable person to believe, but I don't have the ability to prove it.\""
+          }
+        ],
+        "num_reflections": 4
+      },
+      "meta_cognition_features": {
+        "num_reflections": 4,
+        "max_depth": 3,
+        "avg_reflection_length": 73.75,
+        "self_ref_count": 6,
+        "self_ref_density": 0.020134228187919462,
+        "confidence_markers": 0,
+        "uncertainty_markers": 0,
+        "confidence_ratio": 0.0,
+        "emotion_words": 0,
+        "emotional_awareness_density": 0.0,
+        "positive_eval": 0,
+        "negative_eval": 0,
+        "eval_polarity": 0.0,
+        "user_mentions": 3,
+        "perspective_taking_score": 0.010067114093959731
+      },
+      "neurochemistry": {
+        "dopamine": 0.7411488544940948,
+        "serotonin": 0.6607659029960633,
+        "norepinephrine": 0.5,
+        "oxytocin": 0.5803829514980315,
+        "cortisol": 0.3
+      },
+      "outcomes": {
+        "consciousness_metrics": {
+          "phi": 0.4421782197772239,
+          "global_availability": 0.7999999999999999,
+          "meta_cognitive_depth": 0.746875,
+          "temporal_binding": 0.44,
+          "reportability": 0.7250000000000001,
+          "overall_consciousness": 0.6346695549443059,
+          "timestamp": 1762204203.4468532
+        },
+        "engagement_score": null,
+        "resonance_score": null,
+        "appropriateness_score": null,
+        "human_quality_rating": null,
+        "user_satisfaction": null,
+        "conversation_continued": null
+      }
+    },
+    {
+      "turn_id": "062f9889-603c-4704-b48e-744f9cf92b7a",
+      "timestamp": "2025-11-03T13:10:11.517385",
+      "session_id": "919dea85",
+      "user_input": "That's interesting, tell me more.",
+      "user_input_length": 33,
+      "response": "\"I thought you were talking about your own mind.\"",
+      "response_length": 49,
+      "user_emotion": "neutral",
+      "user_emotion_confidence": 0.6045249104499817,
+      "meta_cognition_raw": {
+        "reflections": [
+          {
+            "level": 0,
+            "type": "response",
+            "content": "\"I thought you were talking about your own mind.\""
+          },
+          {
+            "level": 1,
+            "type": "observation",
+            "content": "\"What's the point in talking about yourself when you can't talk about yourself?\""
+          },
+          {
+            "level": 2,
+            "type": "evaluation",
+            "content": "Do you have the confidence to say \"I'm not sure I'm going to get this job.\""
+          },
+          {
+            "level": 3,
+            "type": "introspection",
+            "content": "\"I'm not sure I'm going to get this job.\""
+          }
+        ],
+        "num_reflections": 4
+      },
+      "meta_cognition_features": {
+        "num_reflections": 4,
+        "max_depth": 3,
+        "avg_reflection_length": 61.25,
+        "self_ref_count": 5,
+        "self_ref_density": 0.020161290322580645,
+        "confidence_markers": 2,
+        "uncertainty_markers": 0,
+        "confidence_ratio": 1.0,
+        "emotion_words": 0,
+        "emotional_awareness_density": 0.0,
+        "positive_eval": 0,
+        "negative_eval": 0,
+        "eval_polarity": 0.0,
+        "user_mentions": 3,
+        "perspective_taking_score": 0.012096774193548387
+      },
+      "neurochemistry": {
+        "dopamine": 0.7748233215659858,
+        "serotonin": 0.6527276078462602,
+        "norepinephrine": 0.5609758797287941,
+        "oxytocin": 0.5763638039231299,
+        "cortisol": 0.3
+      },
+      "outcomes": {
+        "consciousness_metrics": {
+          "phi": 0.4432661055249265,
+          "global_availability": 0.7999999999999999,
+          "meta_cognitive_depth": 0.653125,
+          "temporal_binding": 0.44,
+          "reportability": 0.575,
+          "overall_consciousness": 0.5936915263812315,
+          "timestamp": 1762204211.517326
+        },
+        "engagement_score": null,
+        "resonance_score": null,
+        "appropriateness_score": null,
+        "human_quality_rating": null,
+        "user_satisfaction": null,
+        "conversation_continued": null
+      }
+    }
+  ]
+}

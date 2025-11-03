@@ -59,3 +59,7 @@ consciousness.png
 # Model cache
 models/
 .cache/
+
+# ML training logs
+ml_logs/
+ml_training_data/
