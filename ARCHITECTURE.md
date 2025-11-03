@@ -177,10 +177,76 @@ ExperimentRunner(
     ├── QUICKSTART.md              # Quick start guide
     ├── ARCHITECTURE.md            # This file
     ├── PROJECT_SUMMARY.md         # Summary
-    ├── PROJECT_STATUS.md          # Current status
-    ├── RESEARCH_TOOLS.md          # Research tools guide
-    ├── OPENROUTER_SETUP.md        # API setup
-    └── CONTEXT.md                 # Session context
+    ## Command-Line Usage
+
+### Basic Usage
+
+```bash
+# Default (tries API, falls back to local)
+python consciousness_chatbot.py
+
+# Heuristic mode (fastest - no LLM)
+python consciousness_chatbot.py --heuristic
+
+# Local model mode
+python consciousness_chatbot.py --local
+
+# API mode explicitly
+python consciousness_chatbot.py  # (with OPENROUTER_API_KEY set)
+```
+
+### Options
+
+```bash
+python consciousness_chatbot.py [OPTIONS]
+
+Options:
+  --heuristic, --no-llm     Use heuristic response generation (no LLM, fastest)
+  --local                    Use local HuggingFace model
+  --model TEXT              Local model name (default: gpt2)
+                           Options: gpt2, gpt2-medium, microsoft/DialoGPT-medium
+  --depth INTEGER           Recursion depth 0-3 (default: 3)
+  --quiet, -q               Reduce verbose output
+  --help                    Show help message
+```
+
+### Examples
+
+```bash
+# Fastest testing (heuristic + minimal output)
+python consciousness_chatbot.py --heuristic --quiet
+
+# API with full output
+python consciousness_chatbot.py
+
+# Local model with low recursion (faster)
+python consciousness_chatbot.py --local --depth 1
+
+# Heuristic with low recursion (fastest possible)
+python consciousness_chatbot.py --heuristic --depth 0 --quiet
+```
+
+### Mode Comparison
+
+| Command | Mode | Speed | Quality | Dependencies |
+|---------|------|-------|---------|--------------|
+| `--heuristic` | Rules | 50-80ms | Good | spaCy, RoBERTa |
+| `--local` | GPT-2 | 1-2s | Moderate | Transformers |
+| (default) | API | 2-5s | Best | OpenRouter |
+
+## Testing
+
+All 22+ unit tests passing:
+```bash
+pytest test_consciousness.py -v
+```
+
+## Next Steps
+
+1. **Full Ablation Study**: Run with 10+ trials per condition
+2. **Statistical Analysis**: Determine significance of recursion depth effects
+3. **Dataset Collection**: 100+ conversations for publication-ready analysis
+4. **Visualization**: Complete dashboard with error bars and distributions
 ```
 
 ## Testing

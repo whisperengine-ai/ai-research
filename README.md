@@ -115,9 +115,40 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_md
 ```
 
-### Using OpenRouter API (Recommended)
+## Usage
 
-For much better quality responses, use OpenRouter to access GPT-4, Claude, etc.:
+### Quick Start (Heuristic Mode - No LLM)
+
+For fastest testing without any LLM dependency:
+
+```bash
+# Instant responses using spaCy linguistic rules (perfect for rapid testing)
+python consciousness_chatbot.py --heuristic
+```
+
+### Full Modes
+
+```bash
+# API Mode (Premium models: Claude 3.5, GPT-4, Mistral)
+# Requires OPENROUTER_API_KEY in .env
+python consciousness_chatbot.py
+
+# Local Model Mode (fast, no API needed, lower quality)
+python consciousness_chatbot.py --local
+
+# Heuristic Mode (instant, rule-based, no LLM)
+python consciousness_chatbot.py --heuristic
+
+# With options:
+python consciousness_chatbot.py --heuristic --quiet              # Reduce verbosity
+python consciousness_chatbot.py --local --model gpt2-medium      # Larger local model
+python consciousness_chatbot.py --heuristic --depth 1            # Lower recursion
+python consciousness_chatbot.py --help                            # Show all options
+```
+
+### Using OpenRouter API (Recommended for Best Quality)
+
+For premium responses using Claude 3.5, GPT-4, Mistral, etc.:
 
 1. Get API key from [openrouter.ai](https://openrouter.ai/)
 2. Copy `.env.example` to `.env`
@@ -127,13 +158,30 @@ See [OPENROUTER_SETUP.md](OPENROUTER_SETUP.md) for detailed instructions.
 
 ### Using Local Models
 
-If you don't set an API key, the system will use local GPT-2 (free but lower quality).
-
-## Usage
+If you don't set an API key, the system will use local GPT-2 (free but lower quality):
 
 ```bash
-python consciousness_chatbot.py
+python consciousness_chatbot.py --local
 ```
+
+### Using Heuristic Mode (FASTEST)
+
+For rapid testing without LLM overhead, use rule-based heuristic responses:
+
+```bash
+python consciousness_chatbot.py --heuristic
+```
+
+**Advantages**:
+- ⚡ Instant responses (no API latency, no model loading)
+- 🎯 Perfect for testing consciousness metrics and system logic
+- 💻 Minimal CPU/memory requirements
+- 🔬 Great for ablation studies on non-response components
+
+**Disadvantages**:
+- Responses are rule-based patterns (not learned language)
+- Lower conversational quality
+- Limited response diversity
 
 ## Research-Grade Features
 
@@ -237,17 +285,21 @@ If you use this system in your research, please cite:
 ## Documentation
 
 - [README.md](README.md) - This file, quick start guide
+- [QUICKSTART.md](QUICKSTART.md) - 3-step setup guide
+- [HEURISTIC_MODE.md](HEURISTIC_MODE.md) - **Fast testing** without LLM (50-80ms per response)
 - [ARCHITECTURE.md](ARCHITECTURE.md) - System architecture and module details
+- [SYSTEM_DESIGN.md](SYSTEM_DESIGN.md) - Detailed consciousness model
 - [RESEARCH_NOTES.md](RESEARCH_NOTES.md) - Theoretical foundations
 - [EXAMPLE_SESSION.md](EXAMPLE_SESSION.md) - Live example conversation with metrics
 - [ETHICS_SYSTEM.md](ETHICS_SYSTEM.md) - Ethical guidelines and content checking
-- [SPACY_OPTIMIZATION.md](SPACY_OPTIMIZATION.md) - Performance optimization using spaCy (50x faster keyword matching)
-- [METRICS_HISTORY.md](METRICS_HISTORY.md) - Conversation history tracking in consciousness metrics
-- [GLOBAL_WORKSPACE_THEORY.md](GLOBAL_WORKSPACE_THEORY.md) - **NEW!** GWT implementation
-- [RECURSION_ANALYSIS.md](RECURSION_ANALYSIS.md) - **NEW!** True recursion vs iteration
-- [ADVANCED_NLP_FEATURES.md](ADVANCED_NLP_FEATURES.md) - **NEW!** Ethical AI & spaCy features
+- [SPACY_OPTIMIZATION.md](SPACY_OPTIMIZATION.md) - Performance optimization (50x faster keyword matching)
+- [METRICS_HISTORY.md](METRICS_HISTORY.md) - Conversation history tracking in metrics
+- [METRICS_IMPROVEMENT.md](METRICS_IMPROVEMENT.md) - How metrics improved
+- [GLOBAL_WORKSPACE_THEORY.md](GLOBAL_WORKSPACE_THEORY.md) - GWT implementation details
+- [RECURSION_ANALYSIS.md](RECURSION_ANALYSIS.md) - True recursion vs iteration
+- [ADVANCED_NLP_FEATURES.md](ADVANCED_NLP_FEATURES.md) - Ethical AI & spaCy features
 - [CALCULATION_VALIDATION.md](CALCULATION_VALIDATION.md) - Scientific validation
 - [OPENROUTER_SETUP.md](OPENROUTER_SETUP.md) - API setup guide
 - [EMOTION_HEADER.md](EMOTION_HEADER.md) - Display documentation
 - [EXAMPLE_OUTPUT.md](EXAMPLE_OUTPUT.md) - Sample outputs
-- [QUICKSTART.md](QUICKSTART.md) - Fast setup
+

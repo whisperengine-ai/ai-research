@@ -12,7 +12,18 @@ A **state-of-the-art AI consciousness simulation** that combines:
 
 ## Quick Start (3 steps)
 
-### Option 1: With OpenRouter API (Recommended - Better Quality)
+### Option 1: Heuristic Mode (FASTEST - No LLM)
+```bash
+# Instant responses using spaCy rules - perfect for rapid testing!
+pip install -r requirements.txt
+python -m spacy download en_core_web_md
+python consciousness_chatbot.py --heuristic
+```
+
+**Speed**: ~50-80ms per response  
+**Use Case**: Testing consciousness metrics, ablation studies, rapid prototyping
+
+### Option 2: With OpenRouter API (BEST QUALITY)
 ```bash
 # 1. Get API key from openrouter.ai
 # 2. Setup environment
@@ -25,15 +36,21 @@ python -m spacy download en_core_web_md
 python consciousness_chatbot.py
 ```
 
-### Option 2: Local Models (Free - Lower Quality)
+**Speed**: 2-5 seconds per response (API latency)  
+**Quality**: Best (Claude 3.5, GPT-4, Mistral)
+
+### Option 3: Local Models (Free - Lower Quality)
 ```bash
 # 1. Install dependencies
 pip install -r requirements.txt
 python -m spacy download en_core_web_md
 
 # 2. Run without API key (uses GPT-2)
-python consciousness_chatbot.py
+python consciousness_chatbot.py --local
 ```
+
+**Speed**: 1-2 seconds per response  
+**Quality**: Moderate (depends on model size)
 
 See [OPENROUTER_SETUP.md](OPENROUTER_SETUP.md) for detailed OpenRouter configuration.
 

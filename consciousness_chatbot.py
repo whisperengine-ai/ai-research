@@ -12,6 +12,7 @@ from emotion_detector import EmotionDetector
 from meta_cognition import RecursiveMetaCognition, Thought
 from linguistic_analysis import LinguisticAnalyzer
 from openrouter_llm import OpenRouterLLM
+from heuristic_response_generator import HeuristicResponseGenerator
 from global_workspace import (GlobalWorkspace, EmotionProcessor, LanguageProcessor, 
                               MemoryProcessor, MetaCognitiveProcessor)
 from metrics import ConsciousnessMetrics  # Research-grade consciousness metrics
@@ -35,6 +36,7 @@ class ConsciousnessSimulator:
     def __init__(self, 
                  llm_model: Optional[str] = None,
                  use_openrouter: bool = True,
+                 use_heuristic: bool = False,
                  recursion_depth: int = 3,
                  verbose: bool = True):
         """
@@ -43,40 +45,53 @@ class ConsciousnessSimulator:
         Args:
             llm_model: Model name (HuggingFace model or OpenRouter model)
             use_openrouter: If True, use OpenRouter API. If False, use local HuggingFace model
+            use_heuristic: If True, use heuristic response generation (no LLM). Fastest for testing
             recursion_depth: How many levels of self-reflection (1-3)
             verbose: Show detailed internal states
         """
         self.verbose = verbose
         self.use_openrouter = use_openrouter
+        self.use_heuristic = use_heuristic
         
         print("🧠 Initializing Consciousness Simulator...\n")
         
         # Core systems
-        print("1/5 Loading language model...")
-        
-        if use_openrouter:
-            # Use OpenRouter API
-            self.llm = OpenRouterLLM(model=llm_model)
+        if use_heuristic:
+            print("⚡ Using HEURISTIC mode (no LLM, for fast testing)\n")
+            self.heuristic_generator = HeuristicResponseGenerator()
+            self.llm = None
             self.tokenizer = None
             self.model = None
             self.generator = None
-            print(f"   Using OpenRouter with model: {self.llm.model}")
+            print("1/5 Heuristic response generator ready (spaCy-based, instant responses)")
         else:
-            # Use local HuggingFace model
-            model_name = llm_model or "gpt2"
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-            self.model = AutoModelForCausalLM.from_pretrained(model_name)
+            print("1/5 Loading language model...")
             
-            # Set pad token if not exists
-            if self.tokenizer.pad_token is None:
-                self.tokenizer.pad_token = self.tokenizer.eos_token
+            if use_openrouter:
+                # Use OpenRouter API
+                self.llm = OpenRouterLLM(model=llm_model)
+                self.tokenizer = None
+                self.model = None
+                self.generator = None
+                print(f"   Using OpenRouter with model: {self.llm.model}")
+            else:
+                # Use local HuggingFace model
+                model_name = llm_model or "gpt2"
+                self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+                self.model = AutoModelForCausalLM.from_pretrained(model_name)
+                
+                # Set pad token if not exists
+                if self.tokenizer.pad_token is None:
+                    self.tokenizer.pad_token = self.tokenizer.eos_token
+                
+                self.generator = pipeline('text-generation', 
+                                         model=self.model, 
+                                         tokenizer=self.tokenizer,
+                                         device=-1)  # CPU
+                self.llm = None
+                print(f"   Using local model: {model_name}")
             
-            self.generator = pipeline('text-generation', 
-                                     model=self.model, 
-                                     tokenizer=self.tokenizer,
-                                     device=-1)  # CPU
-            self.llm = None
-            print(f"   Using local model: {model_name}")
+            self.heuristic_generator = None
         
         print("2/5 Initializing neurochemical system...")
         self.neurochemistry = NeurochemicalSystem()
@@ -320,7 +335,11 @@ class ConsciousnessSimulator:
         temperature = 0.7 + (behavioral_mods['creativity'] - 0.5) * 0.4
         temperature = max(0.3, min(temperature, 1.2))
         
-        response = self._generate_response(prompt, temperature=temperature)
+        response = self._generate_response(prompt, 
+                                          temperature=temperature,
+                                          user_input=user_input,
+                                          user_emotion=user_emotion,
+                                          bot_emotion=emotional_state)
         
         # ===== STEP 3.5: Detect Bot's OWN Emotion from Response =====
         # Bot has autonomous emotional state based on what it generated
@@ -647,10 +666,30 @@ This is a research demonstration of computational consciousness modeling, not a 
         prompt = prompt_base + "\n\nResponse:"
         return prompt
     
-    def _generate_response(self, prompt: str, temperature: float = 0.7, max_length: int = 100) -> str:
-        """Generate response using LLM (OpenRouter or local)"""
+    def _generate_response(self, prompt: str, temperature: float = 0.7, max_length: int = 100, 
+                          user_input: str = "", user_emotion: str = None, bot_emotion: str = None) -> str:
+        """
+        Generate response using LLM (OpenRouter or local) or heuristic rules
+        
+        Args:
+            prompt: The prompt to generate from
+            temperature: Sampling temperature
+            max_length: Max tokens to generate
+            user_input: Original user input (for heuristic mode)
+            user_emotion: Detected user emotion (for heuristic mode)
+            bot_emotion: Current bot emotion (for heuristic mode)
+        """
         try:
-            if self.use_openrouter:
+            if self.use_heuristic:
+                # Use heuristic response generator (instant, no LLM)
+                response = self.heuristic_generator.generate(
+                    user_input,
+                    user_emotion=user_emotion,
+                    bot_emotion=bot_emotion,
+                    context=self.conversation_memory[-5:] if self.conversation_memory else None
+                )
+                return response
+            elif self.use_openrouter:
                 # Use OpenRouter API
                 response = self.llm.generate(
                     prompt,
@@ -858,39 +897,74 @@ This is a research demonstration of computational consciousness modeling, not a 
 def main():
     """Run the consciousness simulator"""
     import os
+    import argparse
     from dotenv import load_dotenv
+    
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(
+        description="Consciousness Simulator - AI with emotions, meta-cognition, and recursive self-reflection"
+    )
+    parser.add_argument('--heuristic', '--no-llm', action='store_true', 
+                       help='Use heuristic response generation (no LLM, fastest for testing)')
+    parser.add_argument('--local', action='store_true',
+                       help='Use local HuggingFace model instead of API')
+    parser.add_argument('--model', type=str, default='gpt2',
+                       help='Local model name (default: gpt2). Options: gpt2, gpt2-medium, microsoft/DialoGPT-medium')
+    parser.add_argument('--depth', '--recursion', type=int, default=3, choices=[0, 1, 2, 3],
+                       help='Meta-cognitive recursion depth (0-3, default: 3)')
+    parser.add_argument('--quiet', '-q', action='store_true',
+                       help='Reduce verbose output')
+    
+    args = parser.parse_args()
     
     load_dotenv()
     
-    # Check if OpenRouter API key is available
-    use_api = os.getenv('OPENROUTER_API_KEY') is not None
+    # Determine which mode to use
+    if args.heuristic:
+        print("⚡ HEURISTIC MODE - No LLM, instant responses using spaCy linguistic rules")
+        print("   (Best for rapid testing without API/model overhead)\n")
+        
+        simulator = ConsciousnessSimulator(
+            use_heuristic=True,
+            recursion_depth=args.depth,
+            verbose=not args.quiet
+        )
     
-    if use_api:
-        print("🌐 OpenRouter API key found - using API models")
-        print("   Set OPENROUTER_MODEL in .env to change model")
-        print("   Available models: anthropic/claude-3.5-sonnet, openai/gpt-4, etc.\n")
+    elif args.local:
+        print("💻 LOCAL MODE - Using HuggingFace transformer model")
+        print(f"   Model: {args.model}")
+        print("   (To use better models: add OPENROUTER_API_KEY to .env)\n")
         
         simulator = ConsciousnessSimulator(
-            use_openrouter=True,
-            recursion_depth=3,  # 1-3 levels of meta-cognition
-            verbose=True  # Show internal consciousness states
-        )
-    else:
-        print("💻 No API key found - using local model")
-        print("   To use OpenRouter: Add OPENROUTER_API_KEY to .env file\n")
-        
-        # Local model options:
-        # - "gpt2" (fast, 124M params)
-        # - "gpt2-medium" (larger, better quality)
-        # - "microsoft/DialoGPT-medium" (conversational)
-        # - "facebook/opt-350m" (efficient)
-        
-        simulator = ConsciousnessSimulator(
-            llm_model="gpt2",  # Change to larger model for better responses
+            llm_model=args.model,
             use_openrouter=False,
-            recursion_depth=3,  # 1-3 levels of meta-cognition
-            verbose=True  # Show internal consciousness states
+            recursion_depth=args.depth,
+            verbose=not args.quiet
         )
+    
+    else:
+        # Default: try API, fall back to local
+        api_key = os.getenv('OPENROUTER_API_KEY')
+        
+        if api_key:
+            print("🌐 API MODE - Using OpenRouter for premium LLMs")
+            print("   (Models: Claude 3.5, GPT-4, Mistral, etc.)\n")
+            
+            simulator = ConsciousnessSimulator(
+                use_openrouter=True,
+                recursion_depth=args.depth,
+                verbose=not args.quiet
+            )
+        else:
+            print("💻 LOCAL MODE - No API key found, using local model")
+            print("   To use premium models: add OPENROUTER_API_KEY to .env\n")
+            
+            simulator = ConsciousnessSimulator(
+                llm_model=args.model,
+                use_openrouter=False,
+                recursion_depth=args.depth,
+                verbose=not args.quiet
+            )
     
     simulator.chat_loop()
 

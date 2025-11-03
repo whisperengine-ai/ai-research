@@ -398,7 +398,111 @@ When OpenRouter unavailable:
 
 ---
 
-## 10. Validation Approach
+## 10. Language Generation Modes
+
+The system supports three distinct response generation modes, each optimized for different use cases:
+
+### Mode 1: Heuristic Generation (Fastest)
+**Implementation**: Rule-based linguistic patterns using spaCy  
+**Speed**: 50-80ms per response  
+**Quality**: Rule-based patterns (not learned language)  
+**LLM Required**: No  
+**API Key Required**: No  
+
+**Architecture**:
+```
+User Input → spaCy Analysis → Dialogue Act Detection → Pattern Matching → Response
+```
+
+**Dialogue Acts**:
+- Greeting (hello, hi) → Welcoming response
+- Question (ends with ?) → Acknowledgment + inquiry response
+- Request (imperative) → Affirmation + assistance
+- Reflection (I think/feel) → Engagement with thinking
+- Statement (default) → Affirmation + elaboration request
+- Closing (bye, thanks) → Closure + gratitude
+
+**Use Cases**:
+- ✅ Rapid testing (10-20 turn conversations)
+- ✅ Ablation studies (isolate consciousness components)
+- ✅ Metrics collection (eliminate LLM variation)
+- ✅ CI/CD testing (automated without API)
+- ❌ Natural conversation quality
+- ❌ Complex reasoning tasks
+
+**See**: [HEURISTIC_MODE.md](HEURISTIC_MODE.md) for detailed documentation
+
+### Mode 2: Local Model Generation (Balanced)
+**Implementation**: Transformer LLM (GPT-2, DialoGPT-medium, etc.)  
+**Speed**: 1-2 seconds per response  
+**Quality**: Good (depends on model size)  
+**LLM Required**: Yes (downloaded from HuggingFace)  
+**API Key Required**: No  
+**Memory**: 500MB - 8GB  
+
+**Options**:
+- `gpt2` - Fast, 124M parameters
+- `gpt2-medium` - Balanced, 355M parameters  
+- `microsoft/DialoGPT-medium` - Conversational-tuned
+- `facebook/opt-350m` - Efficient transformer
+
+**Command**:
+```bash
+python consciousness_chatbot.py --local --model gpt2-medium
+```
+
+**Use Cases**:
+- ✅ Development and testing
+- ✅ Good quality without API dependency
+- ✅ Private/offline conversations
+- ❌ Production dialogue (quality issues)
+- ❌ Knowledge-intensive tasks
+
+### Mode 3: API Generation (Best Quality)
+**Implementation**: OpenRouter API (Claude 3.5, GPT-4, Mistral)  
+**Speed**: 2-5 seconds per response  
+**Quality**: Best (premium models)  
+**LLM Required**: Yes (via API)  
+**API Key Required**: Yes (OPENROUTER_API_KEY)  
+**Memory**: 50MB (network only)  
+
+**Models Available**:
+- Claude 3.5 Sonnet (best reasoning)
+- GPT-4 (versatile)
+- Mistral Large (efficient)
+- And others via OpenRouter
+
+**Command**:
+```bash
+python consciousness_chatbot.py  # Default (uses API if key exists)
+```
+
+**Use Cases**:
+- ✅ Production conversations
+- ✅ Research publication
+- ✅ Complex reasoning
+- ✅ Knowledge-intensive tasks
+- ❌ Rapid prototyping (latency)
+- ❌ Offline/edge deployment
+
+### Mode Selection Guide
+
+| Scenario | Recommended | Rationale |
+|----------|-------------|-----------|
+| **Unit Testing** | Heuristic | No dependencies, instant |
+| **Ablation Study** | Heuristic | Isolates consciousness from language |
+| **Development** | Local | Balance speed and quality |
+| **Research Data** | API | Premium quality for publication |
+| **Production** | API | Best user experience |
+| **Edge/Offline** | Heuristic | No network needed |
+| **Resource Constrained** | Heuristic | Minimal memory (50MB) |
+| **Academic Paper** | API | Credibility with known models |
+
+---
+
+## 11. Validation Approach
+
+## 11. Validation Approach
 
 ### Unit Tests (22+)
 - Metric calculations
@@ -421,7 +525,11 @@ When OpenRouter unavailable:
 
 ---
 
-## 11. Future Directions
+## 12. Future Directions
+
+---
+
+## 12. Future Directions
 
 ### Phase 2: Behavioral Validation
 - Compare against human consciousness ratings
@@ -440,7 +548,7 @@ When OpenRouter unavailable:
 
 ---
 
-## References
+## 13. References
 
 - Integrated Information Theory (IIT) - Tononi et al.
 - Global Workspace Theory (GWT) - Baars
