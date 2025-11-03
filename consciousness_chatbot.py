@@ -666,7 +666,7 @@ This is a research demonstration of computational consciousness modeling, not a 
         prompt = prompt_base + "\n\nResponse:"
         return prompt
     
-    def _generate_response(self, prompt: str, temperature: float = 0.7, max_length: int = 100, 
+    def _generate_response(self, prompt: str, temperature: float = 0.7, max_length: int = 256, 
                           user_input: str = "", user_emotion: str = None, bot_emotion: str = None) -> str:
         """
         Generate response using LLM (OpenRouter or local) or heuristic rules
@@ -700,9 +700,10 @@ This is a research demonstration of computational consciousness modeling, not a 
                 return response
             else:
                 # Use local HuggingFace model
+                # Use max_new_tokens instead of max_length to avoid conflicts
                 outputs = self.generator(
                     prompt,
-                    max_length=len(prompt.split()) + max_length,
+                    max_new_tokens=max_length,
                     temperature=temperature,
                     do_sample=True,
                     pad_token_id=self.tokenizer.eos_token_id,
