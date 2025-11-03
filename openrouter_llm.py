@@ -33,7 +33,7 @@ class OpenRouterLLM:
             site_url: Your site URL for tracking
         """
         self.api_key = api_key or os.getenv('OPENROUTER_API_KEY')
-        self.model = model or os.getenv('OPENROUTER_MODEL', 'anthropic/claude-3.5-sonnet')
+        self.model = model or os.getenv('OPENROUTER_MODEL', 'deepseek/deepseek-chat-v3.1')
         self.site_name = site_name or os.getenv('OPENROUTER_SITE_NAME', 'consciousness-simulator')
         self.site_url = site_url or os.getenv('OPENROUTER_SITE_URL', 'http://localhost')
         

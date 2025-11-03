@@ -9,6 +9,7 @@ from spacy.matcher import PhraseMatcher, Matcher
 from typing import List, Dict, Set, Tuple, Optional
 from collections import Counter
 import re
+import os
 
 
 class LinguisticAnalyzer:
@@ -17,13 +18,16 @@ class LinguisticAnalyzer:
     Tracks what concepts are being discussed and what the system is "paying attention to"
     """
     
-    def __init__(self, model: str = "en_core_web_md"):
+    def __init__(self, model: str = None):
         """
         Initialize spaCy model
         
         Args:
-            model: spaCy model name (download with: python -m spacy download en_core_web_md)
+            model: spaCy model name (default: en_core_web_md from SPACY_MODEL env var)
         """
+        if model is None:
+            model = os.getenv('SPACY_MODEL', 'en_core_web_md')
+        
         print(f"Loading spaCy model: {model}...")
         try:
             self.nlp = spacy.load(model)

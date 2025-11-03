@@ -10,6 +10,7 @@ from typing import Dict, Tuple, Optional
 import numpy as np
 import spacy
 import re
+import os
 
 
 class EmotionDetector:
@@ -18,15 +19,18 @@ class EmotionDetector:
     Maps detected emotions to neurochemical changes
     """
     
-    def __init__(self, model_name: str = "j-hartmann/emotion-english-distilroberta-base", nlp = None):
+    def __init__(self, model_name: str = None, nlp = None):
         """
         Initialize RoBERTa emotion detector with spaCy for stance analysis
         
         Args:
             model_name: HuggingFace model for emotion classification
-                       Default: fine-tuned RoBERTa on emotion detection
+                       Default: j-hartmann/emotion-english-distilroberta-base (from EMOTION_MODEL env var)
             nlp: spaCy language model (optional, will load if not provided)
         """
+        if model_name is None:
+            model_name = os.getenv('EMOTION_MODEL', 'j-hartmann/emotion-english-distilroberta-base')
+        
         print(f"Loading emotion detection model: {model_name}...")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModelForSequenceClassification.from_pretrained(model_name)

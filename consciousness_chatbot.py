@@ -23,6 +23,13 @@ import os
 import warnings
 warnings.filterwarnings('ignore')
 
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # dotenv not installed, will use defaults
+
 
 class ConsciousnessSimulator:
     """
@@ -38,10 +45,17 @@ class ConsciousnessSimulator:
                  llm_model: Optional[str] = None,
                  use_openrouter: bool = True,
                  use_heuristic: bool = False,
-                 recursion_depth: int = 3,
+                 recursion_depth: int = None,
                  verbose: bool = True,
                  enable_ml_logging: bool = False,
-                 ml_log_dir: str = 'ml_logs'):
+                 ml_log_dir: str = 'ml_logs',
+                 workspace_capacity: int = None,
+                 conversation_memory_turns: int = None,
+                 workspace_decay_rate: float = None,
+                 workspace_competition_threshold: float = None,
+                 neurochemistry_decay_rate: float = None,
+                 llm_temperature: float = None,
+                 llm_max_tokens: int = None):
         """
         Initialize the consciousness simulator
         
@@ -49,15 +63,43 @@ class ConsciousnessSimulator:
             llm_model: Model name (HuggingFace model or OpenRouter model)
             use_openrouter: If True, use OpenRouter API. If False, use local HuggingFace model
             use_heuristic: If True, use heuristic response generation (no LLM). Fastest for testing
-            recursion_depth: How many levels of self-reflection (1-3)
+            recursion_depth: How many levels of self-reflection (1-3). Reads from RECURSION_DEPTH env var if not set
             verbose: Show detailed internal states
             enable_ml_logging: If True, log conversation data for ML training
             ml_log_dir: Directory to save ML training logs
+            workspace_capacity: Global workspace capacity (items conscious simultaneously). Reads from WORKING_MEMORY_CAPACITY env var if not set
+            conversation_memory_turns: Number of conversation turns to remember. Reads from CONVERSATION_MEMORY_TURNS env var if not set
+            workspace_decay_rate: How fast items fade from workspace. Reads from WORKSPACE_DECAY_RATE env var if not set
+            workspace_competition_threshold: Minimum priority for workspace access. Reads from WORKSPACE_COMPETITION_THRESHOLD env var if not set
+            neurochemistry_decay_rate: How fast neurochemicals return to baseline. Reads from NEUROCHEMISTRY_DECAY_RATE env var if not set
+            llm_temperature: LLM temperature for response generation. Reads from LLM_TEMPERATURE env var if not set
+            llm_max_tokens: Maximum tokens for LLM responses. Reads from LLM_MAX_TOKENS env var if not set
         """
+        # Load settings from environment variables with fallbacks
+        if recursion_depth is None:
+            recursion_depth = int(os.getenv('RECURSION_DEPTH', '3'))
+        if workspace_capacity is None:
+            workspace_capacity = int(os.getenv('WORKING_MEMORY_CAPACITY', '5'))
+        if conversation_memory_turns is None:
+            conversation_memory_turns = int(os.getenv('CONVERSATION_MEMORY_TURNS', '20'))
+        if workspace_decay_rate is None:
+            workspace_decay_rate = float(os.getenv('WORKSPACE_DECAY_RATE', '0.30'))
+        if workspace_competition_threshold is None:
+            workspace_competition_threshold = float(os.getenv('WORKSPACE_COMPETITION_THRESHOLD', '0.5'))
+        if neurochemistry_decay_rate is None:
+            neurochemistry_decay_rate = float(os.getenv('NEUROCHEMISTRY_DECAY_RATE', '0.05'))
+        if llm_temperature is None:
+            llm_temperature = float(os.getenv('LLM_TEMPERATURE', '0.7'))
+        if llm_max_tokens is None:
+            llm_max_tokens = int(os.getenv('LLM_MAX_TOKENS', '4096'))
+        
         self.verbose = verbose
         self.use_openrouter = use_openrouter
         self.use_heuristic = use_heuristic
         self.enable_ml_logging = enable_ml_logging
+        self.max_memory_turns = conversation_memory_turns
+        self.llm_temperature = llm_temperature
+        self.llm_max_tokens = llm_max_tokens
         
         print("🧠 Initializing Consciousness Simulator...\n")
         
@@ -111,13 +153,14 @@ class ConsciousnessSimulator:
         
         print("2/5 Initializing neurochemical system...")
         self.neurochemistry = NeurochemicalSystem()
+        self.neurochemistry.decay_rate = neurochemistry_decay_rate  # Set from env or param
         
         print("5/5 Loading linguistic analyzer (spaCy)...")
-        self.linguistic_analyzer = LinguisticAnalyzer(model="en_core_web_md")
+        self.linguistic_analyzer = LinguisticAnalyzer()  # Reads SPACY_MODEL from env
         
         print("3/5 Loading emotion detector (RoBERTa)...")
         # Pass spaCy NLP to emotion detector for stance analysis
-        self.emotion_detector = EmotionDetector(nlp=self.linguistic_analyzer.nlp)
+        self.emotion_detector = EmotionDetector(nlp=self.linguistic_analyzer.nlp)  # Reads EMOTION_MODEL from env
         
         print("4/5 Initializing meta-cognition...")
         self.meta_cognition = RecursiveMetaCognition(max_recursion_depth=recursion_depth)
@@ -125,9 +168,9 @@ class ConsciousnessSimulator:
         
         print("6/6 Initializing Global Workspace (consciousness integration)...")
         self.global_workspace = GlobalWorkspace(
-            capacity=3,              # 3 items can be conscious simultaneously
-            decay_rate=0.30,         # Aggressive decay to clear old content
-            competition_threshold=0.5
+            capacity=workspace_capacity,           # Read from env or param
+            decay_rate=workspace_decay_rate,       # Read from env or param
+            competition_threshold=workspace_competition_threshold  # Read from env or param
         )
         
         # Register specialized processors
@@ -154,8 +197,8 @@ class ConsciousnessSimulator:
         
         # Conversation history and memory
         self.conversation_history: List[Dict] = []
-        self.conversation_memory: List[Dict] = []  # Last 20 turns for LLM context
-        self.max_memory_turns = 20
+        self.conversation_memory: List[Dict] = []  # LLM context (configurable via env)
+        # max_memory_turns already set above from env/param
         
         # ML Logging (NEW: for training quality prediction models)
         if enable_ml_logging:
@@ -356,11 +399,12 @@ class ConsciousnessSimulator:
         prompt = self._create_contextual_prompt(user_input, emotional_state, behavioral_mods, user_linguistic, consciousness_mods)
         
         # Generate with temperature modulated by neurochemistry
-        temperature = 0.7 + (behavioral_mods['creativity'] - 0.5) * 0.4
+        temperature = self.llm_temperature + (behavioral_mods['creativity'] - 0.5) * 0.4
         temperature = max(0.3, min(temperature, 1.2))
         
         response = self._generate_response(prompt, 
                                           temperature=temperature,
+                                          max_length=self.llm_max_tokens,
                                           user_input=user_input,
                                           user_emotion=user_emotion,
                                           bot_emotion=emotional_state)
