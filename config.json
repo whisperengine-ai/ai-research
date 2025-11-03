@@ -1,0 +1,53 @@
+{
+  "model": {
+    "llm_model": "gpt2",
+    "alternatives": [
+      "gpt2",
+      "gpt2-medium",
+      "microsoft/DialoGPT-medium",
+      "facebook/opt-350m",
+      "EleutherAI/gpt-neo-125M"
+    ],
+    "emotion_model": "j-hartmann/emotion-english-distilroberta-base",
+    "spacy_model": "en_core_web_md"
+  },
+  "consciousness": {
+    "recursion_depth": 3,
+    "working_memory_capacity": 7,
+    "homeostatic_decay_rate": 0.05,
+    "conversation_memory_turns": 20
+  },
+  "neurochemistry": {
+    "baseline_dopamine": 0.5,
+    "baseline_serotonin": 0.5,
+    "baseline_norepinephrine": 0.5,
+    "baseline_oxytocin": 0.5,
+    "baseline_cortisol": 0.3
+  },
+  "generation": {
+    "base_temperature": 0.7,
+    "max_response_length": 100,
+    "max_reflection_length": 50
+  },
+  "display": {
+    "verbose": true,
+    "show_neurochemistry": true,
+    "show_attention": true,
+    "show_meta_cognition": true
+  },
+  "research_notes": {
+    "description": "State-of-the-art consciousness simulation combining multiple theories",
+    "theories_implemented": [
+      "Global Workspace Theory (attention mechanisms)",
+      "Higher-Order Thought Theory (recursive meta-cognition)",
+      "Affective Neuroscience (neurochemical emotions)",
+      "Predictive Processing (context-aware generation)"
+    ],
+    "novel_contributions": [
+      "Integration of neurochemical emotion modeling with LLMs",
+      "Multi-level recursive self-reflection",
+      "Real-time emotional state modulation of behavior",
+      "Linguistic analysis of internal thought patterns"
+    ]
+  }
+}
