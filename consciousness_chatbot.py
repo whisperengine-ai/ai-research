@@ -360,8 +360,8 @@ class ConsciousnessSimulator:
         # Update conversation memory (keep last 20 turns)
         self._update_memory(user_input, response)
         
-        if self.verbose:
-            print(f"🤖 AI Response: {response}\n")
+        # NOTE: AI Response will be printed at the END of this method (after all metrics)
+        # This improves UX - user sees all internal processing, then response at bottom ready for next input
         
         # ===== STEP 4: Recursive Meta-Cognition =====
         context = {
@@ -522,6 +522,12 @@ class ConsciousnessSimulator:
             user_linguistic=user_linguistic,
             bot_response=response
         )
+        
+        # ===== FINAL: Display AI Response at Bottom =====
+        # This is displayed AFTER all consciousness metrics and internal processing
+        # so the user sees the response at the bottom of the screen, ready for next input
+        if self.verbose:
+            print(f"\n🤖 AI Response: {response}\n")
         
         return interaction
     
