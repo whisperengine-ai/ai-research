@@ -486,8 +486,8 @@ class ConsciousnessSimulator:
             print(self.linguistic_analyzer.get_attention_report(recent_thoughts))
             print(self.meta_cognition.get_consciousness_summary())
             
-            # Show research-grade consciousness metrics
-            print(self.metrics_tracker.get_metrics_summary(recent_n=1))
+            # Show research-grade consciousness metrics (last 10 turns for trend analysis)
+            print(self.metrics_tracker.get_metrics_summary(recent_n=10))
         
         # Record interaction
         interaction = {
