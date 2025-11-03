@@ -13,6 +13,7 @@ from meta_cognition import RecursiveMetaCognition, Thought
 from linguistic_analysis import LinguisticAnalyzer
 from openrouter_llm import OpenRouterLLM
 from heuristic_response_generator import HeuristicResponseGenerator
+from device_manager import DeviceManager  # Auto-detect GPU/CPU/Metal
 from global_workspace import (GlobalWorkspace, EmotionProcessor, LanguageProcessor, 
                               MemoryProcessor, MetaCognitiveProcessor)
 from metrics import ConsciousnessMetrics  # Research-grade consciousness metrics
@@ -55,6 +56,13 @@ class ConsciousnessSimulator:
         
         print("🧠 Initializing Consciousness Simulator...\n")
         
+        # Detect device (GPU/CPU/Metal) - auto-detect based on OS and hardware
+        print("0/8 Detecting hardware device...\n")
+        self.device_manager = DeviceManager(verbose=True)
+        self.device = self.device_manager.get_device()
+        self.device_info = self.device_manager.get_device_info()
+        print()
+        
         # Core systems
         if use_heuristic:
             print("⚡ Using HEURISTIC mode (no LLM, for fast testing)\n")
@@ -63,9 +71,9 @@ class ConsciousnessSimulator:
             self.tokenizer = None
             self.model = None
             self.generator = None
-            print("1/5 Heuristic response generator ready (spaCy-based, instant responses)")
+            print("1/8 Heuristic response generator ready (spaCy-based, instant responses)")
         else:
-            print("1/5 Loading language model...")
+            print("1/8 Loading language model...")
             
             if use_openrouter:
                 # Use OpenRouter API
@@ -75,21 +83,24 @@ class ConsciousnessSimulator:
                 self.generator = None
                 print(f"   Using OpenRouter with model: {self.llm.model}")
             else:
-                # Use local HuggingFace model
+                # Use local HuggingFace model with auto-detected device
                 model_name = llm_model or "gpt2"
+                print(f"   Loading {model_name} on {self.device}...")
                 self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-                self.model = AutoModelForCausalLM.from_pretrained(model_name)
+                self.model = AutoModelForCausalLM.from_pretrained(model_name).to(self.device)
                 
                 # Set pad token if not exists
                 if self.tokenizer.pad_token is None:
                     self.tokenizer.pad_token = self.tokenizer.eos_token
                 
+                # Use device index for pipeline (0 for GPU, -1 for CPU)
+                device_index = self.device_manager.get_pipeline_device()
                 self.generator = pipeline('text-generation', 
                                          model=self.model, 
                                          tokenizer=self.tokenizer,
-                                         device=-1)  # CPU
+                                         device=device_index)
                 self.llm = None
-                print(f"   Using local model: {model_name}")
+                print(f"   Using local model: {model_name} on {self.device}")
             
             self.heuristic_generator = None
         
