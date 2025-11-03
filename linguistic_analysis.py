@@ -334,7 +334,7 @@ class LinguisticAnalyzer:
         negation_scopes = []
         negation_tokens = ['not', 'no', 'dont', 'wont', 'cant', 'neither', 'never']
         
-        for token in doc:
+        for i, token in enumerate(doc):
             if token.lemma_ in negation_tokens:
                 # Negation scope extends from negation to the end of its clause
                 # Usually covers the next 5-10 tokens or until clause boundary
@@ -345,12 +345,16 @@ class LinguisticAnalyzer:
                 
                 # Extend to cover the negated clause (roughly next 10 tokens or until punctuation)
                 token_count = 0
-                for following in token.nbrs:
+                # Iterate through tokens following this negation
+                for j in range(i + 1, len(doc)):
+                    following = doc[j]
                     if following.is_punct:
+                        # Stop at punctuation (period, comma, etc.)
                         break
                     token_count += 1
                     scope_end = following.idx + len(following.text)
-                    if token_count > 10:
+                    if token_count >= 10:
+                        # Limit negation scope to ~10 tokens
                         break
                 
                 negation_scopes.append((scope_start, scope_end))
