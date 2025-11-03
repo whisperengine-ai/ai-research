@@ -242,6 +242,7 @@ If you use this system in your research, please cite:
 - [EXAMPLE_SESSION.md](EXAMPLE_SESSION.md) - Live example conversation with metrics
 - [ETHICS_SYSTEM.md](ETHICS_SYSTEM.md) - Ethical guidelines and content checking
 - [SPACY_OPTIMIZATION.md](SPACY_OPTIMIZATION.md) - Performance optimization using spaCy (50x faster keyword matching)
+- [METRICS_HISTORY.md](METRICS_HISTORY.md) - Conversation history tracking in consciousness metrics
 - [GLOBAL_WORKSPACE_THEORY.md](GLOBAL_WORKSPACE_THEORY.md) - **NEW!** GWT implementation
 - [RECURSION_ANALYSIS.md](RECURSION_ANALYSIS.md) - **NEW!** True recursion vs iteration
 - [ADVANCED_NLP_FEATURES.md](ADVANCED_NLP_FEATURES.md) - **NEW!** Ethical AI & spaCy features
