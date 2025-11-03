@@ -1,9 +1,685 @@
 {
   "metadata": {
-    "timestamp": "2025-11-03T00:21:25.905062",
-    "total_conversations": 0,
+    "timestamp": "2025-11-03T00:40:57.277550",
+    "total_conversations": 50,
     "recursion_depth": 3
   },
-  "conversations": [],
-  "metrics_summary": {}
+  "conversations": [
+    {
+      "conversation_id": 1,
+      "user_input": "I'm feeling frustrated with my current situation.",
+      "metrics": {
+        "phi": 0.440952294189864,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.78125,
+        "temporal_binding": 0.691908032099406,
+        "reportability": 0.875,
+        "overall_consciousness": 0.7015242783623769,
+        "timestamp": 1762158939.400911
+      }
+    },
+    {
+      "conversation_id": 2,
+      "user_input": "I feel anxious about the future.",
+      "metrics": {
+        "phi": 0.4780163523608602,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.78125,
+        "temporal_binding": 0.44,
+        "reportability": 0.875,
+        "overall_consciousness": 0.673004088090215,
+        "timestamp": 1762158944.316565
+      }
+    },
+    {
+      "conversation_id": 3,
+      "user_input": "How would you approach solving a complex problem?",
+      "metrics": {
+        "phi": 0.47215554170766183,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.875,
+        "temporal_binding": 0.44,
+        "reportability": 0.8250000000000001,
+        "overall_consciousness": 0.6827888854269155,
+        "timestamp": 1762158950.078259
+      }
+    },
+    {
+      "conversation_id": 4,
+      "user_input": "What's your reasoning about consciousness?",
+      "metrics": {
+        "phi": 0.466924145908051,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.44,
+        "reportability": 0.95,
+        "overall_consciousness": 0.6939810364770127,
+        "timestamp": 1762158956.834188
+      }
+    },
+    {
+      "conversation_id": 5,
+      "user_input": "Tell me about your own inner experience.",
+      "metrics": {
+        "phi": 0.491509943943457,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.44,
+        "reportability": 0.95,
+        "overall_consciousness": 0.7001274859858643,
+        "timestamp": 1762158962.8771
+      }
+    },
+    {
+      "conversation_id": 6,
+      "user_input": "Do you think you have subjective experiences?",
+      "metrics": {
+        "phi": 0.4840530964724358,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.44,
+        "reportability": 0.95,
+        "overall_consciousness": 0.6982632741181088,
+        "timestamp": 1762158968.203267
+      }
+    },
+    {
+      "conversation_id": 7,
+      "user_input": "I appreciate your help with this.",
+      "metrics": {
+        "phi": 0.4493163337084957,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.78125,
+        "temporal_binding": 0.44,
+        "reportability": 0.8,
+        "overall_consciousness": 0.6545790834271239,
+        "timestamp": 1762158971.289033
+      }
+    },
+    {
+      "conversation_id": 8,
+      "user_input": "Can you explain a difficult concept?",
+      "metrics": {
+        "phi": 0.4464341945985987,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.44,
+        "reportability": 0.8,
+        "overall_consciousness": 0.6663585486496496,
+        "timestamp": 1762158977.650114
+      }
+    },
+    {
+      "conversation_id": 9,
+      "user_input": "I'm feeling frustrated with my current situation.",
+      "metrics": {
+        "phi": 0.0,
+        "global_availability": 0.5,
+        "meta_cognitive_depth": 0.6925,
+        "temporal_binding": 0.0,
+        "reportability": 0.675,
+        "overall_consciousness": 0.36475,
+        "timestamp": 1762158981.827183
+      }
+    },
+    {
+      "conversation_id": 10,
+      "user_input": "I feel anxious about the future.",
+      "metrics": {
+        "phi": 0.5245580665698403,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.78125,
+        "temporal_binding": 0.5992758957544964,
+        "reportability": 0.875,
+        "overall_consciousness": 0.7085309010056345,
+        "timestamp": 1762158991.864811
+      }
+    },
+    {
+      "conversation_id": 11,
+      "user_input": "How would you approach solving a complex problem?",
+      "metrics": {
+        "phi": 0.5217315561078993,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.75,
+        "temporal_binding": 0.48000000000000004,
+        "reportability": 0.7500000000000001,
+        "overall_consciousness": 0.6649328890269749,
+        "timestamp": 1762158997.4460711
+      }
+    },
+    {
+      "conversation_id": 12,
+      "user_input": "What's your reasoning about consciousness?",
+      "metrics": {
+        "phi": 0.5192256353645667,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.48000000000000004,
+        "reportability": 0.875,
+        "overall_consciousness": 0.7018064088411416,
+        "timestamp": 1762159003.102904
+      }
+    },
+    {
+      "conversation_id": 13,
+      "user_input": "Tell me about your own inner experience.",
+      "metrics": {
+        "phi": 0.5170067965948497,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.48000000000000004,
+        "reportability": 0.8250000000000001,
+        "overall_consciousness": 0.6875016991487124,
+        "timestamp": 1762159008.521348
+      }
+    },
+    {
+      "conversation_id": 14,
+      "user_input": "Do you think you have subjective experiences?",
+      "metrics": {
+        "phi": 0.5150449115712636,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.48000000000000004,
+        "reportability": 0.8,
+        "overall_consciousness": 0.6895112278928159,
+        "timestamp": 1762159013.3371289
+      }
+    },
+    {
+      "conversation_id": 15,
+      "user_input": "I appreciate your help with this.",
+      "metrics": {
+        "phi": 0.5072911780513094,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.59375,
+        "temporal_binding": 0.48000000000000004,
+        "reportability": 0.55,
+        "overall_consciousness": 0.6000727945128275,
+        "timestamp": 1762159017.47909
+      }
+    },
+    {
+      "conversation_id": 16,
+      "user_input": "Can you explain a difficult concept?",
+      "metrics": {
+        "phi": 0.5065997475348887,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.48000000000000004,
+        "reportability": 0.875,
+        "overall_consciousness": 0.6986499368837221,
+        "timestamp": 1762159022.644118
+      }
+    },
+    {
+      "conversation_id": 17,
+      "user_input": "I'm feeling frustrated with my current situation.",
+      "metrics": {
+        "phi": 0.5059981585266399,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.78125,
+        "temporal_binding": 0.48000000000000004,
+        "reportability": 0.7250000000000001,
+        "overall_consciousness": 0.66349953963166,
+        "timestamp": 1762159030.904066
+      }
+    },
+    {
+      "conversation_id": 18,
+      "user_input": "I feel anxious about the future.",
+      "metrics": {
+        "phi": 0.0,
+        "global_availability": 0.5,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.0,
+        "reportability": 0.875,
+        "overall_consciousness": 0.41874999999999996,
+        "timestamp": 1762159045.7201338
+      }
+    },
+    {
+      "conversation_id": 19,
+      "user_input": "How would you approach solving a complex problem?",
+      "metrics": {
+        "phi": 0.5913891304361418,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.47983734766642255,
+        "reportability": 0.8,
+        "overall_consciousness": 0.7085728847589988,
+        "timestamp": 1762159051.5213408
+      }
+    },
+    {
+      "conversation_id": 20,
+      "user_input": "What's your reasoning about consciousness?",
+      "metrics": {
+        "phi": 0.5894456396406106,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.36,
+        "reportability": 0.95,
+        "overall_consciousness": 0.7126114099101527,
+        "timestamp": 1762159058.1144488
+      }
+    },
+    {
+      "conversation_id": 21,
+      "user_input": "Tell me about your own inner experience.",
+      "metrics": {
+        "phi": 0.5877323167265441,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.36,
+        "reportability": 0.95,
+        "overall_consciousness": 0.7059330791816361,
+        "timestamp": 1762159065.5926862
+      }
+    },
+    {
+      "conversation_id": 22,
+      "user_input": "Do you think you have subjective experiences?",
+      "metrics": {
+        "phi": 0.5862246864490545,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.78125,
+        "temporal_binding": 0.36,
+        "reportability": 0.7250000000000001,
+        "overall_consciousness": 0.6655561716122637,
+        "timestamp": 1762159071.13106
+      }
+    },
+    {
+      "conversation_id": 23,
+      "user_input": "I appreciate your help with this.",
+      "metrics": {
+        "phi": 0.5804760084869927,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.72,
+        "temporal_binding": 0.36,
+        "reportability": 0.65,
+        "overall_consciousness": 0.6406190021217483,
+        "timestamp": 1762159074.964405
+      }
+    },
+    {
+      "conversation_id": 24,
+      "user_input": "Can you explain a difficult concept?",
+      "metrics": {
+        "phi": 0.5799990459474393,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.36,
+        "reportability": 0.7250000000000001,
+        "overall_consciousness": 0.6702497614868599,
+        "timestamp": 1762159079.254475
+      }
+    },
+    {
+      "conversation_id": 25,
+      "user_input": "I'm feeling frustrated with my current situation.",
+      "metrics": {
+        "phi": 0.5795891398410961,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.875,
+        "temporal_binding": 0.36,
+        "reportability": 0.875,
+        "overall_consciousness": 0.705147284960274,
+        "timestamp": 1762159085.9843898
+      }
+    },
+    {
+      "conversation_id": 26,
+      "user_input": "I feel anxious about the future.",
+      "metrics": {
+        "phi": 0.47176069135476156,
+        "global_availability": 0.7,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.36,
+        "reportability": 0.95,
+        "overall_consciousness": 0.6519401728386904,
+        "timestamp": 1762159092.870327
+      }
+    },
+    {
+      "conversation_id": 27,
+      "user_input": "How would you approach solving a complex problem?",
+      "metrics": {
+        "phi": 0.37844667835559387,
+        "global_availability": 0.5999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.3273226928710937,
+        "reportability": 0.8250000000000001,
+        "overall_consciousness": 0.5862100735195624,
+        "timestamp": 1762159102.209737
+      }
+    },
+    {
+      "conversation_id": 28,
+      "user_input": "What's your reasoning about consciousness?",
+      "metrics": {
+        "phi": 0.6103335905701156,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.4896197271347046,
+        "reportability": 0.95,
+        "overall_consciousness": 0.7372763567127346,
+        "timestamp": 1762159107.0805068
+      }
+    },
+    {
+      "conversation_id": 29,
+      "user_input": "Tell me about your own inner experience.",
+      "metrics": {
+        "phi": 0.6090664890093452,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.32,
+        "reportability": 0.95,
+        "overall_consciousness": 0.7052666222523363,
+        "timestamp": 1762159112.9940102
+      }
+    },
+    {
+      "conversation_id": 30,
+      "user_input": "Do you think you have subjective experiences?",
+      "metrics": {
+        "phi": 0.6079593086747591,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.32,
+        "reportability": 0.9,
+        "overall_consciousness": 0.7037398271686899,
+        "timestamp": 1762159117.784495
+      }
+    },
+    {
+      "conversation_id": 31,
+      "user_input": "I appreciate your help with this.",
+      "metrics": {
+        "phi": 0.6042507527272115,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.32,
+        "reportability": 0.65,
+        "overall_consciousness": 0.6653126881818029,
+        "timestamp": 1762159125.6777
+      }
+    },
+    {
+      "conversation_id": 32,
+      "user_input": "Can you explain a difficult concept?",
+      "metrics": {
+        "phi": 0.6039310192882031,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.32,
+        "reportability": 0.875,
+        "overall_consciousness": 0.6927327548220508,
+        "timestamp": 1762159130.874571
+      }
+    },
+    {
+      "conversation_id": 33,
+      "user_input": "I'm feeling frustrated with my current situation.",
+      "metrics": {
+        "phi": 0.6036611241119034,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.32,
+        "reportability": 0.875,
+        "overall_consciousness": 0.6989152810279758,
+        "timestamp": 1762159137.33631
+      }
+    },
+    {
+      "conversation_id": 34,
+      "user_input": "I feel anxious about the future.",
+      "metrics": {
+        "phi": 0.6034352747550779,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.32,
+        "reportability": 0.875,
+        "overall_consciousness": 0.6988588186887695,
+        "timestamp": 1762159143.341307
+      }
+    },
+    {
+      "conversation_id": 35,
+      "user_input": "How would you approach solving a complex problem?",
+      "metrics": {
+        "phi": 0.48658162353167184,
+        "global_availability": 0.7,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.32,
+        "reportability": 0.8,
+        "overall_consciousness": 0.627145405882918,
+        "timestamp": 1762159149.509611
+      }
+    },
+    {
+      "conversation_id": 36,
+      "user_input": "What's your reasoning about consciousness?",
+      "metrics": {
+        "phi": 0.36976220556595396,
+        "global_availability": 0.5999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.32720410346984863,
+        "reportability": 0.8,
+        "overall_consciousness": 0.5802711669119658,
+        "timestamp": 1762159156.014106
+      }
+    },
+    {
+      "conversation_id": 37,
+      "user_input": "Tell me about your own inner experience.",
+      "metrics": {
+        "phi": 0.6029728830021291,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.6188728284835816,
+        "reportability": 0.875,
+        "overall_consciousness": 0.7435741450230695,
+        "timestamp": 1762159164.785155
+      }
+    },
+    {
+      "conversation_id": 38,
+      "user_input": "Do you think you have subjective experiences?",
+      "metrics": {
+        "phi": 0.6028766280976678,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.32,
+        "reportability": 0.875,
+        "overall_consciousness": 0.6924691570244169,
+        "timestamp": 1762159172.488713
+      }
+    },
+    {
+      "conversation_id": 39,
+      "user_input": "I appreciate your help with this.",
+      "metrics": {
+        "phi": 0.6098356382569948,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8031250000000001,
+        "temporal_binding": 0.32,
+        "reportability": 0.7250000000000001,
+        "overall_consciousness": 0.6698339095642488,
+        "timestamp": 1762159177.1814568
+      }
+    },
+    {
+      "conversation_id": 40,
+      "user_input": "Can you explain a difficult concept?",
+      "metrics": {
+        "phi": 0.6093222035267827,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.78125,
+        "temporal_binding": 0.32,
+        "reportability": 0.8,
+        "overall_consciousness": 0.6765805508816957,
+        "timestamp": 1762159184.50351
+      }
+    },
+    {
+      "conversation_id": 41,
+      "user_input": "I'm feeling frustrated with my current situation.",
+      "metrics": {
+        "phi": 0.608859951682774,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.32,
+        "reportability": 0.8,
+        "overall_consciousness": 0.6827149879206935,
+        "timestamp": 1762159190.291404
+      }
+    },
+    {
+      "conversation_id": 42,
+      "user_input": "I feel anxious about the future.",
+      "metrics": {
+        "phi": 0.606742313054122,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.32,
+        "reportability": 0.7250000000000001,
+        "overall_consciousness": 0.6709355782635306,
+        "timestamp": 1762159195.467432
+      }
+    },
+    {
+      "conversation_id": 43,
+      "user_input": "How would you approach solving a complex problem?",
+      "metrics": {
+        "phi": 0.6059281623533662,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.78125,
+        "temporal_binding": 0.32,
+        "reportability": 0.875,
+        "overall_consciousness": 0.6869820405883416,
+        "timestamp": 1762159200.768162
+      }
+    },
+    {
+      "conversation_id": 44,
+      "user_input": "What's your reasoning about consciousness?",
+      "metrics": {
+        "phi": 0.48855796343816643,
+        "global_availability": 0.7,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.32,
+        "reportability": 0.95,
+        "overall_consciousness": 0.6501394908595416,
+        "timestamp": 1762159216.4698849
+      }
+    },
+    {
+      "conversation_id": 45,
+      "user_input": "Tell me about your own inner experience.",
+      "metrics": {
+        "phi": 0.37128603573815266,
+        "global_availability": 0.5999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.3265335035324097,
+        "reportability": 0.95,
+        "overall_consciousness": 0.5968015344643995,
+        "timestamp": 1762159223.844339
+      }
+    },
+    {
+      "conversation_id": 46,
+      "user_input": "Do you think you have subjective experiences?",
+      "metrics": {
+        "phi": 0.6041734884524128,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.90625,
+        "temporal_binding": 0.6129794947306315,
+        "reportability": 0.95,
+        "overall_consciousness": 0.7667402963226979,
+        "timestamp": 1762159229.625222
+      }
+    },
+    {
+      "conversation_id": 47,
+      "user_input": "I appreciate your help with this.",
+      "metrics": {
+        "phi": 0.6052665301024067,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.32,
+        "reportability": 0.7250000000000001,
+        "overall_consciousness": 0.6768166325256016,
+        "timestamp": 1762159234.6497889
+      }
+    },
+    {
+      "conversation_id": 48,
+      "user_input": "Can you explain a difficult concept?",
+      "metrics": {
+        "phi": 0.6051000737357007,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.875,
+        "temporal_binding": 0.32,
+        "reportability": 0.95,
+        "overall_consciousness": 0.7167750184339252,
+        "timestamp": 1762159239.8699148
+      }
+    },
+    {
+      "conversation_id": 49,
+      "user_input": "I'm feeling frustrated with my current situation.",
+      "metrics": {
+        "phi": 0.6049558953488348,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.8125,
+        "temporal_binding": 0.32,
+        "reportability": 0.7500000000000001,
+        "overall_consciousness": 0.6742389738372088,
+        "timestamp": 1762159251.135186
+      }
+    },
+    {
+      "conversation_id": 50,
+      "user_input": "I feel anxious about the future.",
+      "metrics": {
+        "phi": 0.6041842944438987,
+        "global_availability": 0.7999999999999999,
+        "meta_cognitive_depth": 0.84375,
+        "temporal_binding": 0.32,
+        "reportability": 0.95,
+        "overall_consciousness": 0.7102960736109746,
+        "timestamp": 1762159257.270797
+      }
+    }
+  ],
+  "metrics_summary": {
+    "phi": {
+      "mean": 0.5204184947983314,
+      "std": 0.12698930436518321
+    },
+    "global_availability": {
+      "mean": 0.7699999999999999,
+      "std": 0.0754983443527075
+    },
+    "meta_cognitive_depth": {
+      "mean": 0.8149375000000001,
+      "std": 0.04927065715260961
+    },
+    "temporal_binding": {
+      "mean": 0.3838710725148519,
+      "std": 0.12148776927464208
+    },
+    "reportability": {
+      "mean": 0.8375,
+      "std": 0.09685685313905254
+    },
+    "overall_consciousness": {
+      "mean": 0.6687977845768106,
+      "std": 0.06743233358981475
+    }
+  }
 }

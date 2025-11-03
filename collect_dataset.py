@@ -44,10 +44,9 @@ class DatasetCollector:
             user_input = DATASET_PROMPTS[prompt_idx]
             
             try:
-                result = simulator.process_input(user_input)
-                metrics_obj = result.get('metrics')
-                if metrics_obj:
-                    metrics = metrics_obj.to_dict() if hasattr(metrics_obj, 'to_dict') else metrics_obj
+                interaction = simulator.process_input(user_input)
+                metrics = interaction.get('consciousness_metrics')
+                if metrics:
                     self.conversations.append({
                         'conversation_id': i + 1,
                         'user_input': user_input[:100],
