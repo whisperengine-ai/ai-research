@@ -23,9 +23,16 @@ wheels/
 .installed.cfg
 *.egg
 
-# Environment
+# Environment & Credentials
 .env
+.env.local
+.env.*.local
 .venv
+.credentials/
+secrets/
+*.pem
+*.key
+*.pub
 
 # IDE
 .vscode/
