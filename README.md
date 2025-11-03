@@ -21,9 +21,6 @@ See [SECURITY.md](SECURITY.md) for details on setup and credential management.
 ## Architecture
 
 ```
-## Architecture
-
-```
 User Input 
     ↓
 🛡️  Ethical Rules Check (spaCy) → Safety screening
@@ -53,9 +50,6 @@ User Input
 💾 Update Conversation Memory
     ↓
 💬 Conscious Output + Internal Self-Talk Display
-```
-
-## Brain Chemicals Modeled
 ```
 
 ## Features
