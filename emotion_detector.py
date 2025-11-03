@@ -47,13 +47,13 @@ class EmotionDetector:
         
         print("✓ Emotion detector ready")
     
-    def detect_emotion(self, text: str, confidence_threshold: float = 0.55) -> Tuple[str, float, Dict[str, float]]:
+    def detect_emotion(self, text: str, confidence_threshold: float = 0.35) -> Tuple[str, float, Dict[str, float]]:
         """
-        Detect emotion in text using RoBERTa with confidence threshold
+        Detect emotion in text using RoBERTa with adaptive confidence thresholding
         
         Args:
             text: Input text to analyze
-            confidence_threshold: Minimum confidence to report non-neutral (default: 0.55)
+            confidence_threshold: Base minimum confidence for emotion detection (default: 0.35)
             
         Returns:
             Tuple of (primary_emotion, confidence, all_scores)
@@ -72,16 +72,73 @@ class EmotionDetector:
         scores = predictions[0].numpy()
         emotion_scores = {self.emotion_labels[i]: float(scores[i]) for i in range(len(scores))}
         
-        # Get primary emotion
-        primary_idx = np.argmax(scores)
+        # Get primary emotion and second-best
+        sorted_indices = np.argsort(scores)[::-1]
+        primary_idx = sorted_indices[0]
+        secondary_idx = sorted_indices[1]
+        
         primary_emotion = self.emotion_labels[primary_idx]
+        secondary_emotion = self.emotion_labels[secondary_idx]
         confidence = float(scores[primary_idx])
+        secondary_confidence = float(scores[secondary_idx])
         
-        # IMPROVED: If confidence is low, return neutral instead
-        if confidence < confidence_threshold and primary_emotion != 'neutral':
-            return 'neutral', confidence, emotion_scores
+        # ADAPTIVE THRESHOLD STRATEGY:
+        # The goal is to reduce false neutrals while keeping true neutrals
+        # Key insight: Neutral should only win when it's CLEARLY the best option
         
-        return primary_emotion, confidence, emotion_scores
+        margin = confidence - secondary_confidence
+        neutral_score = emotion_scores.get('neutral', 0.0)
+        
+        if primary_emotion == 'neutral':
+            # Strategy for when neutral is the top prediction:
+            # Require either HIGH confidence (0.70+) OR a large margin (0.30+)
+            # Exception: If neutral has medium-high confidence (0.50+) with decent margin (0.08+),
+            # accept it (this handles genuinely neutral questions like "How are you?")
+            
+            if confidence >= 0.70 or margin >= 0.30:
+                # Strong neutral signal
+                return 'neutral', confidence, emotion_scores
+            elif confidence >= 0.50 and margin >= 0.08:
+                # Medium-strong neutral with some separation
+                return 'neutral', confidence, emotion_scores
+            else:
+                # Neutral is winning but not confidently
+                # Look for the best non-neutral alternative
+                best_non_neutral = None
+                best_non_neutral_score = 0.0
+                
+                for idx in sorted_indices:
+                    emotion = self.emotion_labels[idx]
+                    score = float(scores[idx])
+                    if emotion != 'neutral' and score > best_non_neutral_score:
+                        best_non_neutral = emotion
+                        best_non_neutral_score = score
+                
+                # Accept non-neutral if it's strong enough (>0.40) OR very close to neutral
+                if best_non_neutral and (best_non_neutral_score >= 0.40 or (confidence - best_non_neutral_score) < 0.05):
+                    return best_non_neutral, best_non_neutral_score, emotion_scores
+                
+                # All emotions too weak, accept neutral as fallback
+                return 'neutral', confidence, emotion_scores
+        else:
+            # For non-neutral emotions, use more lenient thresholds
+            # Accept if: (high confidence) OR (decent confidence + good margin)
+            if confidence >= 0.50:
+                return primary_emotion, confidence, emotion_scores
+            elif confidence >= 0.35 and margin >= 0.15:
+                # Lower confidence OK if there's a clear winner
+                return primary_emotion, confidence, emotion_scores
+            elif margin >= 0.25:
+                # Very large margin means clear winner even at low confidence
+                return primary_emotion, confidence, emotion_scores
+            else:
+                # Too ambiguous, check if we should fall back to neutral
+                # Only fall back to neutral if it's reasonably high
+                if neutral_score >= 0.30:
+                    return 'neutral', neutral_score, emotion_scores
+                else:
+                    # Even neutral is weak, return the top emotion anyway
+                    return primary_emotion, confidence, emotion_scores
     
     def analyze_user_stance(self, user_input: str) -> Dict:
         """
