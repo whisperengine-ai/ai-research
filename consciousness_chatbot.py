@@ -126,7 +126,7 @@ class ConsciousnessSimulator:
         print("6/6 Initializing Global Workspace (consciousness integration)...")
         self.global_workspace = GlobalWorkspace(
             capacity=3,              # 3 items can be conscious simultaneously
-            decay_rate=0.15,         # Moderate decay
+            decay_rate=0.30,         # Aggressive decay to clear old content
             competition_threshold=0.5
         )
         
@@ -379,6 +379,11 @@ class ConsciousnessSimulator:
             intensity=bot_emotion_conf,
             context=f"Bot feeling: {response[:50]}"
         )
+        
+        # ===== GLOBAL WORKSPACE: Submit bot's response to consciousness =====
+        # The generated response is highly salient (it's what we're actually saying)
+        response_linguistic = self.linguistic_analyzer.analyze_user_input(response)
+        self.language_processor.process_input(response, response_linguistic)
         
         # NOW display the emotion header (after bot has its own emotional response)
         if self.verbose:

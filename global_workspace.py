@@ -302,11 +302,15 @@ class LanguageProcessor(SpecializedProcessor):
         """Process language input and extract salient features"""
         # Questions are highly salient
         is_question = linguistic_features.get('is_question', False)
-        salience = 0.9 if is_question else 0.6
+        
+        # Emotional content or urgent topics increase salience
+        has_emotion = linguistic_features.get('intent_signals', {}).get('expressing_emotion', False)
+        
+        # Base salience higher to compete with meta-cognition
+        salience = 0.9 if is_question else 0.75
         
         # Emotional content increases relevance
-        has_emotion = linguistic_features.get('intent_signals', {}).get('expressing_emotion', False)
-        relevance = 0.8 if has_emotion else 0.6
+        relevance = 0.9 if has_emotion else 0.7
         
         content = f"Language input: '{text[:100]}...'"
         self.submit_to_workspace(content, salience, relevance)
