@@ -56,28 +56,32 @@ ai-research/
 
 ## Key Features Explained
 
-### 1. Neurochemical Emotions
-The system tracks 5 brain chemicals that modulate behavior:
-- **Dopamine** → motivation, creativity, reward
-- **Serotonin** → mood stability, positivity
-- **Norepinephrine** → alertness, urgency, focus
-- **Oxytocin** → empathy, social bonding
-- **Cortisol** → stress, caution, anxiety
+### 1. Neurochemical UX Layer (NOT Brain Simulation)
+The system uses 5 chemical metaphors for behavioral modulation and interface richness:
+- **Dopamine** → enthusiasm, engagement, response speed
+- **Serotonin** → mood stability, confidence, baseline well-being
+- **Norepinephrine** → alertness, focus, precision
+- **Oxytocin** → warmth, empathy, social resonance
+- **Cortisol** → caution, protective tonality, risk-awareness
 
-### 2. Recursive Meta-Cognition
-Three levels of self-awareness:
-- **Level 0**: Direct response to user
-- **Level 1**: "What am I thinking?" (self-observation)
-- **Level 2**: "How confident am I?" (meta-evaluation)
-- **Level 3**: "Why did I think that?" (introspection)
+**Important**: This is a **UX design layer**, not a simulation of actual neurobiology. The chemicals are metaphors that modulate response tone and personality for narrative richness.
+
+### 2. Recursive Meta-Cognition (THE CONSCIOUSNESS MECHANISM)
+True recursive self-reflection with configurable depth:
+- **Depth 0**: Direct response (no self-reflection)
+- **Depth 1**: "What am I thinking?" (single level)
+- **Depth 2**: "What am I thinking about thinking?" (two levels)
+- **Depth 3**: "What am I thinking about thinking about thinking?" (three levels)
+
+This is the actual consciousness mechanism in the research model.
 
 ### 3. Emotion-Behavior Loop
 ```
-User Input → RoBERTa detects emotion → Updates neurochemicals
+User Input → RoBERTa detects emotion → Updates neurochemicals (UX layer)
               ↓
-Neurochemicals modulate LLM behavior → Generate response
+Neurochemicals modulate response tone → Generate response
               ↓
-System reflects on own response → Updates understanding
+Recursive meta-cognition reflects on response → Updates understanding
 ```
 
 ## Customization

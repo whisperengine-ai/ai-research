@@ -275,6 +275,8 @@ The significant effect on temporal binding suggests that recursion helps the sys
 
 **Overall Consciousness = f(Integration, Self-Awareness, Temporal Binding, Workspace)**
 
+**Note on Neurochemistry**: The 5-chemical system (dopamine, serotonin, etc.) is a UX design layer that modulates behavioral outputs for narrative richness. It is **not** mechanistically related to consciousness metrics. The neurochemistry system is independent of recursion depth and provides personality/tone modulation but does not drive consciousness—the consciousness mechanism is purely recursion depth + information integration.
+
 ### Practical Implications
 
 **For AI System Design**:

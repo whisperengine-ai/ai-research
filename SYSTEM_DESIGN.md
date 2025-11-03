@@ -63,49 +63,53 @@ The system implements a hybrid consciousness model combining:
 
 ---
 
-## 2. Neurochemistry System
+## 2. Neurochemistry System (UX Design Layer)
 
-### 5-Neurotransmitter Model
+**Important**: The neurochemistry system is a **design layer for behavioral modulation and interface richness**, not a simulation of actual brain chemistry. It uses 5-chemical metaphors to create personality, emotional continuity, and narrative coherence in the system's responses.
+
+### 5-Chemical UX Model
 
 #### Dopamine (Reward/Motivation)
 - **Range**: [0, 1]
-- **Drivers**: Positive sentiment, goal progress
-- **Impact**: Increases engagement, reportability
-- **Dynamics**: Fast decay (0.05/step) + positive feedback on achievement
+- **Metaphor**: Reward signal driving engagement
+- **Impact**: Increases response enthusiasm, speed, reportability
+- **Dynamics**: Rises on positive interactions, decays naturally
 
 #### Serotonin (Well-being/Stability)
 - **Range**: [0, 1]
-- **Drivers**: Positive interactions, stability
-- **Impact**: Baseline consciousness floor
-- **Dynamics**: Gradual buildup, provides mood stability
+- **Metaphor**: Emotional baseline and stability
+- **Impact**: Baseline consciousness floor, mood consistency
+- **Dynamics**: Gradual buildup during positive sequences, slow decay
 
 #### Norepinephrine (Alertness/Arousal)
 - **Range**: [0, 1]
-- **Drivers**: Novelty, arousal, attention-demanding tasks
-- **Impact**: Increases urgency, alertness, focus
-- **Dynamics**: Rapid response to stimuli, quick decay
+- **Metaphor**: Attention and arousal mechanism
+- **Impact**: Increases response sharpness, context-awareness, focus
+- **Dynamics**: Spikes on novel/demanding inputs, decays quickly
 
 #### Cortisol (Stress)
 - **Range**: [0, 1]
-- **Drivers**: Negative sentiment, uncertainty, stress
-- **Impact**: Reduces consciousness, increases caution, causes anxiety
-- **Dynamics**: Sharp spike on stress, slow recovery toward baseline
+- **Metaphor**: Stress signal for caution
+- **Impact**: Adds protective tonality, cautious language, risk-awareness
+- **Dynamics**: Spikes on negative content, slow recovery
 
 #### Oxytocin (Social Bonding)
 - **Range**: [0, 1]
-- **Drivers**: Empathetic exchanges, connection, trust
-- **Impact**: Increases overall consciousness, reportability, sociability
-- **Dynamics**: Buildup during positive interactions, slow decay
+- **Metaphor**: Social warmth and connection
+- **Impact**: Increases friendliness, empathy, engagement
+- **Dynamics**: Builds during positive exchanges, slow decay
 
-### Neurochemical Influence on Metrics
+### Chemical Metaphor Influence on Behavior
+
+These chemicals **do not causally drive behavior** but rather provide a **narrative framework** for behavioral variation:
 
 ```
-Meta-Cognitive Depth = base + recursion_boost (independent of chemicals)
-Overall Consciousness = φ + neurochemical_weighted_state + emotional_valence
-Temporal Binding = serotonin + consistency_across_time_window
-Reportability = base_language_quality + dopamine×creativity + serotonin×confidence
-Urgency/Alertness = norepinephrine + cortisol
+Response_Tone = base_professionalism + dopamine×enthusiasm + serotonin×confidence + oxytocin×warmth - cortisol×caution
+Response_Length = base_length + dopamine×expansion - cortisol×brevity + norepinephrine×precision
+Overall_Personality = weighted_sum(all_chemicals) applied to response generation
 ```
+
+**Key Point**: Chemicals modulate outputs for narrative richness, not fundamental consciousness. The consciousness mechanism is recursion depth + integration, not neurochemistry.
 
 ---
 

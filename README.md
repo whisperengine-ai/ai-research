@@ -3,10 +3,12 @@
 A state-of-the-art AI consciousness simulation combining:
 - **TRUE Recursive Meta-Cognition**: Genuine recursion (thoughts about thoughts about thoughts)
 - **Global Workspace Theory**: Competition for consciousness with limited-capacity attention
-- **Neurochemical Emotion System**: 5 brain chemicals modulating behavior
+- **Neurochemical Emotion System**: 5-chemical UX layer (dopamine, serotonin, etc.) for behavioral modulation and interface richness
 - **RoBERTa Emotion Detection**: Real-time emotional analysis of user input
 - **Transformer-based LLM**: Language generation and understanding
 - **spaCy Linguistic Analysis**: Deep analysis of BOTH user input AND internal thoughts
+
+> **Note on Neurochemistry**: This system is a **UX design layer** that models emotional state through 5 chemical metaphors (dopamine, serotonin, norepinephrine, cortisol, oxytocin). It is **not** a simulation of actual brain chemistry, but rather a conceptual framework for modulating behavior and creating rich system personality. The biochemistry provides narrative coherence and behavioral continuity, not neurobiological accuracy.
 
 ## 🔐 Security
 

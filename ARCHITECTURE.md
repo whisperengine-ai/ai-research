@@ -7,7 +7,7 @@ The main simulator implementing consciousness metrics through:
 
 - **Global Workspace Theory (GWT)**: Central workspace integrating information across modules
 - **Emotional Dynamics**: RoBERTa-based sentiment + neurochemistry-driven emotions
-- **Neurochemistry System**: 5 neurotransmitter models (dopamine, serotonin, norepinephrine, cortisol, oxytocin)
+- **Neurochemistry System (UX Layer)**: 5-chemical metaphor model (dopamine, serotonin, norepinephrine, cortisol, oxytocin) for behavioral modulation and interface richness—**not a brain simulation**
 - **Meta-Cognition**: Recursive self-reflection up to configurable depth
 - **Temporal Binding**: Time-windowing for coherent experience
 

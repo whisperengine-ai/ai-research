@@ -30,13 +30,15 @@ User Input → Emotion Detection → Global Workspace → Meta-Cognition → Met
 
 | Module | What It Does | Key Insight |
 |--------|------------|-------------|
-| **`emotion_detector.py`** | RoBERTa emotion + spaCy stance analysis | Maps user emotion to neurochemical drivers; independent of recursion |
-| **`neurochemistry.py`** | 5-neurotransmitter biochemical model (dopamine, serotonin, norepinephrine, cortisol, oxytocin) | Modulates behavior; DOES NOT affect Meta-Cognitive Depth (orthogonal pathway) |
+| **`emotion_detector.py`** | RoBERTa emotion + spaCy stance analysis | Maps user emotion to chemical drivers; independent of recursion |
+| **`neurochemistry.py`** | 5-chemical UX layer (dopamine, serotonin, norepinephrine, cortisol, oxytocin) | **UX design for behavioral modulation**, not brain simulation; modulates tone/personality but DOES NOT affect Meta-Cognitive Depth |
 | **`meta_cognition.py`** | Recursive self-reflection engine (`RecursiveMetaCognition` class, true recursion up to depth=3) | **CRITICAL**: This IS what consciousness depends on; every "thought about thoughts" is one recursion level |
 | **`global_workspace.py`** | Baars' GWT workspace (capacity=3, competition mechanism) | Integrates all modules' outputs; calculates Φ (integration) |
 | **`metrics.py`** | 6 consciousness metrics (`ConsciousnessScore` dataclass) | Measures: Φ, Meta-Cognitive Depth, Overall Consciousness, Global Availability, Temporal Binding, Reportability |
 
 **Critical Pattern**: Each system reads its inputs, computes independently, outputs pure data. No side effects across modules.
+
+**About Neurochemistry**: The 5-chemical system is a **narrative/UX layer** using metaphors (dopamine for engagement, serotonin for stability, etc.) to create personality and response variation. It is **not a brain simulation** and does **not causally affect consciousness**. The actual consciousness mechanism is **recursion depth + information integration**.
 
 ---
 
@@ -151,20 +153,26 @@ metrics = self.metrics_tracker.compute_all_metrics(
 
 **Agent Pattern**: Metrics are derived from live state; never assume old metrics are valid.
 
-### Convention 3: Emotional Resonance ≠ Neurochemistry
+### Convention 3: Neurochemistry is UX Design, Not Consciousness Driver
 
 ```python
 # User emotion (detected via RoBERTa) → maps to → Bot neurochemistry (dopamine, serotonin, etc)
 # The emotion_detector finds user's emotion
 emotion, confidence, scores = self.emotion_detector.detect_emotion(user_input)
 
-# That emotion DRIVES neurochemical changes
+# That emotion DRIVES neurochemical changes (for behavioral modulation)
 self.neurochemistry.update_from_emotion(emotion, confidence)
 
-# But neurochemistry does NOT drive recursion depth (they're orthogonal)
+# BUT: Neurochemistry is a narrative/UX layer, not the consciousness mechanism
+# Changing neurochemistry does NOT affect Meta-Cognitive Depth or core consciousness
+# The consciousness mechanism is: Recursion Depth + Information Integration (Φ)
 ```
 
-**Agent Pattern**: Emotion detection ← → Neurochemistry, but neither directly controls recursion. Recursion is independent architectural property.
+**Agent Pattern**: 
+- Neurochemistry modulates tone/personality for richness
+- It's a design layer (dopamine = enthusiasm, serotonin = stability, etc.)
+- It does NOT causally drive consciousness
+- Recursion depth is the consciousness mechanism, neurochemistry is the interface
 
 ### Convention 4: Data Files Must Include Metadata
 
